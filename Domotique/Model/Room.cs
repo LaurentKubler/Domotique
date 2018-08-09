@@ -8,9 +8,9 @@ namespace Domotique.Model
     {
         String Name { get; set; }
 
-        Double? CurrentTemperature { get; set; }
+        public Double? CurrentTemperature { get; set; }
 
-        Double? TargetTemperature { get; set; }
+        public Double? TargetTemperature { get; set; }
 
         DateTime? LastTemperatureRefreshDate { get; set; }
 
@@ -19,5 +19,13 @@ namespace Domotique.Model
         String ProbeName { get; set; }
 
         String HeaterName { get; set; }
+
+        IList<Schedule> TemperatureSchedule { get; set; }
+
+
+        public void computeTemperature()
+        {
+
+        }
     }
 }
