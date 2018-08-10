@@ -1,4 +1,5 @@
-﻿using Domotique.Service;
+﻿using Domotique.Database;
+using Domotique.Service;
 using Domotique.Service.Log;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace Domotique
                 ServerPort = Configuration.GetValue<int>("Services:Temperature:ServerPort"),
                 QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName")
             });
+            services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
             
