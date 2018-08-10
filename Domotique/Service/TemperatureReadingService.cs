@@ -1,10 +1,9 @@
-﻿using Messages;
-using MySql.Data.MySqlClient;
+﻿using Domotique.Model;
+using Messages;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Domotique.Service
@@ -26,26 +25,21 @@ namespace Domotique.Service
 
         private IStatusService statusService;
 
+        private IDataRead _dataRead;
+
+        public TemperatureReadingService  (IDataRead dataRead)
+        {
+            _dataRead = dataRead;
+        }
         public void  SetStatusService(IStatusService service)
         {
-            statusService = service;
+            statusService = service;            
         }
 
-        private String ReadRoomName(String CaptorId)
-        {
-            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
-            connection.Open();
-            var command = connection.CreateCommand();
-            command.CommandText = "Select Name from Room left join Device on Device.DeviceID = Room.Captor where Device.Address = @CaptorId";
-            command.Parameters.AddWithValue("@CaptorId", CaptorId.Replace("/",String.Empty)/*"F2000002E0B67828"*/);
-            var name = command.ExecuteScalar().ToString();
-            return name;
-        }
 
         public void Start()
         {
-
-            ReadRoomName("/28.B1E5CB040000/");
+            
             var factory = new ConnectionFactory() { HostName = ServerName };
             connection = factory.CreateConnection();
             channel = connection.CreateModel();
@@ -64,7 +58,7 @@ namespace Domotique.Service
                                 var message = Encoding.UTF8.GetString(body);
                                 var temp = JsonConvert.DeserializeObject<ProbeTemperatureMessage>(message);
 
-                                String roomName = ReadRoomName(temp.ProbeAddress);       
+                                String roomName = _dataRead.ReadRoomNameByProbe(temp.ProbeAddress);       
 
                                 statusService.RegisterTemperature(roomName, temp.TemperatureValue,temp.MessageDate);
                             };

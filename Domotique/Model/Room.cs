@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domotique.Model
 {
-    class Room
+    public class Room
     {
         public String Name { get; set; }
 

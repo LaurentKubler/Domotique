@@ -1,4 +1,5 @@
 ﻿using Domotique.Database;
+using Domotique.Model;
 using Domotique.Service;
 using Domotique.Service.Log;
 using Microsoft.AspNetCore.Builder;
@@ -36,7 +37,8 @@ namespace Domotique
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
-            
+            services.AddTransient<IDataRead, DataRead>(); 
+
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
             {                
             }
