@@ -6,13 +6,13 @@ namespace Domotique.Model
 {
     class Room
     {
-        String Name { get; set; }
+        public String Name { get; set; }
 
         public Double? CurrentTemperature { get; set; }
 
         public Double? TargetTemperature { get; set; }
 
-        DateTime? LastTemperatureRefreshDate { get; set; }
+        public DateTime? LastTemperatureRefreshDate { get; set; }
 
         Boolean ContainsHeater { get; set; }
 
