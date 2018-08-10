@@ -20,9 +20,9 @@ namespace Domotique.Database
 
         public DbSet<Device> Device { get; set; }
 
-        public DbSet<DeviceChangeEvent> DeviceChangeEvent { get; set; }
+      /*  public DbSet<DeviceChangeEvent> DeviceChangeEvent { get; set; }
 
-        public DbSet<DeviceRequestLog> DeviceRequestLog { get; set; }
+        public DbSet<DeviceRequestLog> DeviceRequestLog { get; set; }*/
 
         public DbSet<ScenarioStep> ScenarioStep { get; set; }
 
