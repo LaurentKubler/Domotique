@@ -67,8 +67,6 @@ namespace Domotique.Service
                                 String roomName = ReadRoomName(temp.ProbeAddress);       
 
                                 statusService.RegisterTemperature(roomName, temp.TemperatureValue,temp.MessageDate);
-
-                                Console.WriteLine(" [x] Received {0}", message+":"+temp.ProbeAddress+"?"+temp.TemperatureValue);
                             };
                 channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);
             }

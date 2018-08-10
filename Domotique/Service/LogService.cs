@@ -10,7 +10,7 @@ namespace Domotique.Service.Log
     {
         public void LogTemperatureService(String name, Double currentTemperature, Double? targetTemperature, DateTime logDate)
         {
-            using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile"))
+            using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile"))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -22,6 +22,7 @@ namespace Domotique.Service.Log
                     command.Parameters.AddWithValue("@Room", name);
                     command.Parameters.AddWithValue("@TargetTemp", targetTemperature);
                     command.ExecuteNonQuery();
+                    Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
                 }
             }
         }
