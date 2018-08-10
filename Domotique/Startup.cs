@@ -32,8 +32,9 @@ namespace Domotique
                 ServerPort = Configuration.GetValue<int>("Services:Temperature:ServerPort"),
                 QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName")
             });
-            services.AddSingleton<Status>();
-            services.AddSingleton<ILogService>();
+            services.AddSingleton<ILogService, LogService>();
+            services.AddSingleton<IStatusService, Status>();
+            
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
             {                
             }
