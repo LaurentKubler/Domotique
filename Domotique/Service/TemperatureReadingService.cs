@@ -36,7 +36,7 @@ namespace Domotique.Service
             var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
             connection.Open();
             var command = connection.CreateCommand();
-            command.CommandText = "Select Name from Room left join Device on Device.DeviceName = Room.DeviceName where Device.Address = @CaptorId";
+            command.CommandText = "Select Name from Room left join Device on Device.DeviceID = Room.Captor where Device.Address = @CaptorId";
             command.Parameters.AddWithValue("@CaptorId", CaptorId.Replace("/",String.Empty)/*"F2000002E0B67828"*/);
             var name = command.ExecuteScalar().ToString();
             return name;
