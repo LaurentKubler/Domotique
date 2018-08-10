@@ -60,6 +60,7 @@ namespace Domotique.Service
                             };
                 channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);
             }
+            
             IsStarted = true;            
         }
 

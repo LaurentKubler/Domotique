@@ -49,11 +49,11 @@ namespace Domotique
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             // Start the main server
-            app.ApplicationServices.GetService<Status>();
+            var tmp = app.ApplicationServices.GetService<IStatusService>();
 
             app.UseMvc();
 
-
+/*
             var factory = new ConnectionFactory() { HostName = "localhost" };
             string queueName = "hello";
             using (var connection = factory.CreateConnection())
@@ -73,7 +73,7 @@ namespace Domotique
                                      basicProperties: null,
                                      body: body);
                 Console.WriteLine(" [x] Sent {0}", message);
-            }
+            } */
         }
     }
 }
