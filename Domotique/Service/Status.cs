@@ -1,5 +1,6 @@
 ﻿using Domotique.Model;
 using Domotique.Service.Log;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +20,9 @@ namespace Domotique.Service
             Rooms = new Dictionary<String, Room>();
             LogService = logService;
 
+    
+
+
             TempReadingService = tempReadingService;
             TempReadingService.SetStatusService(this);
             TempReadingService.Start();
@@ -30,6 +34,12 @@ namespace Domotique.Service
         {            
             if (!Rooms.ContainsKey(RoomName))
             {
+                var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile");
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "Select * from Room where RoomName = @RoomName";
+                command.Parameters.AddWithValue("@RoomName", RoomName);
+                var retVal = command.ExecuteReader();
                 // Read room in database
             }
 
