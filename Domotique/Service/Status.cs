@@ -37,16 +37,22 @@ namespace Domotique.Service
                 var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile");
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText = "Select * from Room where RoomName = @RoomName";
+                command.CommandText = "Select * from Room where Name = @RoomName";
                 command.Parameters.AddWithValue("@RoomName", RoomName);
-                var retVal = command.ExecuteReader();
-                // Read room in database
+                var roomLine = command.ExecuteReader().Read();
+                Room newRoom = new Room()
+                {
+                    Name = RoomName,
+                    TargetTemperature = 0
+                };
+                Rooms.Add(RoomName, newRoom);                
             }
 
             Room room = Rooms[RoomName];
             
             //update the roomValues:
             room.CurrentTemperature = Temperature;
+            room.LastTemperatureRefreshDate = date;
             // Compute desired temperature
             room.computeTemperature();
 
