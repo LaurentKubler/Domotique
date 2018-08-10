@@ -17,12 +17,13 @@ namespace Domotique.Service.Log
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT ID from Room Where Name = ?RoomName";
+                    command.CommandText = "SELECT ID from Room Where Name = @RoomName";
+                    command.Parameters.AddWithValue("@RoomName", name);
                     RoomId = Int32.Parse(command.ExecuteScalar().ToString());
                 }
                     using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "INSERT INTO `DomotiqueDev`.`TemperatureLog` (`CurrentTemp`,`LogDate`,`RoomId`,`TargetTemp`) VALUES" +
+                    command.CommandText = "INSERT INTO `DomotiqueCore`.`TemperatureLog` (`CurrentTemp`,`LogDate`,`RoomId`,`TargetTemp`) VALUES" +
                                     "(@CurrentTemp,@LogDate,@RoomId,@TargetTemp);";
                     command.Parameters.AddWithValue("@CurrentTemp", currentTemperature);
                     command.Parameters.AddWithValue("@LogDate", logDate);
