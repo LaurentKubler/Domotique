@@ -12,9 +12,9 @@ namespace Domotique.Service
 
         readonly Dictionary<String, Room> Rooms;
 
-        readonly ILogService LogService;
+        readonly LogService LogService;
 
-        public Status(ITemperatureReadingService tempReadingService, ILogService logService)
+        public Status(ITemperatureReadingService tempReadingService, LogService logService)
         {
             Rooms = new Dictionary<String, Room>();
             LogService = logService;
