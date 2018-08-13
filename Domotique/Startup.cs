@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
 using System.Text;
 
 namespace Domotique
@@ -37,7 +38,8 @@ namespace Domotique
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
-            services.AddTransient<IDataRead, DataRead>(); 
+            services.AddTransient<IDataRead, DataRead>();
+            //services.AddWebSocketManager();
 
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
             {                
@@ -78,4 +80,28 @@ namespace Domotique
             } */
         }
     }
+
+    /*
+        select 
+            RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate)
+        from TemperatureLog
+        inner join Room
+            on Room.ID = TemperatureLog.RoomId
+        where 
+            LogDate >  date_sub(now(),INTERVAL 1 WEEK)
+        group by 
+            RoomId, DATE(LogDate);
+
+    select   
+    	l.CurrentTemp,   l.RoomId, l.LogDate
+    from 
+	    TemperatureLog l   
+    where   
+	    row(l.LogDate,l.roomId)  
+	    in   (
+		    select max(LogDate), RoomId 
+		    from TemperatureLog 
+		    group by RoomId);
+
+  */
 }
