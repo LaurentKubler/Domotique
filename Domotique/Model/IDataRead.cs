@@ -1,4 +1,7 @@
-﻿namespace Domotique.Model
+﻿using Messages.WebMessages;
+using System.Collections.Generic;
+
+namespace Domotique.Model
 {
     public interface IDataRead
     {
@@ -6,5 +9,7 @@
         string ReadRoomNameByProbe(string CaptorId);
 
         Room ReadRoomByName(string RoomName);
+
+        IList<RoomStatus> ReadRoomTemperatures();
     }
 }
