@@ -77,5 +77,27 @@ namespace Domotique
                 Console.WriteLine(" [x] Sent {0}", message);
             } */
         }
-    }
+    }/*  /*
+        select 
+            RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate)
+        from TemperatureLog
+        inner join Room
+            on Room.ID = TemperatureLog.RoomId
+        where 
+            LogDate >  date_sub(now(),INTERVAL 1 WEEK)
+        group by 
+            RoomId, DATE(LogDate);
+
+    select   
+    	l.CurrentTemp,   l.RoomId, l.LogDate
+    from 
+	    TemperatureLog l   
+    where   
+	    row(l.LogDate,l.roomId)  
+	    in   (
+		    select max(LogDate), RoomId 
+		    from TemperatureLog 
+		    group by RoomId);
+
+  */
 }

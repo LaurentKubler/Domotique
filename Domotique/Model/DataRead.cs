@@ -49,5 +49,30 @@ namespace Domotique.Model
             };
             return newRoom;
         }
+
+         public void ReadRoomTemperatures()
+        {
+            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile");
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "select  RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
+                "from TemperatureLog " +
+                "inner join Room on Room.ID = TemperatureLog.RoomId " +
+                "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";
+            
+            
+            using (MySqlDataReader reader =  command.ExecuteReader())
+            {
+                while (reader.Read()){
+                    var roomId = reader.GetInt32(0);
+                    var roomName = reader.GetString(1);
+                    var roomMin = reader.GetFloat(2);
+                    var roomMax = reader.GetFloat(3);
+                    var roomLastRefresh = reader.GetDateTime(4);
+                    Console.WriteLine($"{roomId}({roomName}) {roomMin}-{roomMax}")                    ;
+                }
+            
+            }
+        }
     }
 }
