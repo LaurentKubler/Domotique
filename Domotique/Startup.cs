@@ -54,7 +54,10 @@ namespace Domotique
         {
             // Start the main server
             var tmp = app.ApplicationServices.GetService<IStatusService>();
-
+            command.CommandText = "select  RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
+                "from TemperatureLog " +
+                "inner join Room on Room.ID = TemperatureLog.RoomId " +
+                "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";
             app.UseMvc();
 
 /*
