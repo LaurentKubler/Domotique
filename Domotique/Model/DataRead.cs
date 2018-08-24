@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Messages.WebMessages;
 
 namespace Domotique.Model
@@ -55,7 +56,7 @@ namespace Domotique.Model
             IList<RoomStatus> result = new List<RoomStatus>();
 
             Dictionary<int, RoomStatus> rooms = new Dictionary<int, RoomStatus>();
-            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile");
+            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
             connection.Open();
 
             using (var command = connection.CreateCommand())
@@ -68,16 +69,16 @@ namespace Domotique.Model
                     {
                         RoomId = reader.GetInt32("ID"),
                         RoomName = reader.GetString("Name"),
-                        Picture = reader.GetInt32("Picture")
+                      //  Picture = reader.GetInt32("Picture")
                     };
                     rooms.Add(room.RoomId, room);
                 }
-
+                reader.Close();
             }
        
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select  RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
+                command.CommandText = "select  Room.Id, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
                     "from TemperatureLog " +
                     "inner join Room on Room.ID = TemperatureLog.RoomId " +
                     "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";
@@ -92,6 +93,8 @@ namespace Domotique.Model
                         var roomMin = reader.GetFloat(2);
                         var roomMax = reader.GetFloat(3);
                         var roomLastRefresh = reader.GetDateTime(4);
+                        if (rooms[roomId].Temperatures==null)
+                            rooms[roomId].Temperatures = new List<DayTemperature>();
                         rooms[roomId].Temperatures.Add(new DayTemperature()
                         {
                             MaxTemp = reader.GetFloat(3),
@@ -126,7 +129,7 @@ namespace Domotique.Model
                 }
             }
 
-            return result;
+            return rooms.Values.ToList();
         }
     }
 }

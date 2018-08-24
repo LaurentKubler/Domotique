@@ -7,7 +7,7 @@ namespace Domotique.Controllers
 
     [Produces("application/json")]
     [Route("[controller]")]
-    class StatusController : Controller
+    public class StatusController : Controller
     {
         IDataRead _dataRead;
 
