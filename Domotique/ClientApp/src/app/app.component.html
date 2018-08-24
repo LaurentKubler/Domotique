@@ -18,6 +18,20 @@
   </li>
 </ul>
 <ul>
-  <li *ngFor="let roomStatus of Rooms" >{{roomStatus.roomName}}</li>
+  <li *ngFor="let roomStatus of Rooms">
+    {{roomStatus.roomName}} {{roomStatus.lastTemperatureRefresh}} {{roomStatus.currentTemperature}}
+ 
+    <table>
+      <tr>
+        <th *ngFor="let temperature of roomStatus.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
+      </tr>
+      <tr>
+        <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.minTemp | number : '1.1-1'}}</td>
+      </tr>
+      <tr>
+        <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
+      </tr>
+    </table>
+  </li>
 </ul>
 <router-outlet></router-outlet>

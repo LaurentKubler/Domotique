@@ -29,7 +29,7 @@ export class RoomStatus {
   public currentTemperature: number;
 }
 export class DayTemperature {
-  public TemperatureDate: Date;
-  public MinTemp: number;
-  public MaxTemp: number;
+  public temperatureDate: Date;
+  public minTemp: number;
+  public maxTemp: number;
 }
