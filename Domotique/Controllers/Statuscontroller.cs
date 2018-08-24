@@ -6,7 +6,7 @@ namespace Domotique.Controllers
     
 
     [Produces("application/json")]
-    [Route("[controller]")]
+    [Route("/rest/[controller]")]
     public class StatusController : Controller
     {
         IDataRead _dataRead;
@@ -17,7 +17,7 @@ namespace Domotique.Controllers
             _dataRead = dataRead;
         }
 
-        [HttpGet]
+        [HttpGet()]
         public IActionResult Get()
         {
             return Ok(_dataRead.ReadRoomTemperatures());
