@@ -61,18 +61,19 @@ namespace Domotique.Model
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = "Select * from Room;";
-                var reader = command.ExecuteReader();
-                while (reader.Read())
+                using (var reader = command.ExecuteReader())
                 {
-                    RoomStatus room = new RoomStatus()
+                    ;
+                    while (reader.Read())
                     {
-                        RoomId = reader.GetInt32("ID"),
-                        RoomName = reader.GetString("Name"),
-                        Picture = reader.GetInt32("Picture")
-                    };
-                    rooms.Add(room.RoomId, room);
+                        RoomStatus room = new RoomStatus()
+                        {
+                            RoomId = reader.GetInt32("ID"),
+                            RoomName = reader.GetString("Name")
+                        };
+                        rooms.Add(room.RoomId, room);
+                    }
                 }
-
             }
        
             using (var command = connection.CreateCommand())
