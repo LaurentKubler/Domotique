@@ -4,10 +4,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RoomStatusComponent } from './room-status/room-status.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoomStatusComponent
   ],
   imports: [
     BrowserModule,

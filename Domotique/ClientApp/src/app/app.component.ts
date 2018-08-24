@@ -6,13 +6,30 @@ import { Http } from '@angular/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'ClientApp';
-  public values: string;
+  public Rooms: RoomStatus[];
   constructor(private http: Http) {
     this.http.get('/rest/status').subscribe(result => {
-      this.values = result.json() as string[];
-      console.warn(result);
+      this.Rooms =  result.json() as RoomStatus[];
+      console.warn(this.Rooms[0].roomName);
     }, error => console.error(error));
   }
+}
+export class Status {
+  public Rooms: RoomStatus[];
+}
+export class RoomStatus {
+  public roomId: number;
+  public roomName: string;
+  public picture: number;
+  public temperatures: DayTemperature[];
+  public lastTemperatureRefresh: Date;
+  public currentTemperature: number;
+}
+export class DayTemperature {
+  public TemperatureDate: Date;
+  public MinTemp: number;
+  public MaxTemp: number;
 }
