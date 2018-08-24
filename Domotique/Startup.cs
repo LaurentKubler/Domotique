@@ -2,8 +2,10 @@
 using Domotique.Model;
 using Domotique.Service;
 using Domotique.Service.Log;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc; 
+using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -44,6 +46,10 @@ namespace Domotique
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
             {                
             }
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/dist";
+            });
             services.AddMvc();
 
         }
@@ -57,30 +63,44 @@ namespace Domotique
          /*   command.CommandText = "select  RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
                 "from TemperatureLog " +
                 "inner join Room on Room.ID = TemperatureLog.RoomId " +
-                "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";*/
+                "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";*/            
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+
+            app.UseHttpsRedirection();
             app.UseMvc();
 
-/*
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            string queueName = "hello";
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
+            app.UseSpa(spa =>
             {
-                channel.QueueDeclare(queue: queueName,
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
+                //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
+                spa.Options.SourcePath = "ClientApp";
+                if (env.IsDevelopment())
+                {
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
+            /*
+                        var factory = new ConnectionFactory() { HostName = "localhost" };
+                        string queueName = "hello";
+                        using (var connection = factory.CreateConnection())
+                        using (var channel = connection.CreateModel())
+                        {
+                            channel.QueueDeclare(queue: queueName,
+                                                 durable: false,
+                                                 exclusive: false,
+                                                 autoDelete: false,
+                                                 arguments: null);
 
-                string message = "testemessasssge";
-                var body = Encoding.UTF8.GetBytes(message);
+                            string message = "testemessasssge";
+                            var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: "",
-                                     routingKey: queueName,
-                                     basicProperties: null,
-                                     body: body);
-                Console.WriteLine(" [x] Sent {0}", message);
-            } */
+                            channel.BasicPublish(exchange: "",
+                                                 routingKey: queueName,
+                                                 basicProperties: null,
+                                                 body: body);
+                            Console.WriteLine(" [x] Sent {0}", message);
+                        } */
         }
     }/*  /*
         select 
