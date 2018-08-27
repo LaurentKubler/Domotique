@@ -1,0 +1,7002 @@
+[
+	{
+		"ID" : 2011093,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-26 19:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011092,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 19:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011091,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 19:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011090,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 19:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011089,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 19:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011088,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 19:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011087,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 19:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011086,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 19:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011085,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 19:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011084,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 19:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011083,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 19:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011082,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 19:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011081,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 19:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011080,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 19:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011079,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 19:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011078,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 19:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011077,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 19:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011076,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 19:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011075,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 19:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011074,
+		"CurrentTemp" : 22.5625,
+		"LogDate" : "2018-08-26 19:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011073,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 19:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011072,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-26 19:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011071,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 19:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011070,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 19:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011069,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 19:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011068,
+		"CurrentTemp" : 22.625,
+		"LogDate" : "2018-08-26 19:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011067,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 19:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011066,
+		"CurrentTemp" : 23.5625,
+		"LogDate" : "2018-08-26 18:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011065,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 18:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011064,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011063,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 18:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011062,
+		"CurrentTemp" : 23.375,
+		"LogDate" : "2018-08-26 18:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011061,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 18:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011060,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011059,
+		"CurrentTemp" : 22.8125,
+		"LogDate" : "2018-08-26 18:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011058,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 18:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011057,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011056,
+		"CurrentTemp" : 23.3125,
+		"LogDate" : "2018-08-26 18:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011055,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 18:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011054,
+		"CurrentTemp" : 23.75,
+		"LogDate" : "2018-08-26 18:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011053,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 18:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011052,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011051,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:32:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011050,
+		"CurrentTemp" : 23.625,
+		"LogDate" : "2018-08-26 18:32:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011049,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 18:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011048,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011047,
+		"CurrentTemp" : 23.8125,
+		"LogDate" : "2018-08-26 18:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011046,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 18:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011045,
+		"CurrentTemp" : 24.375,
+		"LogDate" : "2018-08-26 18:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011044,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 18:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011043,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011042,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 18:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011041,
+		"CurrentTemp" : 24.1875,
+		"LogDate" : "2018-08-26 18:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011040,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 18:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011039,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011038,
+		"CurrentTemp" : 24,
+		"LogDate" : "2018-08-26 18:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011037,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 18:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011036,
+		"CurrentTemp" : 23.9375,
+		"LogDate" : "2018-08-26 18:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011035,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 18:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011034,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011033,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 18:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011032,
+		"CurrentTemp" : 23.9375,
+		"LogDate" : "2018-08-26 18:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011031,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 18:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011030,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 17:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011029,
+		"CurrentTemp" : 24.3125,
+		"LogDate" : "2018-08-26 17:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011028,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011027,
+		"CurrentTemp" : 24.75,
+		"LogDate" : "2018-08-26 17:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011026,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 17:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011025,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 17:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011024,
+		"CurrentTemp" : 23.8125,
+		"LogDate" : "2018-08-26 17:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011023,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 17:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011022,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 17:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011021,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 17:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011020,
+		"CurrentTemp" : 23.75,
+		"LogDate" : "2018-08-26 17:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011019,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011018,
+		"CurrentTemp" : 25.0625,
+		"LogDate" : "2018-08-26 17:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011017,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 17:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011016,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 17:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011015,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 17:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011014,
+		"CurrentTemp" : 24.75,
+		"LogDate" : "2018-08-26 17:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011013,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011012,
+		"CurrentTemp" : 24.3125,
+		"LogDate" : "2018-08-26 17:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011011,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011010,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 17:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011009,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 17:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011008,
+		"CurrentTemp" : 23.8125,
+		"LogDate" : "2018-08-26 17:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011007,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011006,
+		"CurrentTemp" : 23.125,
+		"LogDate" : "2018-08-26 17:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011005,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011004,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 17:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011003,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 17:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2011002,
+		"CurrentTemp" : 23.625,
+		"LogDate" : "2018-08-26 17:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2011001,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 17:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2011000,
+		"CurrentTemp" : 24.625,
+		"LogDate" : "2018-08-26 17:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010999,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 17:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010998,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 17:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010997,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 17:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010996,
+		"CurrentTemp" : 24.4375,
+		"LogDate" : "2018-08-26 17:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010995,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 17:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010994,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 16:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010993,
+		"CurrentTemp" : 23.875,
+		"LogDate" : "2018-08-26 16:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010992,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 16:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010991,
+		"CurrentTemp" : 24.4375,
+		"LogDate" : "2018-08-26 16:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010990,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 16:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010989,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 16:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010988,
+		"CurrentTemp" : 24.8125,
+		"LogDate" : "2018-08-26 16:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010987,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 16:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010986,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 16:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010985,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 16:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010984,
+		"CurrentTemp" : 24.5625,
+		"LogDate" : "2018-08-26 16:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010983,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 16:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010982,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 16:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010981,
+		"CurrentTemp" : 24.375,
+		"LogDate" : "2018-08-26 16:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010980,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 16:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010979,
+		"CurrentTemp" : 24.875,
+		"LogDate" : "2018-08-26 16:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010978,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 16:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010977,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 16:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010976,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 16:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010975,
+		"CurrentTemp" : 25.6875,
+		"LogDate" : "2018-08-26 16:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010974,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 16:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010973,
+		"CurrentTemp" : 26.0625,
+		"LogDate" : "2018-08-26 16:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010972,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 16:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010971,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 16:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010970,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 16:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010969,
+		"CurrentTemp" : 25.6875,
+		"LogDate" : "2018-08-26 16:16:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010968,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 16:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010967,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 16:12:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010966,
+		"CurrentTemp" : 25.625,
+		"LogDate" : "2018-08-26 16:12:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010965,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 16:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010964,
+		"CurrentTemp" : 25.5625,
+		"LogDate" : "2018-08-26 16:06:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010963,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 16:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010962,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 16:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010961,
+		"CurrentTemp" : 24.9375,
+		"LogDate" : "2018-08-26 16:02:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010960,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 16:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010959,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 16:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010958,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010957,
+		"CurrentTemp" : 25.0625,
+		"LogDate" : "2018-08-26 15:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010956,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 15:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010955,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010954,
+		"CurrentTemp" : 24.8125,
+		"LogDate" : "2018-08-26 15:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010953,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 15:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010952,
+		"CurrentTemp" : 23.5,
+		"LogDate" : "2018-08-26 15:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010951,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 15:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010950,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010949,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 15:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010948,
+		"CurrentTemp" : 25.6875,
+		"LogDate" : "2018-08-26 15:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010947,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010946,
+		"CurrentTemp" : 25.6875,
+		"LogDate" : "2018-08-26 15:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010945,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010944,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 15:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010943,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 15:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010942,
+		"CurrentTemp" : 24.125,
+		"LogDate" : "2018-08-26 15:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010941,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 15:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010940,
+		"CurrentTemp" : 25.3125,
+		"LogDate" : "2018-08-26 15:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010939,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 15:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010938,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 15:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010937,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 15:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010936,
+		"CurrentTemp" : 23.9375,
+		"LogDate" : "2018-08-26 15:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010935,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 15:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010934,
+		"CurrentTemp" : 25.125,
+		"LogDate" : "2018-08-26 15:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010933,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 15:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010932,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 15:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010931,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 15:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010930,
+		"CurrentTemp" : 24.75,
+		"LogDate" : "2018-08-26 15:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010929,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 15:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010928,
+		"CurrentTemp" : 24.9375,
+		"LogDate" : "2018-08-26 15:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010927,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 15:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010926,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 15:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010925,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 15:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010924,
+		"CurrentTemp" : 25.1875,
+		"LogDate" : "2018-08-26 15:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010923,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 15:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010922,
+		"CurrentTemp" : 24.875,
+		"LogDate" : "2018-08-26 14:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010921,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 14:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010920,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 14:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010919,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-26 14:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010918,
+		"CurrentTemp" : 24.8125,
+		"LogDate" : "2018-08-26 14:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010917,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 14:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010916,
+		"CurrentTemp" : 24.5,
+		"LogDate" : "2018-08-26 14:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010915,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 14:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010914,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 14:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010913,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 14:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010912,
+		"CurrentTemp" : 24.3125,
+		"LogDate" : "2018-08-26 14:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010911,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 14:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010910,
+		"CurrentTemp" : 23.9375,
+		"LogDate" : "2018-08-26 14:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010909,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 14:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010908,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 14:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010907,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 14:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010906,
+		"CurrentTemp" : 24.5625,
+		"LogDate" : "2018-08-26 14:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010905,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 14:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010904,
+		"CurrentTemp" : 24.5,
+		"LogDate" : "2018-08-26 14:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010903,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 14:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010902,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 14:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010901,
+		"CurrentTemp" : 25.25,
+		"LogDate" : "2018-08-26 14:22:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010900,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 14:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010899,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 14:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010898,
+		"CurrentTemp" : 25.8125,
+		"LogDate" : "2018-08-26 14:17:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010897,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 14:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010896,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 14:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010895,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 14:12:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010894,
+		"CurrentTemp" : 24.625,
+		"LogDate" : "2018-08-26 14:12:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010893,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 14:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010892,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 14:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010891,
+		"CurrentTemp" : 24.4375,
+		"LogDate" : "2018-08-26 14:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010890,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 14:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010889,
+		"CurrentTemp" : 23.5,
+		"LogDate" : "2018-08-26 14:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010888,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 14:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010887,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 14:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010886,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 13:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010885,
+		"CurrentTemp" : 24,
+		"LogDate" : "2018-08-26 13:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010884,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 13:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010883,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 13:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010882,
+		"CurrentTemp" : 23.75,
+		"LogDate" : "2018-08-26 13:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010881,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 13:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010880,
+		"CurrentTemp" : 24.375,
+		"LogDate" : "2018-08-26 13:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010879,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010878,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 13:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010877,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 13:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010876,
+		"CurrentTemp" : 24.6875,
+		"LogDate" : "2018-08-26 13:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010875,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010874,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 13:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010873,
+		"CurrentTemp" : 24.875,
+		"LogDate" : "2018-08-26 13:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010872,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010871,
+		"CurrentTemp" : 23.4375,
+		"LogDate" : "2018-08-26 13:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010870,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 13:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010869,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 13:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010868,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 13:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010867,
+		"CurrentTemp" : 23.5,
+		"LogDate" : "2018-08-26 13:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010866,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 13:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010865,
+		"CurrentTemp" : 24,
+		"LogDate" : "2018-08-26 13:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010864,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010863,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 13:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010862,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 13:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010861,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-26 13:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010860,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 13:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010859,
+		"CurrentTemp" : 24.0625,
+		"LogDate" : "2018-08-26 13:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010858,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 13:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010857,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 13:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010856,
+		"CurrentTemp" : 24.125,
+		"LogDate" : "2018-08-26 13:07:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010855,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010854,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 13:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010853,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 13:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010852,
+		"CurrentTemp" : 24.375,
+		"LogDate" : "2018-08-26 13:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010851,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 13:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010850,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 12:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010849,
+		"CurrentTemp" : 22.5,
+		"LogDate" : "2018-08-26 12:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010848,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 12:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010847,
+		"CurrentTemp" : 23.375,
+		"LogDate" : "2018-08-26 12:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010846,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 12:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010845,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 12:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010844,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 12:47:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010843,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 12:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010842,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 12:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010841,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 12:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010840,
+		"CurrentTemp" : 27.6875,
+		"LogDate" : "2018-08-26 12:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010839,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 12:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010838,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 12:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010837,
+		"CurrentTemp" : 27.25,
+		"LogDate" : "2018-08-26 12:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010836,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 12:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010835,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 12:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010834,
+		"CurrentTemp" : 30.3125,
+		"LogDate" : "2018-08-26 12:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010833,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 12:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010832,
+		"CurrentTemp" : 30.5625,
+		"LogDate" : "2018-08-26 12:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010831,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 12:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010830,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010829,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:22:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010828,
+		"CurrentTemp" : 29.4375,
+		"LogDate" : "2018-08-26 12:22:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010827,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 12:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010826,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010825,
+		"CurrentTemp" : 25.625,
+		"LogDate" : "2018-08-26 12:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010824,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 12:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010823,
+		"CurrentTemp" : 29.5625,
+		"LogDate" : "2018-08-26 12:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010822,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 12:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010821,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010820,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010819,
+		"CurrentTemp" : 26.5,
+		"LogDate" : "2018-08-26 12:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010818,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 12:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010817,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 12:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010816,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 12:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010815,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 12:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010814,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 11:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010813,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 11:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010812,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 11:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010811,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 11:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010810,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 11:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010809,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 11:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010808,
+		"CurrentTemp" : 19.75,
+		"LogDate" : "2018-08-26 11:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010807,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 11:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010806,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 11:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010805,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010804,
+		"CurrentTemp" : 20.0625,
+		"LogDate" : "2018-08-26 11:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010803,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010802,
+		"CurrentTemp" : 19.875,
+		"LogDate" : "2018-08-26 11:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010801,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010800,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010799,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010798,
+		"CurrentTemp" : 19.375,
+		"LogDate" : "2018-08-26 11:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010797,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 11:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010796,
+		"CurrentTemp" : 19,
+		"LogDate" : "2018-08-26 11:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010795,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010794,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010793,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:22:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010792,
+		"CurrentTemp" : 18.875,
+		"LogDate" : "2018-08-26 11:22:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010791,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010790,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 11:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010789,
+		"CurrentTemp" : 18.9375,
+		"LogDate" : "2018-08-26 11:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010788,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010787,
+		"CurrentTemp" : 18.25,
+		"LogDate" : "2018-08-26 11:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010786,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010785,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 11:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010784,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 11:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010783,
+		"CurrentTemp" : 18.375,
+		"LogDate" : "2018-08-26 11:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010782,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010781,
+		"CurrentTemp" : 17.75,
+		"LogDate" : "2018-08-26 11:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010780,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 11:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010779,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 11:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010778,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010777,
+		"CurrentTemp" : 17.8125,
+		"LogDate" : "2018-08-26 10:56:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010776,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010775,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:52:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010774,
+		"CurrentTemp" : 17.625,
+		"LogDate" : "2018-08-26 10:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010773,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 10:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010772,
+		"CurrentTemp" : 17,
+		"LogDate" : "2018-08-26 10:46:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010771,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010770,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010769,
+		"CurrentTemp" : 17,
+		"LogDate" : "2018-08-26 10:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010768,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010767,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 10:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010766,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010765,
+		"CurrentTemp" : 16.625,
+		"LogDate" : "2018-08-26 10:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010764,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010763,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010762,
+		"CurrentTemp" : 16,
+		"LogDate" : "2018-08-26 10:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010761,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010760,
+		"CurrentTemp" : 16,
+		"LogDate" : "2018-08-26 10:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010759,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010758,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010757,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010756,
+		"CurrentTemp" : 16.125,
+		"LogDate" : "2018-08-26 10:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010755,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 10:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010754,
+		"CurrentTemp" : 15.4375,
+		"LogDate" : "2018-08-26 10:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010753,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010752,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010751,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010750,
+		"CurrentTemp" : 14.8125,
+		"LogDate" : "2018-08-26 10:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010749,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010748,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010747,
+		"CurrentTemp" : 14.6875,
+		"LogDate" : "2018-08-26 10:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010746,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 10:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010745,
+		"CurrentTemp" : 14.375,
+		"LogDate" : "2018-08-26 10:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010744,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 10:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010743,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 10:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010742,
+		"CurrentTemp" : 14.3125,
+		"LogDate" : "2018-08-26 09:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010741,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 09:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010740,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010739,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:52:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010738,
+		"CurrentTemp" : 13.875,
+		"LogDate" : "2018-08-26 09:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010737,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 09:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010736,
+		"CurrentTemp" : 13.6875,
+		"LogDate" : "2018-08-26 09:46:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010735,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 09:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010734,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010733,
+		"CurrentTemp" : 13.4375,
+		"LogDate" : "2018-08-26 09:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010732,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 09:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010731,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010730,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010729,
+		"CurrentTemp" : 13.125,
+		"LogDate" : "2018-08-26 09:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010728,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 09:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010727,
+		"CurrentTemp" : 13,
+		"LogDate" : "2018-08-26 09:31:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010726,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 09:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010725,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010724,
+		"CurrentTemp" : 12.6875,
+		"LogDate" : "2018-08-26 09:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010723,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 09:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010722,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010721,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 09:22:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010720,
+		"CurrentTemp" : 12.4375,
+		"LogDate" : "2018-08-26 09:22:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010719,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 09:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010718,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 09:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010717,
+		"CurrentTemp" : 12.5,
+		"LogDate" : "2018-08-26 09:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010716,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 09:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010715,
+		"CurrentTemp" : 12.75,
+		"LogDate" : "2018-08-26 09:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010714,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 09:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010713,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 09:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010712,
+		"CurrentTemp" : 12.0625,
+		"LogDate" : "2018-08-26 09:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010711,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 09:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010710,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 09:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010709,
+		"CurrentTemp" : 11.9375,
+		"LogDate" : "2018-08-26 09:02:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010708,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 09:02:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010707,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 09:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010706,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010705,
+		"CurrentTemp" : 11.625,
+		"LogDate" : "2018-08-26 08:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010704,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 08:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010703,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010702,
+		"CurrentTemp" : 12.0625,
+		"LogDate" : "2018-08-26 08:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010701,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 08:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010700,
+		"CurrentTemp" : 11.9375,
+		"LogDate" : "2018-08-26 08:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010699,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 08:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010698,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010697,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 08:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010696,
+		"CurrentTemp" : 11.4375,
+		"LogDate" : "2018-08-26 08:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010695,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 08:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010694,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010693,
+		"CurrentTemp" : 11.3125,
+		"LogDate" : "2018-08-26 08:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010692,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 08:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010691,
+		"CurrentTemp" : 11.1875,
+		"LogDate" : "2018-08-26 08:31:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010690,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 08:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010689,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010688,
+		"CurrentTemp" : 11.0625,
+		"LogDate" : "2018-08-26 08:27:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010687,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 08:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010686,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010685,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010684,
+		"CurrentTemp" : 10.9375,
+		"LogDate" : "2018-08-26 08:21:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010683,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 08:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010682,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 08:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010681,
+		"CurrentTemp" : 10.8125,
+		"LogDate" : "2018-08-26 08:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010680,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 08:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010679,
+		"CurrentTemp" : 10.6875,
+		"LogDate" : "2018-08-26 08:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010678,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 08:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010677,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 08:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010676,
+		"CurrentTemp" : 10.625,
+		"LogDate" : "2018-08-26 08:07:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010675,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 08:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010674,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 08:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010673,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 08:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010672,
+		"CurrentTemp" : 10.5625,
+		"LogDate" : "2018-08-26 08:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010671,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 08:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010670,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 07:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010669,
+		"CurrentTemp" : 10.625,
+		"LogDate" : "2018-08-26 07:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010668,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 07:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010667,
+		"CurrentTemp" : 10.5,
+		"LogDate" : "2018-08-26 07:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010666,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 07:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010665,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 07:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010664,
+		"CurrentTemp" : 10.4375,
+		"LogDate" : "2018-08-26 07:47:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010663,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 07:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010662,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 07:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010661,
+		"CurrentTemp" : 20.25,
+		"LogDate" : "2018-08-26 07:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010660,
+		"CurrentTemp" : 10,
+		"LogDate" : "2018-08-26 07:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010659,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 07:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010658,
+		"CurrentTemp" : 9.875,
+		"LogDate" : "2018-08-26 07:36:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010657,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 07:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010656,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 07:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010655,
+		"CurrentTemp" : 9.8125,
+		"LogDate" : "2018-08-26 07:32:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010654,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 07:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010653,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 07:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010652,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010651,
+		"CurrentTemp" : 9.625,
+		"LogDate" : "2018-08-26 07:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010650,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 07:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010649,
+		"CurrentTemp" : 9.5625,
+		"LogDate" : "2018-08-26 07:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010648,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 07:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010647,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010646,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010645,
+		"CurrentTemp" : 9.4375,
+		"LogDate" : "2018-08-26 07:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010644,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 07:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010643,
+		"CurrentTemp" : 9.5625,
+		"LogDate" : "2018-08-26 07:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010642,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010641,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010640,
+		"CurrentTemp" : 9.5,
+		"LogDate" : "2018-08-26 07:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010639,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 07:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010638,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 07:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010637,
+		"CurrentTemp" : 9.375,
+		"LogDate" : "2018-08-26 07:02:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010636,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 07:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010635,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 07:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010634,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 06:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010633,
+		"CurrentTemp" : 9.375,
+		"LogDate" : "2018-08-26 06:56:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010632,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010631,
+		"CurrentTemp" : 9.5625,
+		"LogDate" : "2018-08-26 06:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010630,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010629,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 06:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010628,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 06:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010627,
+		"CurrentTemp" : 9.625,
+		"LogDate" : "2018-08-26 06:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010626,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010625,
+		"CurrentTemp" : 9.6875,
+		"LogDate" : "2018-08-26 06:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010624,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 06:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010623,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 06:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010622,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010621,
+		"CurrentTemp" : 9.625,
+		"LogDate" : "2018-08-26 06:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010620,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 06:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010619,
+		"CurrentTemp" : 9.75,
+		"LogDate" : "2018-08-26 06:31:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010618,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 06:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010617,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 06:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010616,
+		"CurrentTemp" : 9.625,
+		"LogDate" : "2018-08-26 06:27:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010615,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 06:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010614,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010613,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010612,
+		"CurrentTemp" : 9.75,
+		"LogDate" : "2018-08-26 06:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010611,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 06:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010610,
+		"CurrentTemp" : 9.9375,
+		"LogDate" : "2018-08-26 06:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010609,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 06:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010608,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010607,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010606,
+		"CurrentTemp" : 9.875,
+		"LogDate" : "2018-08-26 06:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010605,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-26 06:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010604,
+		"CurrentTemp" : 9.8125,
+		"LogDate" : "2018-08-26 06:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010603,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 06:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010602,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010601,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 06:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010600,
+		"CurrentTemp" : 10,
+		"LogDate" : "2018-08-26 06:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010599,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 06:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010598,
+		"CurrentTemp" : 10,
+		"LogDate" : "2018-08-26 05:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010597,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 05:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010596,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 05:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010595,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 05:52:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010594,
+		"CurrentTemp" : 10,
+		"LogDate" : "2018-08-26 05:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010593,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 05:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010592,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 05:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010591,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 05:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010590,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 05:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010589,
+		"CurrentTemp" : 9.9375,
+		"LogDate" : "2018-08-26 05:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010588,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-26 05:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010587,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010586,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 05:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010585,
+		"CurrentTemp" : 10,
+		"LogDate" : "2018-08-26 05:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010584,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 05:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010583,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 05:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010582,
+		"CurrentTemp" : 20.9375,
+		"LogDate" : "2018-08-26 05:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010581,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010580,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010579,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 05:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010578,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 05:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010577,
+		"CurrentTemp" : 10.25,
+		"LogDate" : "2018-08-26 05:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010576,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 05:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010575,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010574,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010573,
+		"CurrentTemp" : 10.1875,
+		"LogDate" : "2018-08-26 05:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010572,
+		"CurrentTemp" : 21,
+		"LogDate" : "2018-08-26 05:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010571,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 05:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010570,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 05:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010569,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010568,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010567,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 05:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010566,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 05:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010565,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 05:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010564,
+		"CurrentTemp" : 10.3125,
+		"LogDate" : "2018-08-26 05:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010563,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-26 05:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010562,
+		"CurrentTemp" : 10.4375,
+		"LogDate" : "2018-08-26 04:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010561,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 04:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010560,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 04:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010559,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010558,
+		"CurrentTemp" : 10.4375,
+		"LogDate" : "2018-08-26 04:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010557,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 04:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010556,
+		"CurrentTemp" : 10.0625,
+		"LogDate" : "2018-08-26 04:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010555,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-26 04:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010554,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010553,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010552,
+		"CurrentTemp" : 10.3125,
+		"LogDate" : "2018-08-26 04:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010551,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 04:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010550,
+		"CurrentTemp" : 10.1875,
+		"LogDate" : "2018-08-26 04:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010549,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 04:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010548,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 04:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010547,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 04:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010546,
+		"CurrentTemp" : 10.1875,
+		"LogDate" : "2018-08-26 04:31:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010545,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 04:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010544,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 04:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010543,
+		"CurrentTemp" : 10.125,
+		"LogDate" : "2018-08-26 04:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010542,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 04:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010541,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010540,
+		"CurrentTemp" : 10.1875,
+		"LogDate" : "2018-08-26 04:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010539,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 04:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010538,
+		"CurrentTemp" : 10.25,
+		"LogDate" : "2018-08-26 04:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010537,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-26 04:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010536,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010535,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 04:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010534,
+		"CurrentTemp" : 10.5,
+		"LogDate" : "2018-08-26 04:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010533,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 04:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010532,
+		"CurrentTemp" : 10.5625,
+		"LogDate" : "2018-08-26 04:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010531,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-26 04:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010530,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 04:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010529,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 04:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010528,
+		"CurrentTemp" : 10.625,
+		"LogDate" : "2018-08-26 04:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010527,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 04:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010526,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010525,
+		"CurrentTemp" : 10.625,
+		"LogDate" : "2018-08-26 03:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010524,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 03:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010523,
+		"CurrentTemp" : 10.6875,
+		"LogDate" : "2018-08-26 03:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010522,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-26 03:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010521,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010520,
+		"CurrentTemp" : 10.875,
+		"LogDate" : "2018-08-26 03:47:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010519,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 03:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010518,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010517,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010516,
+		"CurrentTemp" : 10.875,
+		"LogDate" : "2018-08-26 03:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010515,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-26 03:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010514,
+		"CurrentTemp" : 10.9375,
+		"LogDate" : "2018-08-26 03:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010513,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 03:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010512,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 03:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010511,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010510,
+		"CurrentTemp" : 11.0625,
+		"LogDate" : "2018-08-26 03:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010509,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 03:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010508,
+		"CurrentTemp" : 11.125,
+		"LogDate" : "2018-08-26 03:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010507,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 03:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010506,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010505,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010504,
+		"CurrentTemp" : 11.0625,
+		"LogDate" : "2018-08-26 03:21:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010503,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-26 03:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010502,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010501,
+		"CurrentTemp" : 11.125,
+		"LogDate" : "2018-08-26 03:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010500,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-26 03:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010499,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010498,
+		"CurrentTemp" : 11.1875,
+		"LogDate" : "2018-08-26 03:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010497,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 03:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010496,
+		"CurrentTemp" : 11.3125,
+		"LogDate" : "2018-08-26 03:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010495,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 03:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010494,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010493,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 03:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010492,
+		"CurrentTemp" : 11.375,
+		"LogDate" : "2018-08-26 03:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010491,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-26 03:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010490,
+		"CurrentTemp" : 20.75,
+		"LogDate" : "2018-08-26 02:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010489,
+		"CurrentTemp" : 11.3125,
+		"LogDate" : "2018-08-26 02:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010488,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 02:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010487,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010486,
+		"CurrentTemp" : 11.375,
+		"LogDate" : "2018-08-26 02:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010485,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 02:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010484,
+		"CurrentTemp" : 11.5,
+		"LogDate" : "2018-08-26 02:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010483,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 02:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010482,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010481,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010480,
+		"CurrentTemp" : 11.5625,
+		"LogDate" : "2018-08-26 02:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010479,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-26 02:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010478,
+		"CurrentTemp" : 11.5,
+		"LogDate" : "2018-08-26 02:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010477,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 02:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010476,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010475,
+		"CurrentTemp" : 11.375,
+		"LogDate" : "2018-08-26 02:32:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010474,
+		"CurrentTemp" : 21.75,
+		"LogDate" : "2018-08-26 02:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010473,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010472,
+		"CurrentTemp" : 11.4375,
+		"LogDate" : "2018-08-26 02:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010471,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 02:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010470,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010469,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010468,
+		"CurrentTemp" : 11.5625,
+		"LogDate" : "2018-08-26 02:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010467,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 02:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010466,
+		"CurrentTemp" : 11.75,
+		"LogDate" : "2018-08-26 02:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010465,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 02:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010464,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010463,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 02:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010462,
+		"CurrentTemp" : 11.6875,
+		"LogDate" : "2018-08-26 02:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010461,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-26 02:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010460,
+		"CurrentTemp" : 11.75,
+		"LogDate" : "2018-08-26 02:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010459,
+		"CurrentTemp" : 21.8125,
+		"LogDate" : "2018-08-26 02:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010458,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 02:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010457,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 02:02:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010456,
+		"CurrentTemp" : 11.8125,
+		"LogDate" : "2018-08-26 02:02:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010455,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-26 02:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010454,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 01:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010453,
+		"CurrentTemp" : 11.8125,
+		"LogDate" : "2018-08-26 01:56:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010452,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 01:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010451,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 01:52:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010450,
+		"CurrentTemp" : 11.9375,
+		"LogDate" : "2018-08-26 01:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010449,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 01:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010448,
+		"CurrentTemp" : 12,
+		"LogDate" : "2018-08-26 01:46:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010447,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 01:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010446,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 01:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010445,
+		"CurrentTemp" : 12,
+		"LogDate" : "2018-08-26 01:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010444,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 01:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010443,
+		"CurrentTemp" : 20.125,
+		"LogDate" : "2018-08-26 01:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010442,
+		"CurrentTemp" : 20.1875,
+		"LogDate" : "2018-08-26 01:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010441,
+		"CurrentTemp" : 12.0625,
+		"LogDate" : "2018-08-26 01:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010440,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 01:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010439,
+		"CurrentTemp" : 19.9375,
+		"LogDate" : "2018-08-26 01:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010438,
+		"CurrentTemp" : 12.0625,
+		"LogDate" : "2018-08-26 01:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010437,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 01:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010436,
+		"CurrentTemp" : 12.125,
+		"LogDate" : "2018-08-26 01:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010435,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 01:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010434,
+		"CurrentTemp" : 20,
+		"LogDate" : "2018-08-26 01:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010433,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-26 01:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010432,
+		"CurrentTemp" : 12.125,
+		"LogDate" : "2018-08-26 01:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010431,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 01:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010430,
+		"CurrentTemp" : 12.25,
+		"LogDate" : "2018-08-26 01:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010429,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 01:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010428,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 01:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010427,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 01:12:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010426,
+		"CurrentTemp" : 12.125,
+		"LogDate" : "2018-08-26 01:12:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010425,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-26 01:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010424,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 01:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010423,
+		"CurrentTemp" : 12.375,
+		"LogDate" : "2018-08-26 01:06:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010422,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-26 01:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010421,
+		"CurrentTemp" : 12.3125,
+		"LogDate" : "2018-08-26 01:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010420,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 01:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010419,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 01:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010418,
+		"CurrentTemp" : 20.25,
+		"LogDate" : "2018-08-26 00:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010417,
+		"CurrentTemp" : 12.375,
+		"LogDate" : "2018-08-26 00:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010416,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 00:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010415,
+		"CurrentTemp" : 20,
+		"LogDate" : "2018-08-26 00:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010414,
+		"CurrentTemp" : 12.375,
+		"LogDate" : "2018-08-26 00:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010413,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010412,
+		"CurrentTemp" : 19.8125,
+		"LogDate" : "2018-08-26 00:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010411,
+		"CurrentTemp" : 12.375,
+		"LogDate" : "2018-08-26 00:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010410,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 00:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010409,
+		"CurrentTemp" : 12.3125,
+		"LogDate" : "2018-08-26 00:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010408,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010407,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 00:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010406,
+		"CurrentTemp" : 12.5,
+		"LogDate" : "2018-08-26 00:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010405,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 00:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010404,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 00:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010403,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-26 00:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010402,
+		"CurrentTemp" : 12.4375,
+		"LogDate" : "2018-08-26 00:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010401,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010400,
+		"CurrentTemp" : 12.5,
+		"LogDate" : "2018-08-26 00:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010399,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010398,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 00:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010397,
+		"CurrentTemp" : 12.5,
+		"LogDate" : "2018-08-26 00:22:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010396,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010395,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-26 00:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010394,
+		"CurrentTemp" : 12.5625,
+		"LogDate" : "2018-08-26 00:17:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010393,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010392,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-26 00:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010391,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-26 00:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010390,
+		"CurrentTemp" : 12.6875,
+		"LogDate" : "2018-08-26 00:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010389,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010388,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-26 00:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010387,
+		"CurrentTemp" : 12.75,
+		"LogDate" : "2018-08-26 00:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010386,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-26 00:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010385,
+		"CurrentTemp" : 12.6875,
+		"LogDate" : "2018-08-26 00:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010384,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-26 00:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010383,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-26 00:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010382,
+		"CurrentTemp" : 12.6875,
+		"LogDate" : "2018-08-25 23:57:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010381,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 23:56:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010380,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-25 23:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010379,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-25 23:52:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010378,
+		"CurrentTemp" : 12.75,
+		"LogDate" : "2018-08-25 23:52:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010377,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 23:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010376,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-25 23:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010375,
+		"CurrentTemp" : 12.75,
+		"LogDate" : "2018-08-25 23:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010374,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 23:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010373,
+		"CurrentTemp" : 12.75,
+		"LogDate" : "2018-08-25 23:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010372,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 23:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010371,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-25 23:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010370,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-25 23:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010369,
+		"CurrentTemp" : 12.875,
+		"LogDate" : "2018-08-25 23:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010368,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 23:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010367,
+		"CurrentTemp" : 12.9375,
+		"LogDate" : "2018-08-25 23:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010366,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 23:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010365,
+		"CurrentTemp" : 20.875,
+		"LogDate" : "2018-08-25 23:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010364,
+		"CurrentTemp" : 12.875,
+		"LogDate" : "2018-08-25 23:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010363,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-25 23:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010362,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-25 23:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010361,
+		"CurrentTemp" : 12.8125,
+		"LogDate" : "2018-08-25 23:22:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010360,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-25 23:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010359,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-25 23:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010358,
+		"CurrentTemp" : 20.3125,
+		"LogDate" : "2018-08-25 23:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010357,
+		"CurrentTemp" : 12.8125,
+		"LogDate" : "2018-08-25 23:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010356,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-25 23:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010355,
+		"CurrentTemp" : 20.125,
+		"LogDate" : "2018-08-25 23:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010354,
+		"CurrentTemp" : 12.875,
+		"LogDate" : "2018-08-25 23:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010353,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-25 23:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010352,
+		"CurrentTemp" : 12.875,
+		"LogDate" : "2018-08-25 23:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010351,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 23:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010350,
+		"CurrentTemp" : 20.25,
+		"LogDate" : "2018-08-25 23:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010349,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-25 23:02:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010348,
+		"CurrentTemp" : 13.0625,
+		"LogDate" : "2018-08-25 23:02:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010347,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 23:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010346,
+		"CurrentTemp" : 20.625,
+		"LogDate" : "2018-08-25 22:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010345,
+		"CurrentTemp" : 13,
+		"LogDate" : "2018-08-25 22:56:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010344,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 22:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010343,
+		"CurrentTemp" : 13,
+		"LogDate" : "2018-08-25 22:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010342,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 22:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010341,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-25 22:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010340,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-25 22:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010339,
+		"CurrentTemp" : 12.9375,
+		"LogDate" : "2018-08-25 22:46:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010338,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 22:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010337,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-25 22:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010336,
+		"CurrentTemp" : 13.0625,
+		"LogDate" : "2018-08-25 22:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010335,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 22:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010334,
+		"CurrentTemp" : 13.1875,
+		"LogDate" : "2018-08-25 22:36:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010333,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 22:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010332,
+		"CurrentTemp" : 20.375,
+		"LogDate" : "2018-08-25 22:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010331,
+		"CurrentTemp" : 13.3125,
+		"LogDate" : "2018-08-25 22:32:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010330,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 22:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010329,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-25 22:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010328,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-25 22:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010327,
+		"CurrentTemp" : 13.1875,
+		"LogDate" : "2018-08-25 22:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010326,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 22:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010325,
+		"CurrentTemp" : 20.4375,
+		"LogDate" : "2018-08-25 22:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010324,
+		"CurrentTemp" : 13.3125,
+		"LogDate" : "2018-08-25 22:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010323,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 22:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010322,
+		"CurrentTemp" : 13.5625,
+		"LogDate" : "2018-08-25 22:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010321,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 22:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010320,
+		"CurrentTemp" : 20.5,
+		"LogDate" : "2018-08-25 22:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010319,
+		"CurrentTemp" : 20.6875,
+		"LogDate" : "2018-08-25 22:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010318,
+		"CurrentTemp" : 13.5625,
+		"LogDate" : "2018-08-25 22:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010317,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 22:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010316,
+		"CurrentTemp" : 20.5625,
+		"LogDate" : "2018-08-25 22:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010315,
+		"CurrentTemp" : 13.6875,
+		"LogDate" : "2018-08-25 22:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010314,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 22:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010313,
+		"CurrentTemp" : 13.75,
+		"LogDate" : "2018-08-25 22:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010312,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 22:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010311,
+		"CurrentTemp" : 20.8125,
+		"LogDate" : "2018-08-25 22:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010310,
+		"CurrentTemp" : 13.8125,
+		"LogDate" : "2018-08-25 21:57:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010309,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 21:56:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010308,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-25 21:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010307,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-25 21:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010306,
+		"CurrentTemp" : 13.75,
+		"LogDate" : "2018-08-25 21:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010305,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 21:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010304,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 21:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010303,
+		"CurrentTemp" : 13.8125,
+		"LogDate" : "2018-08-25 21:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010302,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 21:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010301,
+		"CurrentTemp" : 13.8125,
+		"LogDate" : "2018-08-25 21:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010300,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 21:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010299,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 21:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010298,
+		"CurrentTemp" : 13.875,
+		"LogDate" : "2018-08-25 21:37:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010297,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 21:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010296,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 21:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010295,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 21:32:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010294,
+		"CurrentTemp" : 14,
+		"LogDate" : "2018-08-25 21:32:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010293,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 21:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010292,
+		"CurrentTemp" : 14.1875,
+		"LogDate" : "2018-08-25 21:26:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010291,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 21:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010290,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 21:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010289,
+		"CurrentTemp" : 14.3125,
+		"LogDate" : "2018-08-25 21:22:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010288,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 21:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010287,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 21:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010286,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 21:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010285,
+		"CurrentTemp" : 14.3125,
+		"LogDate" : "2018-08-25 21:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010284,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 21:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010283,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 21:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010282,
+		"CurrentTemp" : 14.375,
+		"LogDate" : "2018-08-25 21:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010281,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 21:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010280,
+		"CurrentTemp" : 14.4375,
+		"LogDate" : "2018-08-25 21:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010279,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 21:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010278,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 21:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010277,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 21:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010276,
+		"CurrentTemp" : 14.5,
+		"LogDate" : "2018-08-25 21:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010275,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 21:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010274,
+		"CurrentTemp" : 14.75,
+		"LogDate" : "2018-08-25 20:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010273,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 20:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010272,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 20:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010271,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 20:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010270,
+		"CurrentTemp" : 14.75,
+		"LogDate" : "2018-08-25 20:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010269,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010268,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 20:47:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010267,
+		"CurrentTemp" : 14.75,
+		"LogDate" : "2018-08-25 20:47:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010266,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 20:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010265,
+		"CurrentTemp" : 15.0625,
+		"LogDate" : "2018-08-25 20:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010264,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:41:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010263,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 20:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010262,
+		"CurrentTemp" : 15.3125,
+		"LogDate" : "2018-08-25 20:37:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010261,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010260,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-25 20:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010259,
+		"CurrentTemp" : 21.0625,
+		"LogDate" : "2018-08-25 20:32:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010258,
+		"CurrentTemp" : 15.375,
+		"LogDate" : "2018-08-25 20:32:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010257,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010256,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 20:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010255,
+		"CurrentTemp" : 15.625,
+		"LogDate" : "2018-08-25 20:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010254,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 20:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010253,
+		"CurrentTemp" : 15.75,
+		"LogDate" : "2018-08-25 20:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010252,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:21:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010251,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-25 20:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010250,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-25 20:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010249,
+		"CurrentTemp" : 15.8125,
+		"LogDate" : "2018-08-25 20:16:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010248,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010247,
+		"CurrentTemp" : 15.9375,
+		"LogDate" : "2018-08-25 20:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010246,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 20:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010245,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-25 20:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010244,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-25 20:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010243,
+		"CurrentTemp" : 16.0625,
+		"LogDate" : "2018-08-25 20:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010242,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 20:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010241,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 20:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010240,
+		"CurrentTemp" : 16.3125,
+		"LogDate" : "2018-08-25 20:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010239,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 20:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010238,
+		"CurrentTemp" : 16.5625,
+		"LogDate" : "2018-08-25 19:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010237,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 19:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010236,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 19:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010235,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-25 19:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010234,
+		"CurrentTemp" : 16.5,
+		"LogDate" : "2018-08-25 19:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010233,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010232,
+		"CurrentTemp" : 16.5625,
+		"LogDate" : "2018-08-25 19:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010231,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 19:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010230,
+		"CurrentTemp" : 21.125,
+		"LogDate" : "2018-08-25 19:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010229,
+		"CurrentTemp" : 21.25,
+		"LogDate" : "2018-08-25 19:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010228,
+		"CurrentTemp" : 16.6875,
+		"LogDate" : "2018-08-25 19:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010227,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 19:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010226,
+		"CurrentTemp" : 16.75,
+		"LogDate" : "2018-08-25 19:36:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010225,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010224,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-25 19:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010223,
+		"CurrentTemp" : 16.9375,
+		"LogDate" : "2018-08-25 19:32:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010222,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010221,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-25 19:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010220,
+		"CurrentTemp" : 21.1875,
+		"LogDate" : "2018-08-25 19:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010219,
+		"CurrentTemp" : 16.6875,
+		"LogDate" : "2018-08-25 19:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010218,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 19:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010217,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 19:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010216,
+		"CurrentTemp" : 16.8125,
+		"LogDate" : "2018-08-25 19:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010215,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 19:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010214,
+		"CurrentTemp" : 16.75,
+		"LogDate" : "2018-08-25 19:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010213,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010212,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 19:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010211,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 19:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010210,
+		"CurrentTemp" : 16.8125,
+		"LogDate" : "2018-08-25 19:11:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010209,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 19:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010208,
+		"CurrentTemp" : 17.0625,
+		"LogDate" : "2018-08-25 19:07:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010207,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:06:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010206,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 19:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010205,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 19:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010204,
+		"CurrentTemp" : 17.3125,
+		"LogDate" : "2018-08-25 19:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010203,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 19:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010202,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 18:57:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010201,
+		"CurrentTemp" : 16.75,
+		"LogDate" : "2018-08-25 18:57:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010200,
+		"CurrentTemp" : 22.1875,
+		"LogDate" : "2018-08-25 18:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010199,
+		"CurrentTemp" : 17.0625,
+		"LogDate" : "2018-08-25 18:51:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010198,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:51:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010197,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010196,
+		"CurrentTemp" : 17.125,
+		"LogDate" : "2018-08-25 18:47:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010195,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 18:46:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010194,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 18:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010193,
+		"CurrentTemp" : 21.375,
+		"LogDate" : "2018-08-25 18:42:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010192,
+		"CurrentTemp" : 16.75,
+		"LogDate" : "2018-08-25 18:42:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010191,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010190,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 18:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010189,
+		"CurrentTemp" : 16.75,
+		"LogDate" : "2018-08-25 18:36:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010188,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 18:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010187,
+		"CurrentTemp" : 16.625,
+		"LogDate" : "2018-08-25 18:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010186,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 18:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010185,
+		"CurrentTemp" : 21.3125,
+		"LogDate" : "2018-08-25 18:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010184,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:27:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010183,
+		"CurrentTemp" : 17.125,
+		"LogDate" : "2018-08-25 18:27:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010182,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010181,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010180,
+		"CurrentTemp" : 17.1875,
+		"LogDate" : "2018-08-25 18:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010179,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 18:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010178,
+		"CurrentTemp" : 17.375,
+		"LogDate" : "2018-08-25 18:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010177,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 18:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010176,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010175,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010174,
+		"CurrentTemp" : 17.25,
+		"LogDate" : "2018-08-25 18:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010173,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010172,
+		"CurrentTemp" : 21.4375,
+		"LogDate" : "2018-08-25 18:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010171,
+		"CurrentTemp" : 17.25,
+		"LogDate" : "2018-08-25 18:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010170,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010169,
+		"CurrentTemp" : 17.3125,
+		"LogDate" : "2018-08-25 18:01:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010168,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 18:01:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010167,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 18:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010166,
+		"CurrentTemp" : 17.5625,
+		"LogDate" : "2018-08-25 17:57:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010165,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:56:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010164,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010163,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010162,
+		"CurrentTemp" : 17.375,
+		"LogDate" : "2018-08-25 17:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010161,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010160,
+		"CurrentTemp" : 17.125,
+		"LogDate" : "2018-08-25 17:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010159,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010158,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010157,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-25 17:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010156,
+		"CurrentTemp" : 17.5,
+		"LogDate" : "2018-08-25 17:41:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010155,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010154,
+		"CurrentTemp" : 17.4375,
+		"LogDate" : "2018-08-25 17:37:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010153,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:36:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010152,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010151,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:32:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010150,
+		"CurrentTemp" : 17.125,
+		"LogDate" : "2018-08-25 17:31:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010149,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010148,
+		"CurrentTemp" : 17.25,
+		"LogDate" : "2018-08-25 17:27:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010147,
+		"CurrentTemp" : 22.375,
+		"LogDate" : "2018-08-25 17:26:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010146,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010145,
+		"CurrentTemp" : 21.5,
+		"LogDate" : "2018-08-25 17:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010144,
+		"CurrentTemp" : 17.1875,
+		"LogDate" : "2018-08-25 17:21:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010143,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 17:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010142,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-25 17:17:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010141,
+		"CurrentTemp" : 17.5,
+		"LogDate" : "2018-08-25 17:17:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010140,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 17:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010139,
+		"CurrentTemp" : 17.6875,
+		"LogDate" : "2018-08-25 17:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010138,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 17:11:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010137,
+		"CurrentTemp" : 21.5625,
+		"LogDate" : "2018-08-25 17:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010136,
+		"CurrentTemp" : 17.9375,
+		"LogDate" : "2018-08-25 17:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010135,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 17:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010134,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 17:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010133,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 17:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010132,
+		"CurrentTemp" : 18.25,
+		"LogDate" : "2018-08-25 17:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010131,
+		"CurrentTemp" : 22.25,
+		"LogDate" : "2018-08-25 17:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010130,
+		"CurrentTemp" : 18.375,
+		"LogDate" : "2018-08-25 16:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010129,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 16:56:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010128,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 16:56:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010127,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:52:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010126,
+		"CurrentTemp" : 18.6875,
+		"LogDate" : "2018-08-25 16:51:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010125,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 16:51:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010124,
+		"CurrentTemp" : 18.875,
+		"LogDate" : "2018-08-25 16:47:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010123,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 16:46:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010122,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:46:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010121,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:42:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010120,
+		"CurrentTemp" : 18.5,
+		"LogDate" : "2018-08-25 16:41:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010119,
+		"CurrentTemp" : 22.3125,
+		"LogDate" : "2018-08-25 16:41:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010118,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 16:37:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010117,
+		"CurrentTemp" : 19.0625,
+		"LogDate" : "2018-08-25 16:37:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010116,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 16:36:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010115,
+		"CurrentTemp" : 19.125,
+		"LogDate" : "2018-08-25 16:31:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010114,
+		"CurrentTemp" : 22,
+		"LogDate" : "2018-08-25 16:31:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010113,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 16:31:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010112,
+		"CurrentTemp" : 18.875,
+		"LogDate" : "2018-08-25 16:27:02",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010111,
+		"CurrentTemp" : 21.875,
+		"LogDate" : "2018-08-25 16:26:58",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010110,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 16:26:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010109,
+		"CurrentTemp" : 21.625,
+		"LogDate" : "2018-08-25 16:22:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010108,
+		"CurrentTemp" : 19.3125,
+		"LogDate" : "2018-08-25 16:21:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010107,
+		"CurrentTemp" : 21.9375,
+		"LogDate" : "2018-08-25 16:21:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010106,
+		"CurrentTemp" : 19.25,
+		"LogDate" : "2018-08-25 16:17:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010105,
+		"CurrentTemp" : 22.0625,
+		"LogDate" : "2018-08-25 16:16:57",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010104,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:16:56",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010103,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:12:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010102,
+		"CurrentTemp" : 19.5625,
+		"LogDate" : "2018-08-25 16:11:59",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010101,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 16:11:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010100,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:07:04",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010099,
+		"CurrentTemp" : 19.5625,
+		"LogDate" : "2018-08-25 16:07:00",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010098,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 16:06:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010097,
+		"CurrentTemp" : 21.6875,
+		"LogDate" : "2018-08-25 16:02:01",
+		"TargetTemp" : 0,
+		"RoomId" : 4
+	},
+	{
+		"ID" : 2010096,
+		"CurrentTemp" : 19.4375,
+		"LogDate" : "2018-08-25 16:01:58",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	},
+	{
+		"ID" : 2010095,
+		"CurrentTemp" : 22.125,
+		"LogDate" : "2018-08-25 16:01:56",
+		"TargetTemp" : 0,
+		"RoomId" : 2
+	},
+	{
+		"ID" : 2010094,
+		"CurrentTemp" : 19.8125,
+		"LogDate" : "2018-08-25 15:57:01",
+		"TargetTemp" : 0,
+		"RoomId" : 1
+	}
+]
