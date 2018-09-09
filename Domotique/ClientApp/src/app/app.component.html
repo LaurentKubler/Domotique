@@ -2,20 +2,35 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </h1>  
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<div class="container-fluid no-padding">
+  <div class="row">
+
+
+    <div *ngFor="let roomStatus of Rooms" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{roomStatus.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{roomStatus.lastTemperatureRefresh}}"> {{roomStatus.currentTemperature}}°C</span>
+        </h5>
+
+        <div class="table-responsive">
+
+          <table class="table">
+            <tr>
+              <th *ngFor="let temperature of roomStatus.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
+            </tr>
+            <tr>
+              <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.minTemp | number : '1.1-1'}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
+            </tr>
+          </table>
+          </div>
+        </div>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
