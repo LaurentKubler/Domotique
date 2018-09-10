@@ -4,13 +4,13 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Linq;
 
 namespace Domotique.Controllers
 {
     [Produces("application/json")]
     [Route("/rest/[controller]")]
-    class TempHistoryController : Controller
+    public class TempHistoryController : Controller
     {
         [HttpGet()]
         public IActionResult Get()
@@ -19,6 +19,8 @@ namespace Domotique.Controllers
             {
                 string json = r.ReadToEnd();
                 List<TemperatureLog> items = JsonConvert.DeserializeObject<List<TemperatureLog>>(json);
+                // items.Where(c => c.RoomId == 4);
+                return Ok(items);
             }
             return Ok();
         }
