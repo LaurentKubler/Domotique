@@ -66,7 +66,10 @@ namespace Domotique
                 "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";*/            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+            app.UseSpaStaticFiles(c =>
+            {
+                c.RootPath = "ClientApp/dist";
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();
@@ -74,7 +77,7 @@ namespace Domotique
             app.UseSpa(spa =>
             {
                 //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
-                spa.Options.SourcePath = "ClientApp";
+                c.RootPath = "ClientApp/dist";                
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
