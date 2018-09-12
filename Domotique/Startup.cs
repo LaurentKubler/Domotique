@@ -73,8 +73,7 @@ namespace Domotique
 
             app.UseSpa(spa =>
             {
-                //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
-                c.RootPath = "ClientApp/dist";                
+                //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";                
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
