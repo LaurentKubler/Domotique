@@ -66,10 +66,7 @@ namespace Domotique
                 "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";*/            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles(c =>
-            {
-                c.RootPath = "ClientApp/dist";
-            });
+            app.UseSpaStaticFiles();
 
             app.UseHttpsRedirection();
             app.UseMvc();
