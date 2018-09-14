@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomStatusComponent } from './room-status/room-status.component';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RoomStatusComponent } from './room-status/room-status.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    ChartModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
