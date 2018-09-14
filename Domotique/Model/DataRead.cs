@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Messages.WebMessages;
+using static Domotique.Controllers.StatusController;
 
 namespace Domotique.Model
 {
@@ -130,6 +131,84 @@ namespace Domotique.Model
             }
 
             return rooms.Values.ToList();
+        }
+
+        public IList<Graph> ReadRoomTemperaturesGraph()
+        {
+            IList<Graph> result = new List<Graph>();
+
+            Dictionary<int, RoomStatus> rooms = new Dictionary<int, RoomStatus>();
+            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
+            connection.Open();
+
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "Select * from Room;";
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    RoomStatus room = new RoomStatus()
+                    {
+                        RoomId = reader.GetInt32("ID"),
+                        RoomName = reader.GetString("Name"),
+                        //  Picture = reader.GetInt32("Picture")
+                    };
+                    rooms.Add(room.RoomId, room);
+                }
+                reader.Close();
+            }
+
+            using (var command = connection.CreateCommand())
+            {
+                foreach (var room in rooms.Values)
+                {                    
+                    command.CommandText = "SELECT CurrentTemp, LogDate " +
+                        "FROM TemperatureLog " +
+                        "INNER JOIN Room ON Room.ID = TemperatureLog.RoomId " +
+                        $"WHERE LogDate >  date_sub(now(),INTERVAL 1 WEEK) and  TemperatureLog.RoomId  = {room.RoomId}";
+
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        var graph = new Graph()
+                        {
+                            Name = room.RoomName,
+                            Data = new List<List<object>>()
+                        };
+                        while (reader.Read())
+                        {
+                            var list = new List<object>
+                            {
+                                (reader.GetDateTime(1).ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds * 1000,
+                                //list.Add(reader.GetDateTime(1).ToUniversalTime().to);
+                                reader.GetDouble(0)
+                            };
+                            graph.Data.Add(list);
+                        }
+                        var liste = new List<Point>();
+                        /*foreach (var point in graph.Data)
+                        {
+                            var x = point[0];
+                            var y = point[1];
+                            var point2 = new Point();
+                            point2.X = (long)x;
+                            point2.Y = (long)y;
+                        }*/
+                        List<Point> points = graph.Data.Select(c => new Point() { X = (double)c[0], Y = ((double)c[1]) }).ToList();
+                        List<Point> pointsreduced = DouglasPeuckerReduction(points, 0.1);
+                        graph.Data = pointsreduced.Select(p => {
+                            var list = new List<object>
+                            {
+                                p.X,
+                                p.Y
+                            }; return list; }).ToList();
+                        result.Add(graph);
+
+                    }
+                }
+            }
+
+            return result.ToList();
         }
     }
 }
