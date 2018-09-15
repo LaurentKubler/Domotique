@@ -60,10 +60,7 @@ namespace Domotique
         {
             // Start the main server
             var tmp = app.ApplicationServices.GetService<IStatusService>();
-         /*   command.CommandText = "select  RoomId, Name, min(CurrentTemp) Min, max(CurrentTemp) Max,DATE(LogDate) " +
-                "from TemperatureLog " +
-                "inner join Room on Room.ID = TemperatureLog.RoomId " +
-                "where  LogDate >  date_sub(now(),INTERVAL 1 WEEK) group by  RoomId, DATE(LogDate);";*/            
+                 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -74,32 +71,12 @@ namespace Domotique
             app.UseSpa(spa =>
             {
                 //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";                
+                spa.Options.SourcePath = "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique\\ClientApp";
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
-            });
-            /*
-                        var factory = new ConnectionFactory() { HostName = "localhost" };
-                        string queueName = "hello";
-                        using (var connection = factory.CreateConnection())
-                        using (var channel = connection.CreateModel())
-                        {
-                            channel.QueueDeclare(queue: queueName,
-                                                 durable: false,
-                                                 exclusive: false,
-                                                 autoDelete: false,
-                                                 arguments: null);
-
-                            string message = "testemessasssge";
-                            var body = Encoding.UTF8.GetBytes(message);
-
-                            channel.BasicPublish(exchange: "",
-                                                 routingKey: queueName,
-                                                 basicProperties: null,
-                                                 body: body);
-                            Console.WriteLine(" [x] Sent {0}", message);
-                        } */
+            });            
         }
     }/*  /*
         select 

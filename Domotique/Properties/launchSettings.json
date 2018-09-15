@@ -2,7 +2,7 @@
   "profiles": {
     "Domotique": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique",
+      "workingDirectory": "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

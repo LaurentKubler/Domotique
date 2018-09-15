@@ -9,7 +9,7 @@ namespace Domotique.Controllers
 
     [Produces("application/json")]
     [Route("/rest/[controller]")]
-    public class StatusController : Controller
+    public partial class StatusController : Controller
     {
         IDataRead _dataRead;
 
@@ -23,19 +23,6 @@ namespace Domotique.Controllers
         public IActionResult Get()
         {
             return Ok(_dataRead.ReadRoomTemperatures());
-        }
-
-        /// <summary>
-        /// Uses the Douglas Peucker algorithm to reduce the number of points.
-        /// </summary>
-        /// <param name="Points">The points.</param>
-        /// <param name="Tolerance">The tolerance.</param>
-        /// <returns></returns>
-
-        public class Point
-        {
-            public double X { get; set; }
-            public double Y { get; set; }
         }
 
 

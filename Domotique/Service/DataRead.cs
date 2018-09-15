@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Messages.WebMessages;
 using static Domotique.Controllers.StatusController;
+using Domotique.Controllers;
 
 namespace Domotique.Model
 {
@@ -11,13 +12,17 @@ namespace Domotique.Model
     {
         public String ReadRoomNameByProbe(String CaptorId)
         {
-            var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
-            connection.Open();
-            var command = connection.CreateCommand();
-            command.CommandText = "Select Name from Room left join Device on Device.DeviceID = Room.Captor where Device.Address = @CaptorId";
-            command.Parameters.AddWithValue("@CaptorId", CaptorId.Replace("/", String.Empty));
-            var name = command.ExecuteScalar().ToString();
-            return name;
+            using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile"))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "Select Name from Room left join Device on Device.DeviceID = Room.Captor where Device.Address = @CaptorId";
+                    command.Parameters.AddWithValue("@CaptorId", CaptorId.Replace("/", String.Empty));
+                    var name = command.ExecuteScalar().ToString();
+                    return name;
+                }
+            }
         }
 
 
@@ -185,25 +190,15 @@ namespace Domotique.Model
                             };
                             graph.Data.Add(list);
                         }
-                        var liste = new List<Point>();
-                        /*foreach (var point in graph.Data)
-                        {
-                            var x = point[0];
-                            var y = point[1];
-                            var point2 = new Point();
-                            point2.X = (long)x;
-                            point2.Y = (long)y;
-                        }*/
+                        var liste = new List<Point>();                        
                         List<Point> points = graph.Data.Select(c => new Point() { X = (double)c[0], Y = ((double)c[1]) }).ToList();
                         List<Point> pointsreduced = DouglasPeuckerReduction(points, 0.1);
-                        graph.Data = pointsreduced.Select(p => {
-                            var list = new List<object>
-                            {
-                                p.X,
-                                p.Y
-                            }; return list; }).ToList();
-                        result.Add(graph);
 
+                        graph.Data = pointsreduced
+                            .Select(p => {var list = new List<object>{p.X, p.Y }; return list; })
+                            .ToList();
+
+                        result.Add(graph);
                     }
                 }
             }
