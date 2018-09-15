@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { Chart } from 'angular-highcharts';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,43 @@ import { Http } from '@angular/http';
 export class AppComponent {
   title = 'ClientApp';
   public Rooms: RoomStatus[];
+  public chart: Chart;
   constructor(private http: Http) {
+    
     this.http.get('/rest/status').subscribe(result => {
-      this.Rooms =  result.json() as RoomStatus[];
+      this.Rooms = result.json() as RoomStatus[];
       console.warn(this.Rooms[0].roomName);
+    }, error => console.error(error));
+    this.http.get('/rest/temphistory').subscribe(result => {
+      var series = result.json() as Highcharts.SeriesOptions[];
+      this.chart = new Chart({
+        chart: {          
+          type: 'spline'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%e. %b',
+            year: '%b'
+          },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'Snow depth (m)'
+          },
+          min: 0
+        },
+        title: {
+          text: 'Linechart'
+        },
+        credits: {
+          enabled: false
+        },
+        series: series
+      });              
     }, error => console.error(error));
   }
 }

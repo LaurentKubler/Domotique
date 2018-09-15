@@ -23,7 +23,7 @@ namespace Domotique.Model
         IList<Schedule> TemperatureSchedule { get; set; }
 
 
-        public void computeTemperature()
+        public void ComputeTemperature()
         {
 
         }

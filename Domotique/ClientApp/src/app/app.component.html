@@ -4,11 +4,9 @@
     Welcome to {{ title }}!
   </h1>  
 </div>
-
+<div [chart]="chart"></div>
 <div class="container-fluid no-padding">
   <div class="row">
-
-
     <div *ngFor="let roomStatus of Rooms" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">
@@ -28,9 +26,9 @@
               <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
             </tr>
           </table>
-          </div>
         </div>
       </div>
+    </div>
   </div>
   <router-outlet></router-outlet>
 </div>
