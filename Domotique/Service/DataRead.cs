@@ -15,9 +15,9 @@ namespace Domotique.Model
         IDatabaseConnection _databaseConnection;
 
 
-        public DataRead(IDatabaseConnection databaseConnectio)
+        public DataRead(IDatabaseConnection databaseConnection)
         {
-
+            _databaseConnection = databaseConnection;
         }
 
 
