@@ -157,6 +157,7 @@ namespace Domotique.Model
             }
         }
 
+
         public IList<Graph> ReadRoomTemperaturesGraph()
         {
             IList<Graph> result = new List<Graph>();
