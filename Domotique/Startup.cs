@@ -31,6 +31,8 @@ namespace Domotique
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IDatabaseConnection>(c => {return new DatabaseConnection(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
+
             services.AddSingleton<ITemperatureReadingService>(new TemperatureReadingService(new DataRead())
             {
                 ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName"),
