@@ -147,7 +147,7 @@ namespace Domotique.Model
                             var roomId = reader.GetInt32(0);
                             var roomLastRefresh = reader.GetDateTime(2);
                             rooms[roomId].LastTemperatureRefresh = reader.GetDateTime(2);
-                            rooms[roomId].currentTemperature = reader.GetFloat(1);
+                            rooms[roomId].CurrentTemperature = reader.GetFloat(1);
                         }
 
                     }

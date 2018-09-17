@@ -12,11 +12,9 @@ namespace Domotique.Service
     public class TemperatureReadingService : IDisposable, ITemperatureReadingService
     {
 
-        public String ServerName { get; set; }
+        public static String ServerName { get; set; }
 
-        public String QueueName { get; set; }
-
-        public int ServerPort { get; set; }
+        public static String QueueName { get; set; }
 
         public bool IsStarted { get; set; } = false;
 

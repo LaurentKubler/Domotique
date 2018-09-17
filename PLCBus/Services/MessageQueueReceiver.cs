@@ -8,6 +8,6 @@ namespace PLCBus.Services
 {
     public class MessageQueueReceiver : IMessageQueueReceiver
     {
-        SerialPort port = new SerialPort("/dev/tty");
+        readonly SerialPort port = new SerialPort("/dev/tty");
     }
 }

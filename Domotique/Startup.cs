@@ -32,18 +32,21 @@ namespace Domotique
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IDatabaseConnection>(c => {return new DatabaseConnection(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
-
-            services.AddSingleton<ITemperatureReadingService>(new TemperatureReadingService(new DataRead())
+            
+            services.AddSingleton<ITemperatureReadingService, TemperatureReadingService>();/* new TemperatureReadingService(new DataRead()
             {
                 ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName"),
                 ServerPort = Configuration.GetValue<int>("Services:Temperature:ServerPort"),
                 QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName")
-            });
+            });*/
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
             services.AddTransient<IDataRead, DataRead>();
             //services.AddWebSocketManager();
+
+            TemperatureReadingService.ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName");
+            TemperatureReadingService.QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName");
 
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
             {                
