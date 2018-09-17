@@ -44,7 +44,7 @@ namespace Domotique.Service
             room.CurrentTemperature = Temperature;
             room.LastTemperatureRefreshDate = date;
             // Compute desired temperature
-            room.computeTemperature();
+            room.ComputeTemperature();
 
 
             // store Temperature in database for the room

@@ -22,7 +22,7 @@ namespace Messages.WebMessages
 
         public DateTime LastTemperatureRefresh { get; set; }
 
-        public float currentTemperature { get; set; }
+        public float CurrentTemperature { get; set; }
     }
 
 
