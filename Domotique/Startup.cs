@@ -40,9 +40,7 @@ namespace Domotique
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
-            services.AddTransient<IDatabaseConnection>(c => { return new DatabaseConnection(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
             services.AddTransient<IDataRead, DataRead>();
-            
             //services.AddWebSocketManager();
 
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
@@ -75,7 +73,7 @@ namespace Domotique
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";                
+                //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";                
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
