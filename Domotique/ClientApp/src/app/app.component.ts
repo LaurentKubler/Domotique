@@ -9,7 +9,7 @@ import { Chart } from 'angular-highcharts';
 })
 
 export class AppComponent {
-  title = 'ClientApp';
+  title = 'ma domotique';
   public Rooms: RoomStatus[];
   public chart: Chart;
   constructor(private http: Http) {
