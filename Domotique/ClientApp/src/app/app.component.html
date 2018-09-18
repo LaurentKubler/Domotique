@@ -2,33 +2,57 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-  </h1>  
+  </h1>
 </div>
-<div [chart]="chart"></div>
-<div class="container-fluid no-padding">
-  <div class="row">
-    <div *ngFor="let roomStatus of Rooms" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">
-          {{roomStatus.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{roomStatus.lastTemperatureRefresh}}"> {{roomStatus.currentTemperature}}°C</span>
-        </h5>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#temp">Temperature</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#device">Devices</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#music">Music</a>
+  </li>
+</ul>
 
-        <div class="table-responsive">
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active" hidden="temp'">
+    <div [chart]="chart"></div>
+    <div class="container-fluid no-padding">
+      <div class="row">
+        <div *ngFor="let roomStatus of Rooms" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{roomStatus.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{roomStatus.lastTemperatureRefresh}}"> {{roomStatus.currentTemperature}}°C</span>
+            </h5>
 
-          <table class="table">
-            <tr>
-              <th *ngFor="let temperature of roomStatus.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
-            </tr>
-            <tr>
-              <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.minTemp | number : '1.1-1'}}</td>
-            </tr>
-            <tr>
-              <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
-            </tr>
-          </table>
+            <div class="table-responsive">
+
+              <table class="table">
+                <tr>
+                  <th *ngFor="let temperature of roomStatus.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
+                </tr>
+                <tr>
+                  <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.minTemp | number : '1.1-1'}}</td>
+                </tr>
+                <tr>
+                  <td *ngFor="let temperature of roomStatus.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <router-outlet></router-outlet>
+  <div id="device" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="music" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
 </div>
