@@ -53,7 +53,7 @@ namespace PLCBus
             {
                 app.UseHsts();
             }
-
+            app.ApplicationServices.GetService<IPLCBusService>();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

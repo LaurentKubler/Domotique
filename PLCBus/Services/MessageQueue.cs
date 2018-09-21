@@ -48,9 +48,9 @@ namespace PLCBus.Services
         }
 
 
-        public void Connect(CancellationToken cancellationtocken)
+        public void Connect()
         {
-            _cancellationtocken = cancellationtocken;
+            //_cancellationtocken = cancellationtocken;
             _channel.QueueBind(queue: _queueName,
                                    exchange: _commandExchange,
                                    routingKey: _messageFilter);
