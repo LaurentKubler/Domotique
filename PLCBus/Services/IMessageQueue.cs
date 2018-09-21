@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PLCBus.Services
 {
-    public class IMessageQueueReceiver
+    public class IMessageQueue
     {
     }
 }
