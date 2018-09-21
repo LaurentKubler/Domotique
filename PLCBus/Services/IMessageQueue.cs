@@ -12,6 +12,8 @@ namespace PLCBus.Services
 
         void Publish(DeviceMessage message);
 
+        event QueueMessageReceived OnMessage;
+
         void Disconnect();
     }
 }

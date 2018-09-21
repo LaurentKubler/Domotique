@@ -32,6 +32,8 @@ namespace PLCBus.Services
 
         string _responseTag;
 
+        public event QueueMessageReceived OnMessage;
+
 
         public MessageQueue(string server, string commandExchange, string messageFilter, string responseExchange, string responseTag)
         {
@@ -63,6 +65,12 @@ namespace PLCBus.Services
                 Console.WriteLine(" [x] Received '{0}':'{1}'",
                                   routingKey,
                                   message);
+                var command = new CommandMessage()
+                {
+                    Command="test",
+                    TargetAdapter="tot"
+                };
+                OnMessage(command);
             };
             _channel.BasicConsume(queue: _queueName,
                                  autoAck: true,
