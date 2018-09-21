@@ -20,12 +20,13 @@ namespace PLCBus.Services
             _messageQueue = messageQueue;
             messageQueue.Connect();
 
-            messageQueue.OnMessage += OnPLCBusMessage; 
+            messageQueue.OnMessage += OnMQMessage; 
 
         }
 
-        private void OnPLCBusMessage(CommandMessage command)
+        private void OnMQMessage(CommandMessage command)
         {
+           
             Console.WriteLine("Message received");
         }
     }
