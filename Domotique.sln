@@ -7,7 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domotique", "Domotique\Domo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "Messages\Messages.csproj", "{E9E3D262-4ACD-4775-B857-C113CCEF28B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCBus", "PLCBus\PLCBus.csproj", "{168F5594-5706-4173-BF0B-6B9D19CFFAE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLCBus", "PLCBus\PLCBus.csproj", "{168F5594-5706-4173-BF0B-6B9D19CFFAE7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9E3D262-4ACD-4775-B857-C113CCEF28B8} = {E9E3D262-4ACD-4775-B857-C113CCEF28B8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
