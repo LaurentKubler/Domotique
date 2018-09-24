@@ -2,18 +2,11 @@
 using Domotique.Model;
 using Domotique.Service;
 using Domotique.Service.Log;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc; 
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-using Newtonsoft.Json;
-using RabbitMQ.Client;
-using System;
-using System.Collections.Generic; 
-using System.Text;
 
 namespace Domotique
 {
@@ -31,8 +24,8 @@ namespace Domotique
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IDatabaseConnection>(c => {return new DatabaseConnection(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
-            
+            services.AddSingleton<IDatabaseConnection>(c => { return new DatabaseConnection(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
+
             services.AddSingleton<ITemperatureReadingService, TemperatureReadingService>();/* new TemperatureReadingService(new DataRead()
             {
                 ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName"),
@@ -42,6 +35,7 @@ namespace Domotique
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
+            services.AddSingleton<IDeviceService, DeviceService>();
             services.AddTransient<IDataRead, DataRead>();
             //services.AddWebSocketManager();
 
@@ -49,7 +43,7 @@ namespace Domotique
             TemperatureReadingService.QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName");
 
             if (Configuration.GetValue<bool>("Services:Logger:GlobalLogEnabled"))
-            {                
+            {
             }
             services.AddSpaStaticFiles(configuration =>
             {
@@ -65,7 +59,7 @@ namespace Domotique
         {
             // Start the main server
             var tmp = app.ApplicationServices.GetService<IStatusService>();
-                 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -81,7 +75,7 @@ namespace Domotique
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
-            });            
+            });
         }
     }/*  /*
         select 
