@@ -13,7 +13,7 @@ namespace PLCBus.Model
         string UserCode { get; set; }
 
 
-        PLCBusAddress(string address)
+        public PLCBusAddress(string address)
         {
             UserCode = address.Substring(0, 2);
             HomeUnit = address.Substring(2, 2);
