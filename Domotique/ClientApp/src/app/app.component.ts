@@ -36,12 +36,12 @@ export class AppComponent {
         },
         yAxis: {
           title: {
-            text: 'Snow depth (m)'
+            text: 'Température (°C)'
           },
           min: 0
         },
         title: {
-          text: 'Linechart'
+          text: 'Evolution des températures'
         },
         credits: {
           enabled: false
