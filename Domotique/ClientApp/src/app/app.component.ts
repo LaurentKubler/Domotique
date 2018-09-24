@@ -11,16 +11,16 @@ import { Chart } from 'angular-highcharts';
 export class AppComponent {
   title = 'ma domotique';
   public Status: Status;
-  public Rooms: RoomStatus[];
-  public Devices: DeviceStatus[];
+  public rooms: RoomStatus[];
+  public devices: DeviceStatus[];
   public chart: Chart;
   constructor(private http: Http) {
 
     this.http.get('/rest/status').subscribe(result => {
       this.Status = result.json() as Status;
-      this.Rooms = this.Status.Rooms;
-      this.Devices = this.Status.Devices;
-      console.warn(this.Rooms[0].roomName);
+      this.rooms = this.Status.rooms;
+      this.devices = this.Status.devices;
+      console.warn(this.rooms[0].roomName);
     }, error => console.error(error));
     this.http.get('/rest/temphistory').subscribe(result => {
       var series = result.json() as Highcharts.SeriesOptions[];
@@ -56,8 +56,8 @@ export class AppComponent {
   }
 }
 export class Status {
-  public Rooms: RoomStatus[];
-  public Devices: DeviceStatus[];
+  public rooms: RoomStatus[];
+  public devices: DeviceStatus[];
 }
 export class RoomStatus {
   public roomId: number;
@@ -73,10 +73,10 @@ export class DayTemperature {
   public maxTemp: number;
 }
 export class DeviceStatus {
-  public Device_ID: number;
-  public Name: string;
-  public Value: number;
-  public Status: boolean;
-  public OnImage_ID: number;
-  public OffImage_ID: number;
+  public device_ID: number;
+  public name: string;
+  public value: number;
+  public status: boolean;
+  public onImage_ID: number;
+  public offImage_ID: number;
 }
