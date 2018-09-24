@@ -17,7 +17,7 @@
 </ul>
 
 <div class="tab-content">
-  <div id="temp" class="tab-pane fade in active">
+  <div id="temp" class="tab-pane fade show active">
     <div [chart]="chart"></div>
     <div class="container-fluid no-padding">
       <div class="row">
@@ -26,9 +26,7 @@
             <h5 class="card-title">
               {{roomStatus.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{roomStatus.lastTemperatureRefresh}}"> {{roomStatus.currentTemperature}}°C</span>
             </h5>
-
             <div class="table-responsive">
-
               <table class="table">
                 <tr>
                   <th *ngFor="let temperature of roomStatus.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
