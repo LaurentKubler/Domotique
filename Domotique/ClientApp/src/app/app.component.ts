@@ -11,16 +11,16 @@ import { Chart } from 'angular-highcharts';
 export class AppComponent {
   title = 'ma domotique';
   public Status: Status;
-  public rooms: RoomStatus[];
-  public devices: DeviceStatus[];
+  public Rooms: RoomStatus[];
+  public Devices: DeviceStatus[];
   public chart: Chart;
   constructor(private http: Http) {
 
     this.http.get('/rest/status').subscribe(result => {
       this.Status = result.json() as Status;
-      this.rooms = this.Status.rooms;
-      this.devices = this.Status.devices;
-      console.warn(this.rooms[0].roomName);
+      this.Rooms = this.Status.rooms;
+      this.Devices = this.Status.devices;
+      console.warn(this.Rooms[0].roomName);
     }, error => console.error(error));
     this.http.get('/rest/temphistory').subscribe(result => {
       var series = result.json() as Highcharts.SeriesOptions[];
