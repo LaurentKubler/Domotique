@@ -12,12 +12,14 @@ export class AppComponent {
   title = 'ma domotique';
   public Status: Status;
   public Rooms: RoomStatus[];
+  public Devices: DeviceStatus[];
   public chart: Chart;
   constructor(private http: Http) {
 
     this.http.get('/rest/status').subscribe(result => {
       this.Status = result.json() as Status;
       this.Rooms = this.Status.Rooms;
+      this.Devices = this.Status.Devices;
       console.warn(this.Rooms[0].roomName);
     }, error => console.error(error));
     this.http.get('/rest/temphistory').subscribe(result => {
