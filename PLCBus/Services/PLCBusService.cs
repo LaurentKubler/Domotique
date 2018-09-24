@@ -1,8 +1,5 @@
 ﻿using Messages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PLCBus.Services
 {
@@ -20,13 +17,12 @@ namespace PLCBus.Services
             _messageQueue = messageQueue;
             messageQueue.Connect();
 
-            messageQueue.OnMessage += OnMQMessage; 
+            messageQueue.OnMessage += OnMQMessage;
 
         }
 
         private void OnMQMessage(CommandMessage command)
         {
-           
             Console.WriteLine("Message received");
         }
     }

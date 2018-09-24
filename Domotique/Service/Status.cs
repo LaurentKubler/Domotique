@@ -9,20 +9,19 @@ namespace Domotique.Service
     {
         readonly ITemperatureReadingService TempReadingService;
 
-        readonly Dictionary<String, Room> Rooms;
+        readonly Dictionary<string, Room> Rooms;
 
         readonly ILogService LogService;
 
 
         IDataRead _dataRead;
 
+
         public Status(ITemperatureReadingService tempReadingService, ILogService logService, IDataRead dataRead)
         {
-            Rooms = new Dictionary<String, Room>();
+            Rooms = new Dictionary<string, Room>();
             LogService = logService;
             _dataRead = dataRead;
-
-
 
             TempReadingService = tempReadingService;
             TempReadingService.SetStatusService(this);
@@ -31,15 +30,15 @@ namespace Domotique.Service
 
 
 
-        public void RegisterTemperature(String RoomName, double Temperature, DateTime date)
-        {            
+        public void RegisterTemperature(string RoomName, double Temperature, DateTime date)
+        {
             if (!Rooms.ContainsKey(RoomName))
             {
                 Rooms.Add(RoomName, _dataRead.ReadRoomByName(RoomName));
             }
 
             Room room = Rooms[RoomName];
-            
+
             //update the roomValues:
             room.CurrentTemperature = Temperature;
             room.LastTemperatureRefreshDate = date;
@@ -51,7 +50,7 @@ namespace Domotique.Service
             LogService.LogTemperatureService(RoomName, Temperature, room.TargetTemperature, date);
 
             // Eventually issue command
-            if (room.CurrentTemperature<room.TargetTemperature)
+            if (room.CurrentTemperature < room.TargetTemperature)
             {
 
             }

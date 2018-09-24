@@ -1,4 +1,5 @@
 ﻿using Domotique.Model;
+using Messages.WebMessages;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,9 @@ namespace Domotique.Controllers
         [HttpGet()]
         public IActionResult Get()
         {
-            return Ok(_dataRead.ReadRoomTemperatures());
+            Status status = new Status();
+            status.Rooms = _dataRead.ReadRoomTemperatures();
+            return Ok(status);
         }
 
 

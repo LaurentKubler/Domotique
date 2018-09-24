@@ -10,18 +10,20 @@ import { Chart } from 'angular-highcharts';
 
 export class AppComponent {
   title = 'ma domotique';
+  public Status: Status;
   public Rooms: RoomStatus[];
   public chart: Chart;
   constructor(private http: Http) {
-    
+
     this.http.get('/rest/status').subscribe(result => {
-      this.Rooms = result.json() as RoomStatus[];
+      this.Status = result.json() as Status;
+      this.Rooms = this.Status.Rooms;
       console.warn(this.Rooms[0].roomName);
     }, error => console.error(error));
     this.http.get('/rest/temphistory').subscribe(result => {
       var series = result.json() as Highcharts.SeriesOptions[];
       this.chart = new Chart({
-        chart: {          
+        chart: {
           type: 'spline'
         },
         xAxis: {
@@ -36,23 +38,24 @@ export class AppComponent {
         },
         yAxis: {
           title: {
-            text: 'Snow depth (m)'
+            text: 'Température (°C)'
           },
           min: 0
         },
         title: {
-          text: 'Linechart'
+          text: 'Evolution des températures'
         },
         credits: {
           enabled: false
         },
         series: series
-      });              
+      });
     }, error => console.error(error));
   }
 }
 export class Status {
   public Rooms: RoomStatus[];
+  public Devices: DeviceStatus[];
 }
 export class RoomStatus {
   public roomId: number;
@@ -66,4 +69,12 @@ export class DayTemperature {
   public temperatureDate: Date;
   public minTemp: number;
   public maxTemp: number;
+}
+export class DeviceStatus {
+  public Device_ID: number;
+  public Name: string;
+  public Value: number;
+  public Status: boolean;
+  public OnImage_ID: number;
+  public OffImage_ID: number;
 }
