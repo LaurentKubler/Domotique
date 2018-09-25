@@ -1,5 +1,5 @@
 ﻿using Domotique.Model;
-using Messages;
+using Messages.Queue.Model;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -51,7 +51,7 @@ namespace Domotique.Service
                     Console.Write("unable to reach rabbitmq");
                     Thread.Sleep(10000);
                 }
-                
+
             }
             channel = connection.CreateModel();
             {

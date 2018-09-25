@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Messages
+﻿namespace Messages.Queue.Model
 {
     public class DeviceChangeMessage : GenericMessage
     {

@@ -1,4 +1,4 @@
-﻿using Messages;
+﻿using Messages.Queue.Model;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -13,7 +13,7 @@ namespace PLCBus.Services
     {
         readonly SerialPort port = new SerialPort("/dev/tty");
 
-        CancellationToken _cancellationtocken;
+        readonly CancellationToken _cancellationtocken;
 
         readonly string _messageFilter = string.Empty;
 
@@ -23,11 +23,11 @@ namespace PLCBus.Services
 
         IModel _channel;
 
-        string _commandExchange;
+        readonly string _commandExchange;
 
-        string _responseExchange;
+        readonly string _responseExchange;
 
-        string _responseTag;
+        readonly string _responseTag;
 
         public event QueueMessageReceived OnMessage;
 

@@ -2,6 +2,7 @@
 using Domotique.Model;
 using Domotique.Service;
 using Domotique.Service.Log;
+using Messages.Queue.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;

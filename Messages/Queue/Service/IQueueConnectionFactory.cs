@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace Domotique.Service
+namespace Messages.Queue.Service
 {
-    interface IQueueConnectionFactory
+    public interface IQueueConnectionFactory
     {
         Task<IQueuePublisher<T>> GetQueuePublisher<T>(string queueTag);
 
