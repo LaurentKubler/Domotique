@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Messages;
-using System.IO.Ports;
-using System.Threading;
+﻿using Messages;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System;
+using System.IO.Ports;
 using System.Text;
-using Newtonsoft.Json;
+using System.Threading;
 
 namespace PLCBus.Services
 {
@@ -67,14 +64,14 @@ namespace PLCBus.Services
                                   message);
                 var command = new CommandMessage()
                 {
-                    Command="test",
-                    TargetAdapter="tot"
+                    Command = "test",
+                    TargetAdapter = "tot"
                 };
                 OnMessage(command);
             };
             _channel.BasicConsume(queue: _queueName,
                                  autoAck: true,
-                                 consumer: consumer);            
+                                 consumer: consumer);
 
         }
 
