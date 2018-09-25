@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\Version" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\Version" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

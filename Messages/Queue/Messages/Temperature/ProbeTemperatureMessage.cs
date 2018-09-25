@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Messages
+namespace Messages.Queue.Model
 {
     public class ProbeTemperatureMessage : GenericMessage
     {
 
         public ProbeTemperatureMessage() : base("ProbeTemperatureMessage")
         {
-            
+
         }
 
         public float TemperatureValue { get; set; }

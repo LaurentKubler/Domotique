@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PLCBus.Model
 {
@@ -62,7 +59,7 @@ namespace PLCBus.Model
         }
 
 
-        public String toStringHomeUnit(byte code)
+        public String ToStringHomeUnit(byte code)
         {
             String val = "";
             int home = code << 4;

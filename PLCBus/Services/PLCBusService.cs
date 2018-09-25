@@ -1,4 +1,4 @@
-﻿using Messages;
+﻿using Messages.Queue.Model;
 using System;
 
 namespace PLCBus.Services
@@ -10,7 +10,7 @@ namespace PLCBus.Services
 
     public class PLCBusService : IPLCBusService
     {
-        IMessageQueue _messageQueue;
+        readonly IMessageQueue _messageQueue;
 
         public PLCBusService(IMessageQueue messageQueue)
         {

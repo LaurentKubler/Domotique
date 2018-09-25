@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domotique.Service
+namespace Messages.Queue.Service
 {
     class QueuePublisher<T> : IQueuePublisher<T>
     {

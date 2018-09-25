@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Domotique.Service
+namespace Messages.Queue.Service
 {
-    class QueueConnectionFactory : IQueueConnectionFactory
+    public class QueueConnectionFactory : IQueueConnectionFactory
     {
         public QueueConnectionFactory(List<QueueConfiguration> queues)
         {

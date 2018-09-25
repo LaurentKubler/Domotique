@@ -23,9 +23,11 @@ namespace Domotique.Controllers
         [HttpGet()]
         public IActionResult Get()
         {
-            Status status = new Status();
-            status.Rooms = _dataRead.ReadRoomTemperatures();
-            status.Devices = _dataRead.ReadDevices();
+            Status status = new Status()
+            {
+                Rooms = _dataRead.ReadRoomTemperatures(),
+                Devices = _dataRead.ReadDevices()
+            };
 
             return Ok(status);
         }
@@ -39,11 +41,12 @@ namespace Domotique.Controllers
 
             int firstPoint = 0;
             int lastPoint = Points.Count - 1;
-            List<int> pointIndexsToKeep = new List<int>();
-
-            //Add the first and last index to the keepers
-            pointIndexsToKeep.Add(firstPoint);
-            pointIndexsToKeep.Add(lastPoint);
+            List<int> pointIndexsToKeep = new List<int>
+            {
+                //Add the first and last index to the keepers
+                firstPoint,
+                lastPoint
+            };
 
             //The first and the last point cannot be the same
             while (Points[firstPoint].Equals(Points[lastPoint]))

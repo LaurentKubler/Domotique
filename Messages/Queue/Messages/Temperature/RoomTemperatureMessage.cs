@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Messages
+namespace Messages.Queue.Model
 {
     public class RoomTemperatureMessage : GenericMessage
     {
