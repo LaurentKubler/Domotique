@@ -1,11 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Domotique.Controllers;
+using Domotique.Service;
+using Messages.WebMessages;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Messages.WebMessages;
 using static Domotique.Controllers.StatusController;
-using Domotique.Controllers;
-using Domotique.Service;
 
 namespace Domotique.Model
 {
@@ -227,5 +227,37 @@ namespace Domotique.Model
                 return result.ToList();
             }
         }
+
+
+        public IList<DeviceStatus> ReadDevices()
+        {
+            IList<DeviceStatus> result = new List<DeviceStatus>();
+
+            using (var connection = _databaseConnection.GetConnection())
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "Select * from Device;";
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        DeviceStatus device = new DeviceStatus()
+                        {
+                            Device_ID = reader.GetInt32("DeviceID"),
+                            DeviceName = reader.GetString("DeviceName"),
+                            OnImage_ID = reader.GetInt32("Picture"),
+                            OffImage_ID = reader.GetInt32("Picture")
+                        };
+                        result.Add(device);
+                    }
+                    reader.Close();
+                }
+
+            }
+            return result;
+        }
     }
+
 }

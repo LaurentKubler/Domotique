@@ -14,45 +14,52 @@ export class AppComponent {
   public Rooms: RoomStatus[];
   public Devices: DeviceStatus[];
   public chart: Chart;
+
   constructor(private http: Http) {
 
-    this.http.get('/rest/status').subscribe(result => {
-      this.Status = result.json() as Status;
-      this.Rooms = this.Status.rooms;
-      this.Devices = this.Status.devices;
-      console.warn(this.Rooms[0].roomName);
-    }, error => console.error(error));
-    this.http.get('/rest/temphistory').subscribe(result => {
-      var series = result.json() as Highcharts.SeriesOptions[];
-      this.chart = new Chart({
-        chart: {
-          type: 'spline'
-        },
-        xAxis: {
-          type: 'datetime',
-          dateTimeLabelFormats: { // don't display the dummy year
-            month: '%e. %b',
-            year: '%b'
+    this.http.get('/rest/status').subscribe(
+      result => {
+        this.Status = result.json() as Status;
+        this.Rooms = this.Status.rooms;
+        this.Devices = this.Status.devices;
+        console.warn(this.Rooms[0].roomName);
+      },
+      error => console.error(error));
+
+    this.http.get('/rest/temphistory').subscribe(
+      result => {
+        var series = result.json() as Highcharts.SeriesOptions[];
+
+        this.chart = new Chart({
+          chart: {
+            type: 'spline'
+          },
+          xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: { // don't display the dummy year
+              month: '%e. %b',
+              year: '%b'
+            },
+            title: {
+              text: 'Date'
+            }
+          },
+          yAxis: {
+            title: {
+              text: 'Température (°C)'
+            },
+            min: 0
           },
           title: {
-            text: 'Date'
-          }
-        },
-        yAxis: {
-          title: {
-            text: 'Température (°C)'
+            text: 'Evolution des températures'
           },
-          min: 0
-        },
-        title: {
-          text: 'Evolution des températures'
-        },
-        credits: {
-          enabled: false
-        },
-        series: series
-      });
-    }, error => console.error(error));
+          credits: {
+            enabled: false
+          },
+          series: series
+        });
+      },
+      error => console.error(error));
   }
 }
 export class Status {

@@ -4,7 +4,7 @@
     {
         public long Device_ID { get; set; }
 
-        public string Name { get; set; }
+        public string DeviceName { get; set; }
 
         public long Value { get; set; }
 
