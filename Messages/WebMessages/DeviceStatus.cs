@@ -10,8 +10,8 @@
 
         public bool? Status { get; set; }
 
-        public long OnImage_ID { get; set; }
+        public string OnImage_ID { get; set; }
 
-        public long OffImage_ID { get; set; }
+        public string OffImage_ID { get; set; }
     }
 }
