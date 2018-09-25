@@ -25,6 +25,8 @@ namespace Domotique.Controllers
         {
             Status status = new Status();
             status.Rooms = _dataRead.ReadRoomTemperatures();
+            status.Devices = _dataRead.ReadDevices();
+
             return Ok(status);
         }
 

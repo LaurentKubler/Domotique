@@ -10,6 +10,8 @@ namespace Domotique.Model
 
         Room ReadRoomByName(string RoomName);
 
+        IList<DeviceStatus> ReadDevices();
+
         IList<RoomStatus> ReadRoomTemperatures();
 
         IList<Graph> ReadRoomTemperaturesGraph();
