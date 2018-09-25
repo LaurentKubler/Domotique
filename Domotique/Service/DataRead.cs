@@ -248,7 +248,7 @@ namespace Domotique.Model
                             Device_ID = reader.GetInt32("DeviceID"),
                             DeviceName = reader.GetString("DeviceName"),
                             OnImage_ID = reader.GetInt32("Picture"),
-                            OffImage_ID = reader.GetInt32("Picture")
+                            OffImage_ID = reader.GetString("Picture")
                         };
                         result.Add(device);
                     }
