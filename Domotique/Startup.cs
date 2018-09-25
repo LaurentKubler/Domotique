@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 
 namespace Domotique
 {
@@ -35,9 +36,20 @@ namespace Domotique
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IStatusService, Status>();
+
+            var queues = new List<QueueConfiguration>();
+            var nodes = Configuration.GetSection("Services:Queues");
+
+            foreach (var node in nodes.GetChildren())
+            {
+                queues.Add(new QueueConfiguration(node));
+            }
+            services.AddSingleton<IQueueConnectionFactory>((c) => new QueueConnectionFactory(queues));
+
+
             services.AddSingleton<IDeviceService, DeviceService>();
             services.AddTransient<IDataRead, DataRead>();
-            //services.AddWebSocketManager();
+
 
             TemperatureReadingService.ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName");
             TemperatureReadingService.QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName");
