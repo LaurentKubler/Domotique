@@ -81,8 +81,9 @@ export class DayTemperature {
 }
 export class DeviceStatus {
   public device_ID: number;
-  public name: string;
+  public deviceName: string;
   public value: number;
+  public valueDate: Date;
   public status: boolean;
   public onImage_ID: number;
   public offImage_ID: number;

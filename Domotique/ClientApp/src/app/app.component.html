@@ -49,14 +49,22 @@
     <div class="container-fluid no-padding">
       <div class="row">
         <div *ngFor="let deviceStatus of Devices" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
-          {{deviceStatus.Name}}
+          <div class="card-title">
+            <h5 class="card-title">{{deviceStatus.deviceName}}</h5>
+          </div>
+          <div class="card-title">
+            Status :{{deviceStatus.status}} value :{{deviceStatus.value}}<br />
+            Last status date: {{deviceStatus.valueDate}}<br />
+            Id :{{deviceStatus.device_ID}}<br />
+          </div>
         </div>
       </div>
       <h3>Menu 1</h3>
       <p>Some content in menu 1.</p>
     </div>
-    <div id="music" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Some content in menu 2.</p>
-    </div>
   </div>
+  <div id="music" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
