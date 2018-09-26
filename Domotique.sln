@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLCBus", "PLCBus\PLCBus.csp
 		{E9E3D262-4ACD-4775-B857-C113CCEF28B8} = {E9E3D262-4ACD-4775-B857-C113CCEF28B8}
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZWave", "ZWave\ZWave.csproj", "{8F34D2B6-558A-4D85-8980-46823712866B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{168F5594-5706-4173-BF0B-6B9D19CFFAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168F5594-5706-4173-BF0B-6B9D19CFFAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168F5594-5706-4173-BF0B-6B9D19CFFAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F34D2B6-558A-4D85-8980-46823712866B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F34D2B6-558A-4D85-8980-46823712866B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F34D2B6-558A-4D85-8980-46823712866B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F34D2B6-558A-4D85-8980-46823712866B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

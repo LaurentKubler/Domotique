@@ -239,7 +239,13 @@ namespace Domotique.Model
 
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "Select * from Device;";
+                    command.CommandText = "SELECT Device.*, MaxDateDeviceStatus.MaxDate,DeviceStatus.DeviceValue" +
+                                          "    FROM Device" +
+                                          "    LEFT JOIN(SELECT Device_ID, MAX(ValueDate) MaxDate FROM DeviceStatus GROUP BY Device_ID) MaxDateDeviceStatus" +
+                                          "          ON MaxDateDeviceStatus.Device_ID = Device.DeviceID" +
+                                          "    LEFT JOIN DeviceStatus" +
+                                          "          ON DeviceStatus.Device_ID = Device.DeviceID AND DeviceStatus.ValueDate = MaxDateDeviceStatus.MaxDate";
+
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
@@ -250,11 +256,22 @@ namespace Domotique.Model
                             OnImage_ID = reader.GetString("Picture"),
                             OffImage_ID = reader.GetString("Picture")
                         };
+                        if (!reader.IsDBNull(reader.GetOrdinal("MaxDate")))
+                            device.ValueDate = reader.GetDateTime("MaxDate");
+                        else
+                            device.ValueDate = null;
+
+                        if (!reader.IsDBNull(reader.GetOrdinal("DeviceValue")))
+                            device.Value = reader.GetInt32("DeviceValue");
+                        else
+                            device.Value = null;
+
+                        if (device.Value != null)
+                            device.Status = (device.Value != 0 ? true : false);
                         result.Add(device);
                     }
                     reader.Close();
                 }
-
             }
             return result;
         }
