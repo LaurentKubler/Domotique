@@ -1,0 +1,28 @@
+From microsoft/dotnet:2.1-sdk AS build
+WORKDIR /app
+
+COPY ZWave/ZWave.csproj ./ZWave/
+COPY Messages/Messages.csproj ./Messages/
+
+WORKDIR /app/PLCBus
+RUN dotnet restore
+
+WORKDIR /app
+COPY ZWave/. ./ZWave/
+COPY Messages/. ./Messages/
+
+WORKDIR /app/ZWave
+RUN dotnet publish  -c Release -o out
+
+#tests
+#FROM build as testrunner
+#WORKDIR /app/tests
+#COPY tests/. .
+#ENTRYPOINT ["dotnet", "test","--logger:trx"]
+
+FROM microsoft/dotnet:2.1-runtime AS runtime
+WORKDIR /app
+COPY --from=build /app/ZWave/out ./
+
+
+ENTRYPOINT ["dotnet", "ZWave.dll"]
