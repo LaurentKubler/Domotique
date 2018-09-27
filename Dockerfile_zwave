@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ZWave/ZWave.csproj ./ZWave/
 COPY Messages/Messages.csproj ./Messages/
 
-WORKDIR /app/PLCBus
+WORKDIR /app/ZWave
 RUN dotnet restore
 
 WORKDIR /app
