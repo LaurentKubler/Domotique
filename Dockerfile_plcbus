@@ -20,7 +20,7 @@ RUN dotnet publish  -c Release -o out
 #COPY tests/. .
 #ENTRYPOINT ["dotnet", "test","--logger:trx"]
 
-FROM microsoft/dotnet:2.1-runtime AS runtime
+FROM microsoft/dotnet:2.1.4-runtime AS runtime
 WORKDIR /app
 COPY --from=build /app/PLCBus/out ./
 
