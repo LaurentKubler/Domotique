@@ -9,9 +9,9 @@ RUN apt-get install --force-yes -y make libudev-dev g++ libyaml-dev
 RUN pip install python_openzwave
 #RUN source venv3/bin/activate
 
-CMD ["pyozw_check", "-i","-d", "/dev/zwave"]
+#CMD ["pyozw_check", "-i","-d", "/dev/zwave"]
 
-#COPY onewire.py ./
-#COPY config.json ./
+COPY ZWave_Python/ZWave_Python.py ./
+COPY ZWave_Python/config.json ./
 
-#CMD ["python", "onewire.py"]
+CMD ["python", "ZWave_Python.py"]
