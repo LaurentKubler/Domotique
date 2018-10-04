@@ -1,0 +1,11 @@
+{
+    "Timeout":300,
+    "Queue":{
+        "server":"rabbitmq",
+        "port":5672,
+        "exchangeName":"hello"
+    },
+    "ZWave":{
+        "address":"/dev/zwave"
+    }
+}

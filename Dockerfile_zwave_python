@@ -1,0 +1,17 @@
+FROM python:3
+
+RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika virtualenv
+
+RUN apt-get update
+
+RUN apt-get install --force-yes -y make libudev-dev g++ libyaml-dev
+
+RUN pip install python_openzwave
+#RUN source venv3/bin/activate
+
+CMD ["pyozw_check", "-i","-d", "/dev/zwave"]
+
+#COPY onewire.py ./
+#COPY config.json ./
+
+#CMD ["python", "onewire.py"]
