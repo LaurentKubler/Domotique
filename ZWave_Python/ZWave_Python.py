@@ -29,6 +29,7 @@ import sys
 import os
 import resource
 import pika
+import json
 
 #logging.getLogger('openzwave').addHandler(logging.NullHandler())
 #logging.basicConfig(level=logging.DEBUG)
@@ -43,6 +44,10 @@ from openzwave.controller import ZWaveController
 from openzwave.network import ZWaveNetwork
 from openzwave.option import ZWaveOption
 import time
+
+
+with open('config.json') as json_data_file:
+    cfg = json.load(json_data_file)
 
 device = "/dev/zwave"
 log = "Info"
@@ -318,18 +323,18 @@ def callback(ch, method, properties, body):
     print(" [x] %r" % body)
 
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
 rabbit_channel = connection.channel()
 
-def bind_mq(callback, exchange_name, routingkey):
+def bind_mq(callback):
 
-    rabbit_channel.exchange_declare(exchange=exchange_name,
+    rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"],
                              exchange_type='fanout')
 
     result = rabbit_channel.queue_declare(exclusive=True)
     queue_name = result.method.queue
 
-    rabbit_channel.queue_bind(exchange=exchange_name, queue=queue_name, routing_key=routingkey)
+    rabbit_channel.queue_bind(exchange=cfg["Queue"]["exchangeName"], queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
 
     print(' [*] Waiting for logs. To exit press CTRL+C')
 
