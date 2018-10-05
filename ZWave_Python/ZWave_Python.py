@@ -44,13 +44,43 @@ from openzwave.controller import ZWaveController
 from openzwave.network import ZWaveNetwork
 from openzwave.option import ZWaveOption
 import time
-
+import six
+if six.PY3:
+    from pydispatch import dispatcher
+else:
+    from louie import dispatcher
 
 with open('config.json') as json_data_file:
     cfg = json.load(json_data_file)
 
 device = "/dev/zwave"
 log = "Info"
+
+
+def louie_network_started(network):
+    print('//////////// ZWave network is started ////////////')
+    print('Louie signal : OpenZWave network is started : homeid {:08x} - {} nodes were found.'.format(network.home_id, network.nodes_count))
+
+def louie_network_resetted(network):
+    print('Louie signal : OpenZWave network is resetted.')
+
+def louie_network_ready(network):
+    print('//////////// ZWave network is ready ////////////')
+    print('Louie signal : ZWave network is ready : {} nodes were found.'.format(network.nodes_count))
+    print('Louie signal : Controller : {}'.format(network.controller))
+    dispatcher.connect(louie_node_update, ZWaveNetwork.SIGNAL_NODE)
+    dispatcher.connect(louie_value_update, ZWaveNetwork.SIGNAL_VALUE)
+    dispatcher.connect(louie_ctrl_message, ZWaveController.SIGNAL_CONTROLLER)
+
+def louie_node_update(network, node):
+    print('Louie signal : Node update : {}.'.format(node))
+
+def louie_value_update(network, node, value):
+    print('Louie signal : Value update : {}.'.format(value))
+
+def louie_ctrl_message(state, message, network, controller):
+    print('Louie signal : Controller message : {}.'.format(message))
+
 
 for arg in sys.argv:
     if arg.startswith("--device"):
@@ -98,6 +128,10 @@ def start_zwave():
     if network.state < network.STATE_AWAKED:
         print(".")
         print("Network is not awake but continue anyway")
+    
+    dispatcher.connect(louie_network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
+    dispatcher.connect(louie_network_resetted, ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
+    dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
     return network
 
 def print_details():
@@ -325,6 +359,7 @@ def callback(ch, method, properties, body):
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
 rabbit_channel = connection.channel()
+start_zwave()
 
 def bind_mq(callback):
 
