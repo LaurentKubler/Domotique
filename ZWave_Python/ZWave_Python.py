@@ -128,10 +128,11 @@ def start_zwave():
     if network.state < network.STATE_AWAKED:
         print(".")
         print("Network is not awake but continue anyway")
-    
+    print("Starting event registration")
     dispatcher.connect(louie_network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
     dispatcher.connect(louie_network_resetted, ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
     dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
+    print("Event registration done")
     return network
 
 def print_details():
@@ -360,6 +361,9 @@ def callback(ch, method, properties, body):
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
 rabbit_channel = connection.channel()
 start_zwave()
+
+while True:    
+    time.sleep(1)
 
 def bind_mq(callback):
 
