@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Messages.QueueMessages.Command
+﻿namespace Messages.QueueMessages.Command
 {
     class PlcBusCommand
     {

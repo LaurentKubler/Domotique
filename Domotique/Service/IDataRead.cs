@@ -6,7 +6,10 @@ namespace Domotique.Model
     public interface IDataRead
     {
         int ReadRoomIdByRoomName(string RoomName);
+
         string ReadRoomNameByProbe(string CaptorId);
+
+        int ReadDeviceIDByAddress(string address, string adapter);
 
         Room ReadRoomByName(string RoomName);
 
@@ -15,5 +18,7 @@ namespace Domotique.Model
         IList<RoomStatus> ReadRoomTemperatures();
 
         IList<Graph> ReadRoomTemperaturesGraph();
+
+
     }
 }

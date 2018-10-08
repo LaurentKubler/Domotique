@@ -74,6 +74,19 @@ namespace Domotique.Model
         }
 
 
+        public int ReadDeviceIDByAddress(string address, string adapter)
+        {
+            using (var connection = _databaseConnection.GetConnection())
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "Select Device_ID from Device where Address = @address";
+                command.Parameters.AddWithValue("@address", address);
+
+                return int.Parse(command.ExecuteScalar().ToString()); ;
+            }
+        }
+
         public IList<RoomStatus> ReadRoomTemperatures()
         {
             IList<RoomStatus> result = new List<RoomStatus>();

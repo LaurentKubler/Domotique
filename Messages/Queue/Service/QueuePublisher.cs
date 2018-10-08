@@ -43,5 +43,31 @@ namespace Messages.Queue.Service
                 Console.WriteLine(e);
             }
         }
+
+
+        public void Publish(T message, string routingKey)
+        {
+            try
+            {
+                var factory = new ConnectionFactory() { HostName = Configuration.ServerName, Port = Configuration.ServerPort };
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
+                {
+                    channel.ExchangeDeclare(exchange: Configuration.Exchange, type: "fanout");
+                    var stringMessage = JsonConvert.SerializeObject(message);
+                    var body = Encoding.UTF8.GetBytes(stringMessage);
+
+                    channel.BasicPublish(exchange: Configuration.Exchange,
+                                         routingKey: routingKey,
+                                         basicProperties: null,
+                                         body: body);
+                }
+            }
+            catch (Exception e)
+            {
+                _unpublishedMessages.Add(message);
+                Console.WriteLine(e);
+            }
+        }
     }
 }

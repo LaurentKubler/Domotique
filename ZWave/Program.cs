@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using System;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using ZWave.Channel;
 using ZWave.CommandClasses;
 
@@ -22,36 +20,36 @@ namespace ZWave
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-            static void Main1(string[] args)
+        static void Main1(string[] args)
+        {
+            // use first serial port
+            var portName = System.IO.Ports.SerialPort.GetPortNames().First();
+
+            // create a channel
+            var channel = new ZWaveChannel("COM5");
+
+            // uncommment to see detailed logging
+            // channel.Log = Console.Out;
+
+            // subcribe to node events
+            channel.NodeEventReceived += (sender, e) => Console.WriteLine($"Event: NodeID:{e.NodeID:D3} Command:[{e.Command}]");
+
+            // open channel
+            channel.Open();
+            try
             {
-                // use first serial port
-                var portName = System.IO.Ports.SerialPort.GetPortNames().First();
-
-                // create a channel
-                var channel = new ZWaveChannel("COM5");
-
-                // uncommment to see detailed logging
-                // channel.Log = Console.Out;
-
-                // subcribe to node events
-                channel.NodeEventReceived += (sender, e) => Console.WriteLine($"Event: NodeID:{e.NodeID:D3} Command:[{e.Command}]");
-
-                // open channel
-                channel.Open();
-                try
-                {
-                    Run(channel).Wait();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"{ex}");
-                }
-                finally
-                {
-                    Console.ReadLine();
-                    channel.Close();
-                }
+                Run(channel).Wait();
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex}");
+            }
+            finally
+            {
+                Console.ReadLine();
+                channel.Close();
+            }
+        }
 
         static private async Task Run(ZWaveChannel channel)
         {
@@ -73,7 +71,7 @@ namespace ZWave
             Console.WriteLine($"Set wallplug on.");
             await channel.Send(wallPlugID, new Command(CommandClass.SwitchBinary, 0x02, 255));
 
-            await channel.Send(wallPlugID, new Command(CommandClass.MultiChannel, 0x07, 255)); 
+            await channel.Send(wallPlugID, new Command(CommandClass.MultiChannel, 0x07, 255));
             //await channel.Send(wallPlugID, new Command(CommandClass.SwitchBinary, 0x01, 255));
             await Task.Delay(1000);
 
@@ -87,13 +85,13 @@ namespace ZWave
             var portName = System.IO.Ports.SerialPort.GetPortNames().Where(element => element != "COM1").First();
 
             var controller = new ZWaveController("COM3");
-            
+
             // netsh http add urlacl url=http://+:80/ user=Everyone
             // http://localhost:80/api/v1.0/controller/nodes/19/basic/get/
-            
+
             //controller.Channel.Log = Console.Out;
 
-            controller.Open();            
+            controller.Open();
             try
             {
                 Run(controller).Wait();
@@ -112,7 +110,7 @@ namespace ZWave
             finally
             {
                 Console.ReadLine();
-                
+
                 controller.Close();
             }
         }
@@ -139,7 +137,7 @@ namespace ZWave
             var controllerNodeID = await controller.GetNodeID();
             LogMessage($"ControllerID: {controllerNodeID:D3}");
 
-            
+
             await controller.DiscoverNodes();
             var nodes = await controller.GetNodes();
             await Task.Delay(2000);
@@ -163,7 +161,7 @@ namespace ZWave
             await Task.Delay(1000);
             await command.BinarySwitchSet(2, true);
             await Task.Delay(1000);
-            await command.BinarySwitchSet(1,false);
+            await command.BinarySwitchSet(1, false);
             await Task.Delay(1000);
             await command.BinarySwitchSet(2, false);
 

@@ -75,7 +75,7 @@ namespace PLCBus.Services
 
         }
 
-        public void Publish(DeviceMessage message)
+        public void Publish(DeviceStatusMessage message)
         {
             var messageJson = JsonConvert.SerializeObject(message);
             var body = Encoding.UTF8.GetBytes(messageJson);

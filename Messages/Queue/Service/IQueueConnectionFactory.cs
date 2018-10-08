@@ -1,11 +1,9 @@
-﻿using System.Threading.Tasks;
-
-namespace Messages.Queue.Service
+﻿namespace Messages.Queue.Service
 {
     public interface IQueueConnectionFactory
     {
-        Task<IQueuePublisher<T>> GetQueuePublisher<T>(string queueTag);
+        IQueuePublisher<T> GetQueuePublisher<T>(string queueTag);
 
-        Task<IQueueSubscriber<T>> GetQueueSubScriber<T>(string queueTag);
+        IQueueSubscriber<T> GetQueueSubScriber<T>(string queueTag);
     }
 }
