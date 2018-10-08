@@ -50,7 +50,7 @@ namespace Domotique
             services.AddSingleton<IQueueConnectionFactory>((c) => new QueueConnectionFactory(queues));
 
 
-            services.AddSingleton<IDeviceService, DeviceService>();
+            services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddTransient<IDataRead, DataRead>();
 
 
@@ -74,7 +74,8 @@ namespace Domotique
         {
             // Start the main server
             var tmp = app.ApplicationServices.GetService<IStatusService>();
-            var tmp2 = app.ApplicationServices.GetService<IDeviceService>();
+            var tmp2 = app.ApplicationServices.GetService<IDeviceStatusReadingService>();
+            tmp2.Start();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
