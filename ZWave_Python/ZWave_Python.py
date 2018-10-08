@@ -359,9 +359,11 @@ def callback(ch, method, properties, body):
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
-rabbit_channel = connection.channel()
-start_zwave()
 
+rabbit_channel = connection.channel()
+print("starting zwave")
+start_zwave()
+print("zwave started")
 while True:    
     time.sleep(1)
 
