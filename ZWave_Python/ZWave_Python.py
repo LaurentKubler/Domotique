@@ -63,8 +63,7 @@ def louie_network_started(network):
     dispatcher.connect(louie_node_update, ZWaveNetwork.SIGNAL_NODE)
     dispatcher.connect(louie_value_update, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
     dispatcher.connect(louie_ctrl_message, ZWaveController.SIGNAL_CONTROLLER)
-    dispatcher.connect(louie_node_event, ZWaveController.SIGNAL_NODE_EVENT)
-
+    #dispatcher.connect(louie_node_event, ZWaveController.SIGNAL_NODE_EVENT)
 def louie_node_event(network, node, value):
     print('Louie signal : louie_node_event.')
 
