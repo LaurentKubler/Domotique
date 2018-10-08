@@ -36,6 +36,8 @@ namespace Domotique
             });*/
             services.AddDbContext<DomotiqueContext>();
             services.AddSingleton<ILogService, LogService>();
+            services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
+            services.AddSingleton<IQueueConnectionFactory, QueueConnectionFactory>();
             services.AddSingleton<IStatusService, Status>();
 
             var queues = new List<QueueConfiguration>();
@@ -72,6 +74,7 @@ namespace Domotique
         {
             // Start the main server
             var tmp = app.ApplicationServices.GetService<IStatusService>();
+            var tmp2 = app.ApplicationServices.GetService<IDeviceService>();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
