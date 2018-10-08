@@ -134,9 +134,11 @@ def start_zwave():
             sys.stdout.flush()
             time_started += 1
             time.sleep(1.0)
+            print("Network is not awake " + i)
     if network.state < network.STATE_AWAKED:
         print(".")
         print("Network is not awake but continue anyway")
+    print("End of start")
     return network
 
 def print_details():
