@@ -1,6 +1,6 @@
 FROM python:3
 
-RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika virtualenv
+RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika virtualenv PyDispatcher
 
 RUN apt-get update
 
