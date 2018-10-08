@@ -109,6 +109,11 @@ print("Memory use : {} Mo".format((resource.getrusage(resource.RUSAGE_SELF).ru_m
 #Create a network object
 def start_zwave():
     network = ZWaveNetwork(options, log=None)
+    print("Starting event registration")
+    dispatcher.connect(louie_network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
+    dispatcher.connect(louie_network_resetted, ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
+    dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
+    print("Event registration done")
 
     time_started = 0
     print("------------------------------------------------------------")
@@ -116,7 +121,6 @@ def start_zwave():
     print("------------------------------------------------------------")
     for i in range(0,300):
         if network.state >= network.STATE_AWAKED:
-
             print("Network initialization done")
             print("Memory use : {} Mo".format((resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0)))
             break
@@ -128,11 +132,6 @@ def start_zwave():
     if network.state < network.STATE_AWAKED:
         print(".")
         print("Network is not awake but continue anyway")
-    print("Starting event registration")
-    dispatcher.connect(louie_network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
-    dispatcher.connect(louie_network_resetted, ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
-    dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
-    print("Event registration done")
     return network
 
 def print_details():
