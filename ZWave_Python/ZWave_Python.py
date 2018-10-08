@@ -60,6 +60,9 @@ log = "Info"
 def louie_network_started(network):
     print('//////////// ZWave network is started ////////////')
     print('Louie signal : OpenZWave network is started : homeid {:08x} - {} nodes were found.'.format(network.home_id, network.nodes_count))
+    dispatcher.connect(louie_node_update, ZWaveNetwork.SIGNAL_NODE)
+    dispatcher.connect(louie_value_update, ZWaveNetwork.SIGNAL_VALUE)
+    dispatcher.connect(louie_ctrl_message, ZWaveController.SIGNAL_CONTROLLER)
 
 def louie_network_resetted(network):
     print('Louie signal : OpenZWave network is resetted.')
@@ -68,9 +71,6 @@ def louie_network_ready(network):
     print('//////////// ZWave network is ready ////////////')
     print('Louie signal : ZWave network is ready : {} nodes were found.'.format(network.nodes_count))
     print('Louie signal : Controller : {}'.format(network.controller))
-    dispatcher.connect(louie_node_update, ZWaveNetwork.SIGNAL_NODE)
-    dispatcher.connect(louie_value_update, ZWaveNetwork.SIGNAL_VALUE)
-    dispatcher.connect(louie_ctrl_message, ZWaveController.SIGNAL_CONTROLLER)
 
 def louie_node_update(network, node):
     print('Louie signal : Node update : {}.'.format(node))
