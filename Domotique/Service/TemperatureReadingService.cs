@@ -26,10 +26,13 @@ namespace Domotique.Service
 
         private IDataRead _dataRead;
 
+
         public TemperatureReadingService(IDataRead dataRead)
         {
             _dataRead = dataRead;
         }
+
+
         public void SetStatusService(IStatusService service)
         {
             statusService = service;
@@ -62,17 +65,19 @@ namespace Domotique.Service
                                      arguments: null);
 
                 var consumer = new EventingBasicConsumer(channel);
+
                 consumer.Received += (model, ea) =>
-                            {
-                                var body = ea.Body;
+                {
+                    var body = ea.Body;
 
-                                var message = Encoding.UTF8.GetString(body);
-                                var temp = JsonConvert.DeserializeObject<ProbeTemperatureMessage>(message);
+                    var message = Encoding.UTF8.GetString(body);
+                    var temp = JsonConvert.DeserializeObject<ProbeTemperatureMessage>(message);
 
-                                String roomName = _dataRead.ReadRoomNameByProbe(temp.ProbeAddress);
+                    string roomName = _dataRead.ReadRoomNameByProbe(temp.ProbeAddress);
 
-                                statusService.RegisterTemperature(roomName, temp.TemperatureValue, temp.MessageDate);
-                            };
+                    statusService.RegisterTemperature(roomName, temp.TemperatureValue, temp.MessageDate);
+                };
+
                 channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);
             }
 

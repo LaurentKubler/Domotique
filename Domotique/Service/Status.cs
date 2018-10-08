@@ -1,5 +1,6 @@
 ﻿using Domotique.Model;
 using Domotique.Service.Log;
+using Messages.Queue.Model;
 using System;
 using System.Collections.Generic;
 
@@ -58,6 +59,11 @@ namespace Domotique.Service
             {
 
             }
+        }
+
+        public void RegisterDeviceStatus(DeviceStatusMessage statusMessage)
+        {
+
         }
     }
 }

@@ -15,13 +15,13 @@ namespace Domotique.Service.Log
         }
 
 
-        public void LogTemperatureService(String name, Double currentTemperature, Double? targetTemperature, DateTime logDate)
+        public void LogTemperatureService(string name, double currentTemperature, double? targetTemperature, DateTime logDate)
         {
             int RoomId = _dataRead.ReadRoomIdByRoomName(name);
             using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile"))
-            {                
+            {
                 connection.Open();
-               using (var command = connection.CreateCommand())
+                using (var command = connection.CreateCommand())
                 {
                     command.CommandText = "INSERT INTO `DomotiqueCore`.`TemperatureLog` (`CurrentTemp`,`LogDate`,`RoomId`,`TargetTemp`) VALUES" +
                                     "(@CurrentTemp,@LogDate,@RoomId,@TargetTemp);";
@@ -31,6 +31,26 @@ namespace Domotique.Service.Log
                     command.Parameters.AddWithValue("@TargetTemp", targetTemperature);
                     command.ExecuteNonQuery();
                     Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
+                }
+            }
+        }
+
+
+        public void LogDeviceStatus(int deviceID, int deviceValue, DateTime valueDate)
+        {
+            using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile"))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "INSERT INTO `DomotiqueCore`.`DeviceStatus` (`Device_ID`, `DeviceValue`, `ValueDate`, `ValueRequest`) VALUES" +
+                                    "(@Device_ID, @DeviceValue, @ValueDate, @ValueRequest);";
+                    command.Parameters.AddWithValue("@Device_ID", deviceID);
+                    command.Parameters.AddWithValue("@DeviceValue", deviceValue);
+                    command.Parameters.AddWithValue("@ValueDate", valueDate);
+                    command.Parameters.AddWithValue("@ValueRequest", null);
+                    command.ExecuteNonQuery();
+                    Console.WriteLine($"Stored into DB: {deviceValue}° for {deviceID} at {valueDate}");
                 }
             }
         }

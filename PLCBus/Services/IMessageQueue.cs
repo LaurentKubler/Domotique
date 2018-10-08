@@ -6,7 +6,7 @@ namespace PLCBus.Services
     {
         void Connect();
 
-        void Publish(DeviceMessage message);
+        void Publish(DeviceStatusMessage message);
 
         event QueueMessageReceived OnMessage;
 

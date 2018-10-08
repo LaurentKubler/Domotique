@@ -2,14 +2,14 @@
 {
     class Device
     {
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        string Adapter { get; set; }
+        public string Adapter { get; set; }
 
-        string Address { get; set; }
+        public string Address { get; set; }
 
-        string WriteAddress { get; set; }
+        public string WriteAddress { get; set; }
 
-        string Value { get; set; }
+        public string Value { get; set; }
     }
 }

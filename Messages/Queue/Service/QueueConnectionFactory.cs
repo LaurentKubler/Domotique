@@ -1,26 +1,36 @@
 ﻿using Domotique.Model;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Messages.Queue.Service
 {
     public class QueueConnectionFactory : IQueueConnectionFactory
     {
+        private List<QueueConfiguration> _queues;
         public QueueConnectionFactory(List<QueueConfiguration> queues)
         {
-
+            _queues = queues;
         }
 
 
-        public Task<IQueuePublisher<T>> GetQueuePublisher<T>(string queueTag)
+        public IQueuePublisher<T> GetQueuePublisher<T>(string queueTag)
         {
-            throw new System.NotImplementedException();
+            foreach (var queue in _queues)
+            {
+                if (queueTag == queue.QueueApplicationTag)
+                    return new QueuePublisher<T>(queue);
+            }
+            throw new System.Exception("Queue not defined{queueTag}");
         }
 
 
-        public Task<IQueueSubscriber<T>> GetQueueSubScriber<T>(string queueTag)
+        public IQueueSubscriber<T> GetQueueSubScriber<T>(string queueTag)
         {
-            throw new System.NotImplementedException();
+            foreach (var queue in _queues)
+            {
+                if (queueTag == queue.QueueApplicationTag)
+                    return new QueueSubscriber<T>(queue);
+            }
+            throw new System.Exception("Queue not defined{queueTag}");
         }
     }
 }

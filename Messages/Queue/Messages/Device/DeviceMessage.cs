@@ -1,19 +1,17 @@
-﻿using System;
-
-namespace Messages.Queue.Model
+﻿namespace Messages.Queue.Model
 {
-    public class DeviceMessage : GenericMessage
+    public class DeviceStatusMessage : GenericMessage
     {
-        public DeviceMessage() : base("DeviceMessage")
+        public DeviceStatusMessage() : base("DeviceMessage")
         {
 
         }
 
-        public string TargetAddress { get; set; }
+        public string DeviceAddress { get; set; }
 
-        public String TargetAdapter { get; set; }
+        public string DeviceAdapter { get; set; }
 
-        public string Value { get; set; }
+        public int Value { get; set; }
 
     }
 }
