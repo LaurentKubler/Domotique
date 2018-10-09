@@ -113,13 +113,11 @@ print("Memory use : {} Mo".format((resource.getrusage(resource.RUSAGE_SELF).ru_m
 def start_zwave():
     network = ZWaveNetwork(options, log=None)
     print("Starting event registration:")
-    #dispatcher.connect(louie_network_started,
-    #ZWaveNetwork.SIGNAL_NETWORK_STARTED)
+    dispatcher.connect(louie_network_started,ZWaveNetwork.SIGNAL_NETWORK_STARTED)
     print("First evenbt registered")
-    #dispatcher.connect(louie_network_resetted,
-    #ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
+    dispatcher.connect(louie_network_resetted, ZWaveNetwork.SIGNAL_NETWORK_RESETTED)
     print("Second evenbt registered")
-    #dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
+    dispatcher.connect(louie_network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
     print("Event registration done")
 
     time_started = 0
