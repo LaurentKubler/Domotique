@@ -57,6 +57,11 @@ device = "/dev/zwave"
 log = "Info"
 
 
+def publish(message):
+    rabbit_channel.basic_publish(exchange="InboundMessages",
+                          routing_key="device.plcbus.status",
+                          body=json.dumps(message))
+
 def louie_network_started(network):
     print('//////////// ZWave network is started ////////////')
     print('Louie signal : OpenZWave network is started : homeid {:08x} - {} nodes were found.'.format(network.home_id, network.nodes_count))
@@ -414,10 +419,6 @@ def bind_mq(callback):
 
     rabbit_channel.start_consuming()
 
-def publish(message):
-    rabbit_channel.basic_publish(exchange="InboundMessages",
-                          routing_key="device.plcbus.status",
-                          body=json.dumps(message))
 def stop_zwave():
     print("------------------------------------------------------------")
     print("Stop network")
