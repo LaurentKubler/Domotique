@@ -58,7 +58,9 @@ log = "Info"
 
 
 def publish(message):
-    rabbit_channel.basic_publish(exchange="InboundMessages",
+    publish_connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
+    publish_channel = publish_connection.channel()
+    publish_channel.basic_publish(exchange="InboundMessages",
                           routing_key="device.plcbus.status",
                           body=json.dumps(message))
 
@@ -90,11 +92,12 @@ def louie_value_update(network, node, value):
     print('Louie signal : node : {}'.format(value.node))
     print('Louie signal : instance : {}'.format(value.instance))
     print('Louie signal : value dict: {}'.format(value.to_dict()))
-    statusMessage = {}
-    statusMessage["DeviceAdress"] = "{0}/{1}".format(value.node, value.instance)
-    statusMessage["DeviceAdapter"] = "plcebus"
-    statusMessage["Value"] = value.data
-    publish(statusMessage)
+    if (value.command_class == 37):
+        statusMessage = {}
+        statusMessage["DeviceAdress"] = "{0}/{1}".format(value.node, value.instance)
+        statusMessage["DeviceAdapter"] = "plcbus"
+        statusMessage["Value"] = value.data
+        publish(statusMessage)
 
     #print('Louie signal : node dict: {}'.format(node.to_dict()))
 def louie_ctrl_message(state, message, network, controller):
@@ -377,29 +380,6 @@ def print_details():
     print("Driver label : {}".format(network.controller.get_stats_label('retries')))
     print("------------------------------------------------------------")
 
-def callback(ch, method, properties, body):
-    print(" [x] %r" % body)
-
-
-connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
-
-rabbit_channel = connection.channel()
-print("starting zwave")
-network = start_zwave()
-
-for node in network.nodes:
-    for val in network.nodes[node].get_switches() :
-        #print("Activate switch {} on node
-        #{}".format(network.nodes[node].values[val].label,node))
-        print("Activate switch {} on node {}".format(network.nodes[node].values[val].index,node))
-        print("Val: {}".format(network.nodes[node].values[val].index,node))
-        network.nodes[node].set_switch(val,True)
-        time.sleep(1)
-        network.nodes[node].set_switch(val,False)
-        time.sleep(5)
-print("zwave started")
-while True:    
-    time.sleep(1)
 
 def bind_mq(callback):
 
@@ -418,6 +398,31 @@ def bind_mq(callback):
                           no_ack=True)
 
     rabbit_channel.start_consuming()
+
+def callback(ch, method, properties, body):
+    print(" [x] %r" % body)
+
+
+connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
+
+rabbit_channel = connection.channel()
+print("starting zwave")
+network = start_zwave()
+bind_mq(callback)
+
+for node in network.nodes:
+    for val in network.nodes[node].get_switches() :
+        #print("Activate switch {} on node
+        #{}".format(network.nodes[node].values[val].label,node))
+        print("Activate switch {} on node {}".format(network.nodes[node].values[val].index,node))
+        print("Val: {}".format(network.nodes[node].values[val].index,node))
+        network.nodes[node].set_switch(val,True)
+        time.sleep(1)
+        network.nodes[node].set_switch(val,False)
+        time.sleep(5)
+print("zwave started")
+while True:    
+    time.sleep(1)
 
 def stop_zwave():
     print("------------------------------------------------------------")
