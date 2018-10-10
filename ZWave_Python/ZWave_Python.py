@@ -83,9 +83,9 @@ def louie_value_update(network, node, value):
     print('Louie signal : index : {}'.format(value.index))
     print('Louie signal : data : {}'.format(value.data))
     print('Louie signal : node : {}'.format(value.node))
+    print('Louie signal : instance : {}'.format(value.instance))
     print('Louie signal : value dict: {}'.format(value.to_dict()))
     #print('Louie signal : node dict: {}'.format(node.to_dict()))
-
 
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
