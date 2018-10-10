@@ -374,12 +374,13 @@ rabbit_channel = connection.channel()
 print("starting zwave")
 network = start_zwave()
 
-for val in network.nodes[node].get_switches() :
-    print("Activate switch {} on node {}".format(network.nodes[node].values[val].label,node))
-    network.nodes[node].set_switch(val,True)
-    time.sleep(1)
-    network.nodes[node].set_switch(val,True)
-    time.sleep(5)
+for node in network.nodes:
+    for val in network.nodes[node].get_switches() :
+        print("Activate switch {} on node {}".format(network.nodes[node].values[val].label,node))
+        network.nodes[node].set_switch(val,True)
+        time.sleep(1)
+        network.nodes[node].set_switch(val,True)
+        time.sleep(5)
 print("zwave started")
 while True:    
     time.sleep(1)
