@@ -83,6 +83,7 @@ def louie_value_update(network, node, value):
     print('Louie signal : index : {}'.format(value.index))
     print('Louie signal : data : {}'.format(value.data))
     print('Louie signal : node : {}'.format(value.node))
+    print('Louie signal : value dict: {}'.format(value.to_dict()))
 
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
@@ -377,9 +378,10 @@ network = start_zwave()
 for node in network.nodes:
     for val in network.nodes[node].get_switches() :
         print("Activate switch {} on node {}".format(network.nodes[node].values[val].label,node))
+        print("Val: {}".format(network.nodes[node].values[val].index,node))
         network.nodes[node].set_switch(val,True)
         time.sleep(1)
-        network.nodes[node].set_switch(val,True)
+        network.nodes[node].set_switch(val,False)
         time.sleep(5)
 print("zwave started")
 while True:    
