@@ -85,8 +85,13 @@ def louie_value_update(network, node, value):
     print('Louie signal : node : {}'.format(value.node))
     print('Louie signal : instance : {}'.format(value.instance))
     print('Louie signal : value dict: {}'.format(value.to_dict()))
-    #print('Louie signal : node dict: {}'.format(node.to_dict()))
+    statusMessage = {}
+    statusMessage["DeviceAdress"] = "{0}/{1}".format(value.node, value.instance)
+    statusMessage["DeviceAdapter"] = "plcebus"
+    statusMessage["Value"] = value.data
+    publish(statusMessage)
 
+    #print('Louie signal : node dict: {}'.format(node.to_dict()))
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
 
@@ -409,10 +414,10 @@ def bind_mq(callback):
 
     rabbit_channel.start_consuming()
 
-def publish(exchange, routing_key, message):
-    rabbit_channel.basic_publish(exchange=exchange,
-                          routing_key=routing_key,
-                          body=message)
+def publish(message):
+    rabbit_channel.basic_publish(exchange="InboundMessages",
+                          routing_key="device.plcbus.status",
+                          body=json.dumps(message))
 def stop_zwave():
     print("------------------------------------------------------------")
     print("Stop network")
