@@ -80,6 +80,9 @@ def louie_node_update(network, node):
 
 def louie_value_update(network, node, value):
     print('Louie signal : Value update : {}.'.format(value))
+    print('Louie signal : index : {}'.format(value.index))
+    print('Louie signal : data : {}'.format(value.data))
+    print('Louie signal : node : {}'.format(value.node))
 
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
@@ -99,6 +102,7 @@ for arg in sys.argv:
 options = ZWaveOption(device, \
   #config_path="../openzwave/config", \
   user_path=".", cmd_line="")
+
 options.set_log_file("OZW_Log.log")
 options.set_append_log_file(False)
 options.set_console_output(True)
@@ -368,7 +372,14 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["ser
 
 rabbit_channel = connection.channel()
 print("starting zwave")
-start_zwave()
+network = start_zwave()
+
+for val in network.nodes[node].get_switches() :
+    print("Activate switch {} on node {}".format(network.nodes[node].values[val].label,node))
+    network.nodes[node].set_switch(val,True)
+    time.sleep(1)
+    network.nodes[node].set_switch(val,True)
+    time.sleep(5)
 print("zwave started")
 while True:    
     time.sleep(1)
