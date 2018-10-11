@@ -30,6 +30,7 @@ import os
 import resource
 import pika
 import json
+import threading
 
 #logging.getLogger('openzwave').addHandler(logging.NullHandler())
 #logging.basicConfig(level=logging.DEBUG)
@@ -382,7 +383,7 @@ def print_details():
 
 
 def bind_mq(callback):
-
+	rabbit_channel = connection.channel()
     rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"],
                              exchange_type='fanout')
 
@@ -398,6 +399,8 @@ def bind_mq(callback):
                           no_ack=True)
 
     rabbit_channel.start_consuming()
+	mq_receive_thread = threading.Thread(target=channel.start_consuming)
+    mq_receive_thread.start()
 
 def callback(ch, method, properties, body):
     print(" [x] %r" % body)
@@ -405,7 +408,7 @@ def callback(ch, method, properties, body):
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
 
-rabbit_channel = connection.channel()
+
 print("starting zwave")
 network = start_zwave()
 bind_mq(callback)
