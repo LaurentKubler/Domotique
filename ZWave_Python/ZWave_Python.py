@@ -96,7 +96,7 @@ def louie_value_update(network, node, value):
     print('Louie signal : value dict: {}'.format(value.to_dict()))
     if (value.command_class == 37):
         statusMessage = {}
-        statusMessage["deviceAdress"] = "{0}/{1}".format(value.to_dict()["node_id"], value.instance)
+        statusMessage["deviceAddress"] = "{0}/{1}".format(value.to_dict()["node_id"], value.instance)
         statusMessage["deviceAdapter"] = "plcbus"
         statusMessage["value"] = value.data
         statusMessage["messageDate"] = datetime.datetime.now().isoformat()
