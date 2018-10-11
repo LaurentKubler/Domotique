@@ -386,7 +386,9 @@ def print_details():
 
 def bind_mq(callback):
     rabbit_channel = connection.channel()
-    rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"], exchange_type='fanout')
+    #rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"],
+    #exchange_type='fanout')
+    rabbit_channel.exchange_declare(exchange="OutboundMessages", exchange_type='fanout')
     result = rabbit_channel.queue_declare(exclusive=True)
     queue_name = result.method.queue
     rabbit_channel.queue_bind(exchange=cfg["Queue"]["exchangeName"], queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
@@ -401,6 +403,7 @@ def bind_mq(callback):
     mq_receive_thread.start()
 
 def callback(ch, method, properties, body):
+    print("Received " + body)
     command = json.loads(body) 
     address = command["TargetAddress"]
     command = command["Command"]
