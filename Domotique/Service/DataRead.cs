@@ -80,7 +80,7 @@ namespace Domotique.Model
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText = "Select Device_ID from Device where Address = @address";
+                command.CommandText = "Select DeviceID from Device where Address = @address";
                 command.Parameters.AddWithValue("@address", address);
 
                 return int.Parse(command.ExecuteScalar().ToString()); ;
