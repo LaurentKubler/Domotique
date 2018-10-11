@@ -417,8 +417,8 @@ def callback(ch, method, properties, body):
             if (str(network.nodes[node].node_id) == str(nodeindex)):
                 print("node found {}".format(node))
                 for val in network.nodes[node].get_switches() :
-                    print("val  {}:{}".format(network.nodes[node].values[val].index,instance))
-                    if str(network.nodes[node].values[val].index) == str(instance):
+                    print("val  {}:{}".format(network.nodes[node].values[val].instance,instance))
+                    if str(network.nodes[node].values[val].instance) == str(instance):
                         print("val found {}".format(node))
                         if Command == "PowerOn":
                             network.nodes[node].set_switch(val,True)
