@@ -419,7 +419,7 @@ def callback(ch, method, properties, body):
                 print("node found {}".format(node))
                 for val in network.nodes[node].get_switches() :
                     print("val  {}".format(val))
-                    if network.nodes[node].values[val].index == instance:
+                    if str(network.nodes[node].values[val].index) == str(instance):
                         if Command == "PowerOn":
                             network.nodes[node].set_switch(val,True)
                         if Command == "PowerOff":
