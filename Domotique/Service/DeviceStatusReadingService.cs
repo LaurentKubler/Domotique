@@ -43,16 +43,24 @@ namespace Domotique.Service
 
         private void OnDeviceStatus(DeviceStatusMessage message)
         {
-            Console.WriteLine($"On Device status Received : {message.ToString()}");
+            try
+            {
+                Console.WriteLine($"On Device status Received : {message.ToString()}");
 
-            int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAdapter, message.DeviceAdapter);
-            Console.WriteLine($"Device identified ad : {device_ID}");
-            if (string.Compare(message.Value, "false", true) == 0)
-                _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
-            else if (string.Compare(message.Value, "true", true) == 0)
-                _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
-            else
-                _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
+                int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAdapter, message.DeviceAdapter);
+                Console.WriteLine($"Device identified ad : {device_ID}");
+
+                if (string.Compare(message.Value, "false", true) == 0)
+                    _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
+                else if (string.Compare(message.Value, "true", true) == 0)
+                    _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
+                else
+                    _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception occured in OnDeviceStatus: {ex.Message}");
+            }
         }
     }
 }
