@@ -45,6 +45,7 @@ from openzwave.controller import ZWaveController
 from openzwave.network import ZWaveNetwork
 from openzwave.option import ZWaveOption
 import time
+import datetime
 import six
 if six.PY3:
     from pydispatch import dispatcher
