@@ -16,7 +16,7 @@
 
         public override string ToString()
         {
-            return ($"Address : {DeviceAddress}/Adapter : {DeviceAdapter}/Value : {Value}/Value : {Value.ToString()}");
+            return ($"Address : {DeviceAddress}/Adapter : {DeviceAdapter}/Value : {Value}/message date : {MessageDate.ToString()}");
         }
     }
 }
