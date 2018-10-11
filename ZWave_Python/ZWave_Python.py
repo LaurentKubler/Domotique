@@ -98,11 +98,11 @@ def louie_value_update(network, node, value):
         statusMessage = {}
         statusMessage["deviceAddress"] = "{0}/{1}".format(value.to_dict()["node_id"], value.instance)
         statusMessage["deviceAdapter"] = "plcbus"
-        statusMessage["value"] = value.data
+        statusMessage["value"] = value.data 
         statusMessage["messageDate"] = datetime.datetime.now().isoformat()
         publish(statusMessage)
 
-    #print('Louie signal : node dict: {}'.format(node.to_dict()))
+    
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
 

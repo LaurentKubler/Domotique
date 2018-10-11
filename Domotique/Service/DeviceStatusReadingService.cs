@@ -46,7 +46,7 @@ namespace Domotique.Service
             Console.WriteLine($"On Device status Received : {message.ToString()}");
 
             int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAdapter, message.DeviceAdapter);
-
+            Console.WriteLine($"Device identified ad : {device_ID}");
             if (string.Compare(message.Value, "false", true) == 0)
                 _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
             else if (string.Compare(message.Value, "true", true) == 0)
