@@ -30,6 +30,7 @@ import os
 import resource
 import pika
 import json
+import threading
 
 #logging.getLogger('openzwave').addHandler(logging.NullHandler())
 #logging.basicConfig(level=logging.DEBUG)
@@ -44,6 +45,7 @@ from openzwave.controller import ZWaveController
 from openzwave.network import ZWaveNetwork
 from openzwave.option import ZWaveOption
 import time
+from datetime import datetime
 import six
 if six.PY3:
     from pydispatch import dispatcher
@@ -94,12 +96,13 @@ def louie_value_update(network, node, value):
     print('Louie signal : value dict: {}'.format(value.to_dict()))
     if (value.command_class == 37):
         statusMessage = {}
-        statusMessage["DeviceAdress"] = "{0}/{1}".format(value.node_id, value.instance)
-        statusMessage["DeviceAdapter"] = "plcbus"
-        statusMessage["Value"] = value.data
+        statusMessage["deviceAddress"] = "{0}/{1}".format(value.to_dict()["node_id"], value.instance)
+        statusMessage["deviceAdapter"] = "plcbus"
+        statusMessage["value"] = value.data 
+        statusMessage["messageDate"] = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
         publish(statusMessage)
 
-    #print('Louie signal : node dict: {}'.format(node.to_dict()))
+    
 def louie_ctrl_message(state, message, network, controller):
     print('Louie signal : Controller message : {}.'.format(message))
 
@@ -382,13 +385,10 @@ def print_details():
 
 
 def bind_mq(callback):
-
-    rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"],
-                             exchange_type='fanout')
-
+    rabbit_channel = connection.channel()
+    rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"], exchange_type='fanout')
     result = rabbit_channel.queue_declare(exclusive=True)
     queue_name = result.method.queue
-
     rabbit_channel.queue_bind(exchange=cfg["Queue"]["exchangeName"], queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
 
     print(' [*] Waiting for logs. To exit press CTRL+C')
@@ -397,7 +397,8 @@ def bind_mq(callback):
                           queue=queue_name,
                           no_ack=True)
 
-    rabbit_channel.start_consuming()
+    mq_receive_thread = threading.Thread(target=rabbit_channel.start_consuming)
+    mq_receive_thread.start()
 
 def callback(ch, method, properties, body):
     command = json.loads(body) 
@@ -416,7 +417,7 @@ def callback(ch, method, properties, body):
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
 
-rabbit_channel = connection.channel()
+
 print("starting zwave")
 network = start_zwave()
 bind_mq(callback)
