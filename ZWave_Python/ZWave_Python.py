@@ -422,7 +422,7 @@ def callback(ch, method, properties, body):
                         if Command == "PowerOff":
                             network.nodes[node].set_switch(val,False)
     except:
-        print("Unexpected error:{}".fformat(sys.exc_info()[0]))
+        print("Unexpected error:{}".format(sys.exc_info()[0]))
 
 
 
