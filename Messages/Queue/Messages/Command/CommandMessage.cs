@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Messages.Queue.Model
+﻿namespace Messages.Queue.Model
 {
     public class CommandMessage : GenericMessage
     {
@@ -11,9 +9,9 @@ namespace Messages.Queue.Model
 
         public string TargetAddress { get; set; }
 
-        public String TargetAdapter { get; set; }
+        public string TargetAdapter { get; set; }
 
-        public String Command { get; set; }
+        public string Command { get; set; }
 
         public float Paramter { get; set; }
 
