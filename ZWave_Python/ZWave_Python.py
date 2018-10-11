@@ -99,7 +99,7 @@ def louie_value_update(network, node, value):
         statusMessage["deviceAddress"] = "{0}/{1}".format(value.to_dict()["node_id"], value.instance)
         statusMessage["deviceAdapter"] = "plcbus"
         statusMessage["value"] = value.data 
-        statusMessage["messageDate"] = datetime.datetime.now().isoformat()
+        statusMessage["messageDate"] = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
         publish(statusMessage)
 
     
