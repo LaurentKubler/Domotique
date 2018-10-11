@@ -43,7 +43,7 @@ namespace Domotique.Service
 
         private void OnDeviceStatus(DeviceStatusMessage message)
         {
-            Console.WriteLine(message.ToString());
+            Console.WriteLine($"On Device status Received : {message.ToString()}");
 
             int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAdapter, message.DeviceAdapter);
 

@@ -50,10 +50,11 @@ namespace Messages.Queue.Service
                 var body = ea.Body;
                 var message = Encoding.UTF8.GetString(body);
                 var routingKey = ea.RoutingKey;
-                Console.WriteLine(" [x] Received '{0}':'{1}'",
+                /*Console.WriteLine(" [x] Received '{0}':'{1}'",
                                   routingKey,
                                   message);
                 Console.WriteLine("going to deserialize");
+                */
                 var command = JsonConvert.DeserializeObject<T>(message);
                 Console.WriteLine(command.ToString());
                 OnMessage(command);
