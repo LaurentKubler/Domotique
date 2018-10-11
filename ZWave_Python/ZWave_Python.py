@@ -395,7 +395,6 @@ def bind_mq(callback):
                           queue=queue_name,
                           no_ack=True)
 
-    rabbit_channel.start_consuming()
     mq_receive_thread = threading.Thread(target=channel.start_consuming)
     mq_receive_thread.start()
 
