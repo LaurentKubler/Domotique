@@ -414,7 +414,7 @@ def callback(ch, method, properties, body):
     print("Activate switch {} on node {}".format(instance,nodeindex))
     try:
         for node in network.nodes:
-            print("node {}".format(node))
+            print("node {}:{}:{}".format(node,network.nodes[node].node_id ,nodeindex))
             if (network.nodes[node].node_id == nodeindex):
                 print("node found {}".format(node))
                 for val in network.nodes[node].get_switches() :
