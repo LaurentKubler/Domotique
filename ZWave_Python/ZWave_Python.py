@@ -412,11 +412,17 @@ def callback(ch, method, properties, body):
     nodeindex,instance = address.split('/')
     nodes = network.nodes
     print("Activate switch {} on node {}".format(instance,nodeindex))
-    for val in network.nodes[nodeindex].get_switches() :
-        if Command == "PowerOn":
-            network.nodes[node].set_switch(val,True)
-        if Command == "PowerOff":
-            network.nodes[node].set_switch(val,False)
+    try:
+        for node in network.nodes:
+            if (node.node_id == nodeindex):
+                for val in network.nodes[node].get_switches() :
+                    if network.nodes[node].values[val].index == instance:
+                        if Command == "PowerOn":
+                            network.nodes[node].set_switch(val,True)
+                        if Command == "PowerOff":
+                            network.nodes[node].set_switch(val,False)
+    except:
+        print("Unexpected error:{}".fformat(sys.exc_info()[0]))
 
 
 
