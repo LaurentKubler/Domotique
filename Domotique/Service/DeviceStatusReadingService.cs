@@ -59,7 +59,7 @@ namespace Domotique.Service
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception occured in OnDeviceStatus: {ex.Message}");
+                Console.WriteLine($"Exception occured in OnDeviceStatus: {ex.Message}:{ex.StackTrace}");
             }
         }
     }
