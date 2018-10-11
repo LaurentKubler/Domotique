@@ -54,6 +54,7 @@ namespace Messages.Queue.Service
                                   routingKey,
                                   message);
                 var command = JsonConvert.DeserializeObject<T>(message);
+                Console.WriteLine(command.ToString());
                 OnMessage(command);
             };
 
