@@ -383,7 +383,7 @@ def print_details():
 
 
 def bind_mq(callback):
-	rabbit_channel = connection.channel()
+    rabbit_channel = connection.channel()
     rabbit_channel.exchange_declare(exchange=cfg["Queue"]["exchangeName"], exchange_type='fanout')
     result = rabbit_channel.queue_declare(exclusive=True)
     queue_name = result.method.queue
