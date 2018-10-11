@@ -53,6 +53,7 @@ namespace Messages.Queue.Service
                 Console.WriteLine(" [x] Received '{0}':'{1}'",
                                   routingKey,
                                   message);
+                Console.WriteLine("going to deserialize");
                 var command = JsonConvert.DeserializeObject<T>(message);
                 Console.WriteLine(command.ToString());
                 OnMessage(command);
