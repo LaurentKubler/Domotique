@@ -47,7 +47,12 @@ namespace Domotique.Service
 
             int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAdapter, message.DeviceAdapter);
 
-            _logService.LogDeviceStatus(device_ID, message.Value, message.MessageDate);
+            if (string.Compare(message.Value, "false", true) == 0)
+                _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
+            else if (string.Compare(message.Value, "true", true) == 0)
+                _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
+            else
+                _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
         }
     }
 }
