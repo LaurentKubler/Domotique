@@ -6,3 +6,6 @@ Body:
 "targetAddress":"2/1",
 "command":"PowerOn"
 }
+
+body ="{\"targetAddress\":\"2/1\",\"command\":\"PowerOn\"}"
+command = json.loads(body) 
