@@ -391,7 +391,9 @@ def bind_mq(callback):
     rabbit_channel.exchange_declare(exchange="OutboundMessages", exchange_type='fanout')
     result = rabbit_channel.queue_declare(exclusive=True)
     queue_name = result.method.queue
-    rabbit_channel.queue_bind(exchange=cfg["Queue"]["exchangeName"], queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
+    #rabbit_channel.queue_bind(exchange=cfg["Queue"]["exchangeName"],
+    #queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
+    rabbit_channel.queue_bind(exchange="OutboundMessages", queue=queue_name, routing_key=cfg["Queue"]["InboundroutingKey"])
 
     print(' [*] Waiting for logs. To exit press CTRL+C')
 

@@ -1,0 +1,8 @@
+Tag:
+command.zwave
+
+Body:
+{
+"targetAddress":"2/1",
+"command":"PowerOn"
+}
