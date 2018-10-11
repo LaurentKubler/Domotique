@@ -13,5 +13,10 @@
 
         public string Value { get; set; }
 
+
+        public override string ToString()
+        {
+            return ($"Address : {DeviceAddress}/Adapter : {DeviceAdapter}/Value : {Value}/Value : {Value.ToString()}");
+        }
     }
 }
