@@ -401,7 +401,18 @@ def bind_mq(callback):
     mq_receive_thread.start()
 
 def callback(ch, method, properties, body):
-    print(" [x] %r" % body)
+    command = json.loads(body) 
+    address = command["TargetAddress"]
+    command = command["Command"]
+    nodeindex,instance = address.split('/')
+    nodes = network.nodes
+    print("Activate switch {} on node {}".format(instance,nodeindex))
+    for val in network.nodes[nodeindex].get_switches() :
+        if Command == "PowerOn":
+            network.nodes[node].set_switch(val,True)
+        if Command == "PowerOff":
+            network.nodes[node].set_switch(val,False)
+
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(cfg["Queue"]["server"]))
