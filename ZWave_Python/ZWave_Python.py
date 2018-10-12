@@ -420,9 +420,9 @@ def callback(ch, method, properties, body):
                     print("val  {}:{}".format(network.nodes[node].values[val].instance,instance))
                     if str(network.nodes[node].values[val].instance) == str(instance):
                         print("val found {}".format(node))
-                        if Command == "PowerOn":
+                        if command == "PowerOn":
                             network.nodes[node].set_switch(val,True)
-                        if Command == "PowerOff":
+                        if command == "PowerOff":
                             network.nodes[node].set_switch(val,False)
     except:
         print("Unexpected error:{}".format(sys.exc_info()[0]))
