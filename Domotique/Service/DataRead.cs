@@ -266,8 +266,8 @@ namespace Domotique.Model
                         {
                             Device_ID = reader.GetInt32("DeviceID"),
                             DeviceName = reader.GetString("DeviceName"),
-                            OnImage_ID = reader.GetString("OnImage"),
-                            OffImage_ID = reader.GetString("OffImage")
+                            OnImage_ID = reader.GetInt32("OnImage"),
+                            OffImage_ID = reader.GetInt32("OffImage")
                         };
                         if (!reader.IsDBNull(reader.GetOrdinal("MaxDate")))
                             device.ValueDate = reader.GetDateTime("MaxDate");
