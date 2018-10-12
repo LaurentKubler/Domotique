@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Messages.WebMessages
 {
@@ -17,5 +18,7 @@ namespace Messages.WebMessages
         public string OffImage_ID { get; set; }
 
         public DateTime? ValueDate { get; set; }
+
+        public IList<Function> Functions { get; set; } = new List<Function>();
     }
 }

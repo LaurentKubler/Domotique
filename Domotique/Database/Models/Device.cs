@@ -34,7 +34,7 @@ CREATE TABLE `DomoTrigger` (
         public Adapter Adapter { get; set; }
         public string StatusAddress { get; set; }
         public string Address { get; set; }
-        public string Picture { get; set; }
+        //public string Picture { get; set; }
 
     }
 }

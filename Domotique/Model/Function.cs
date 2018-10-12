@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Domotique.Model
+﻿namespace Domotique.Model
 {
-    class Function
+    public class Function
     {
         public int ID { get; set; }
 
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        int DeviceID { get; set; }
+        public int DeviceID { get; set; }
 
-        Device Device { get; set; }
+        public Device Device { get; set; }
     }
 }

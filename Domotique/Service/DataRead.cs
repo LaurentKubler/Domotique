@@ -266,8 +266,8 @@ namespace Domotique.Model
                         {
                             Device_ID = reader.GetInt32("DeviceID"),
                             DeviceName = reader.GetString("DeviceName"),
-                            OnImage_ID = reader.GetString("Picture"),
-                            OffImage_ID = reader.GetString("Picture")
+                            OnImage_ID = reader.GetString("OnImage"),
+                            OffImage_ID = reader.GetString("OffImage")
                         };
                         if (!reader.IsDBNull(reader.GetOrdinal("MaxDate")))
                             device.ValueDate = reader.GetDateTime("MaxDate");
@@ -282,6 +282,24 @@ namespace Domotique.Model
                         if (device.Value != null)
                             device.Status = (device.Value != 0 ? true : false);
                         result.Add(device);
+                    }
+                    reader.Close();
+                }
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT * from Functions";
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var func = new Messages.WebMessages.Function()
+                        {
+                            Name = reader.GetString("Function")
+                        };
+
+                        int id = reader.GetInt32("DeviceID");
+
+                        result.First(device => device.Device_ID == id).Functions.Add(func);
                     }
                     reader.Close();
                 }

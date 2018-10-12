@@ -2,7 +2,7 @@
 
 namespace Domotique.Model
 {
-    class Device
+    public class Device
     {
         public string Name { get; set; }
 
@@ -15,6 +15,5 @@ namespace Domotique.Model
         public string Value { get; set; }
 
         public IList<Function> Functions { get; set; }
-
     }
 }
