@@ -52,11 +52,14 @@
           <div class="card-title">
             <h5 class="card-title">{{deviceStatus.deviceName}}</h5>
           </div>
-          <div class="card-title">
+          <div class="card-body">
             Status :{{deviceStatus.status}} value :{{deviceStatus.value}}<br />
             Last status date: {{deviceStatus.valueDate}}<br />
             Id :{{deviceStatus.device_ID}}<br />
           </div>
+          <p *ngFor="let function of deviceStatus.functions">
+            {{function.name}}
+          </p>
         </div>
       </div>
       <h3>Menu 1</h3>
