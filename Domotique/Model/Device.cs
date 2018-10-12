@@ -1,6 +1,8 @@
-﻿namespace Domotique.Model
+﻿using System.Collections.Generic;
+
+namespace Domotique.Model
 {
-    class Device
+    public class Device
     {
         public string Name { get; set; }
 
@@ -11,5 +13,7 @@
         public string WriteAddress { get; set; }
 
         public string Value { get; set; }
+
+        public IList<Function> Functions { get; set; }
     }
 }
