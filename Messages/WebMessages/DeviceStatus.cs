@@ -13,9 +13,9 @@ namespace Messages.WebMessages
 
         public bool? Status { get; set; }
 
-        public string OnImage_ID { get; set; }
+        public int OnImage_ID { get; set; }
 
-        public string OffImage_ID { get; set; }
+        public int OffImage_ID { get; set; }
 
         public DateTime? ValueDate { get; set; }
 
