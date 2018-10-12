@@ -2,8 +2,8 @@
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using RJCP.IO.Ports;
 using System;
-using System.IO.Ports;
 using System.Text;
 using System.Threading;
 
@@ -11,7 +11,7 @@ namespace PLCBus.Services
 {
     public class MessageQueue : IMessageQueue
     {
-        readonly SerialPort port = new SerialPort("/dev/tty");
+        readonly SerialPortStream port = new SerialPortStream("/dev/tty");
 
         readonly CancellationToken _cancellationtocken;
 
