@@ -52,6 +52,7 @@ namespace Domotique
 
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddTransient<IDataRead, DataRead>();
+            services.AddTransient<IDeviceService, DeviceService>();
 
 
             TemperatureReadingService.ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName");

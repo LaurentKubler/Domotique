@@ -79,6 +79,9 @@ export class DayTemperature {
   public minTemp: number;
   public maxTemp: number;
 }
+export class DeviceFunction {
+  public name: number;
+}
 export class DeviceStatus {
   public device_ID: number;
   public deviceName: string;
@@ -87,4 +90,5 @@ export class DeviceStatus {
   public status: boolean;
   public onImage_ID: number;
   public offImage_ID: number;
+  public functions: DeviceFunction[];
 }
