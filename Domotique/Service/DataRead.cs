@@ -21,7 +21,7 @@ namespace Domotique.Model
         }
 
 
-        public String ReadRoomNameByProbe(String CaptorId)
+        public String ReadRoomNameByProbe(string CaptorId)
         {
             using (var connection = _databaseConnection.GetConnection())
             {
@@ -37,11 +37,10 @@ namespace Domotique.Model
         }
 
 
-        public int ReadRoomIdByRoomName(String RoomName)
+        int IDataRead.ReadRoomIdByRoomName(string RoomName)
         {
             using (var connection = _databaseConnection.GetConnection())
             {
-                //var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile");
                 int RoomId = 0;
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -55,7 +54,7 @@ namespace Domotique.Model
         }
 
 
-        public Room ReadRoomByName(String RoomName)
+        public Room ReadRoomByName(string RoomName)
         {
             using (var connection = _databaseConnection.GetConnection())
             {
@@ -239,6 +238,28 @@ namespace Domotique.Model
 
                 return result.ToList();
             }
+        }
+
+        public Device ReadDeviceByID(long deviceID)
+        {
+            Device device = new Device();
+
+            using (var connection = _databaseConnection.GetConnection())
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT Device.* FROM Device";
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        device.Address = reader.GetString("Address");
+                    }
+                }
+            }
+
+            return device;
         }
 
 

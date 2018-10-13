@@ -52,6 +52,7 @@ namespace Domotique
 
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddTransient<IDataRead, DataRead>();
+            services.AddTransient<IDeviceService, DeviceService>();
 
 
             TemperatureReadingService.ServerName = Configuration.GetValue<string>("Services:Temperature:ServerName");
@@ -86,8 +87,8 @@ namespace Domotique
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
-                //spa.Options.SourcePath = "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique\\ClientApp";
+                //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
+                spa.Options.SourcePath = "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique\\ClientApp";
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");

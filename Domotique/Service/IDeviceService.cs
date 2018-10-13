@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Domotique.Service
 {
-    interface IDeviceService
+    public interface IDeviceService
     {
         void PowerOff(long deviceID);
 

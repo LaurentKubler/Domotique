@@ -11,6 +11,8 @@ namespace Domotique.Model
 
         int ReadDeviceIDByAddress(string address, string adapter);
 
+        Device ReadDeviceByID(long deviceID);
+
         Room ReadRoomByName(string RoomName);
 
         IList<DeviceStatus> ReadDevices();
