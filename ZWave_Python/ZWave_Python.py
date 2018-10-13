@@ -407,8 +407,8 @@ def bind_mq(callback):
 def callback(ch, method, properties, body):
     print("Received " + body)
     command = json.loads(body) 
-    address = command["targetAddress"]
-    command = command["command"]
+    address = command["TargetAddress"]
+    command = command["Command"]
     nodeindex,instance = address.split('/')
     nodes = network.nodes
     print("Activate switch {} on node {}".format(instance,nodeindex))

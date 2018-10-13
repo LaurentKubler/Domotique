@@ -21,8 +21,13 @@ export class AppComponent {
       result => {
         this.Status = result.json() as Status;
         this.Rooms = this.Status.rooms;
-        this.Devices = this.Status.devices;
-        console.warn(this.Rooms[0].roomName);
+        this.Devices = [];
+
+        for (let device of this.Status.devices) {
+          this.Devices.push(Object.assign(new DeviceStatus(), device));
+          //console.warn(device.deviceName + ":" + device.IsLight());
+        }
+
       },
       error => console.error(error));
 
@@ -61,6 +66,18 @@ export class AppComponent {
       },
       error => console.error(error));
   }
+  public PowerOn(deviceid) {
+    this.http.post('/rest/BinarySwitchDevice/' + deviceid + '/PowerOn', '').subscribe(
+      result => console.debug(result),
+      error => console.error(error)
+    );
+  }
+  public PowerOff(deviceid) {
+    this.http.post('/rest/BinarySwitchDevice/' + deviceid + '/PowerOff', '').subscribe(
+      result => console.debug(result),
+      error => console.error(error)
+    );
+  }
 }
 export class Status {
   public rooms: RoomStatus[];
@@ -80,7 +97,7 @@ export class DayTemperature {
   public maxTemp: number;
 }
 export class DeviceFunction {
-  public name: number;
+  public name: string;
 }
 export class DeviceStatus {
   public device_ID: number;
@@ -91,4 +108,19 @@ export class DeviceStatus {
   public onImage_ID: number;
   public offImage_ID: number;
   public functions: DeviceFunction[];
+  public IsLight() {
+    for (let func of this.functions) {
+      if (func.name == "Light")
+        return true;
+    }
+    return false;
+  }
+
+  public IsSwitch() {
+    for (let func of this.functions) {
+      if (func.name == "Switch")
+        return true;
+    }
+    return false;
+  }
 }

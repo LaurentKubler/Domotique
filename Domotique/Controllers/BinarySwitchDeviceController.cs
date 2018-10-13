@@ -16,7 +16,7 @@ namespace Domotique.Controllers
         }
 
 
-        [HttpPost()]
+        [HttpPost("{deviceID}/poweron")]
         public IActionResult PowerOn(long deviceID)
         {
             _deviceService.PowerOn(deviceID);
@@ -24,7 +24,7 @@ namespace Domotique.Controllers
         }
 
 
-        [HttpPost()]
+        [HttpPost("{deviceID}/poweroff")]
         public IActionResult PowerOff(long deviceID)
         {
             _deviceService.PowerOff(deviceID);
