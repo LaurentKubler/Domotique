@@ -250,7 +250,7 @@ namespace Domotique.Model
 
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT Device.* FROM Device";
+                    command.CommandText = $"SELECT Device.* FROM Device WHERE DeviceID={deviceID}";
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
@@ -273,12 +273,12 @@ namespace Domotique.Model
 
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT Device.*, MaxDateDeviceStatus.MaxDate,DeviceStatus.DeviceValue" +
+                    command.CommandText = "SELECT Device.*, DeviceStatus.ValueDate,DeviceStatus.DeviceValue" +
                                           "    FROM Device" +
-                                          "    LEFT JOIN(SELECT Device_ID, MAX(ValueDate) MaxDate FROM DeviceStatus GROUP BY Device_ID) MaxDateDeviceStatus" +
+                                          "    LEFT JOIN(SELECT Device_ID, MAX(DeviceStatusID) MaxStatus FROM DeviceStatus GROUP BY Device_ID) MaxDateDeviceStatus" +
                                           "          ON MaxDateDeviceStatus.Device_ID = Device.DeviceID" +
                                           "    LEFT JOIN DeviceStatus" +
-                                          "          ON DeviceStatus.Device_ID = Device.DeviceID AND DeviceStatus.ValueDate = MaxDateDeviceStatus.MaxDate";
+                                          "          ON DeviceStatus.Device_ID = Device.DeviceID AND DeviceStatus.DeviceStatusID = MaxDateDeviceStatus.MaxStatus";
 
                     var reader = command.ExecuteReader();
                     while (reader.Read())
@@ -290,8 +290,8 @@ namespace Domotique.Model
                             OnImage_ID = reader.GetInt32("OnImage"),
                             OffImage_ID = reader.GetInt32("OffImage")
                         };
-                        if (!reader.IsDBNull(reader.GetOrdinal("MaxDate")))
-                            device.ValueDate = reader.GetDateTime("MaxDate");
+                        if (!reader.IsDBNull(reader.GetOrdinal("ValueDate")))
+                            device.ValueDate = reader.GetDateTime("ValueDate");
                         else
                             device.ValueDate = null;
 
