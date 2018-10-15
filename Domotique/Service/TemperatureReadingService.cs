@@ -51,7 +51,7 @@ namespace Domotique.Service
                 }
                 catch (Exception e)
                 {
-                    Console.Write("unable to reach rabbitmq");
+                    Console.Write("unable to reach rabbitmq: " + e.Message);
                     Thread.Sleep(10000);
                 }
 

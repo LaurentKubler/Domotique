@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Domotique.Database
 {
@@ -25,16 +25,59 @@ CREATE TABLE `DomoTrigger` (
     public class Device
     {
         [Key]
-        public int ID { get; set; }
+        public int DeviceID { get; set; }
 
         public string DeviceName { get; set; }
 
-        [Column("Adapter")]
+        [Column("AdapterID")]
         public int AdapterID { get; set; }
         public Adapter Adapter { get; set; }
-        public string StatusAddress { get; set; }
-        public string Address { get; set; }
-        //public string Picture { get; set; }
 
+        public string Address { get; set; }
+
+        public string StatusAddress { get; set; }
+
+        public IList<Function> Functions { get; set; }
+
+
+    }
+    [Table("Functions")]
+    public class Function
+    {
+        [Key]
+        public int ID { get; set; }
+
+        [Column("Function")]
+        public string Name { get; set; }
+
+        public int DeviceID { get; set; }
+
+        [JsonIgnore]
+        [IgnoreDataMember]
+        public Device Device { get; set; }
+    }
+    public class Room
+    {
+        public string Name { get; set; }
+
+        public double? CurrentTemperature { get; set; }
+
+        public double? TargetTemperature { get; set; }
+
+        public DateTime? LastTemperatureRefreshDate { get; set; }
+
+        bool ContainsHeater { get; set; }
+
+        string ProbeName { get; set; }
+
+        string HeaterName { get; set; }
+
+        IList<Schedule> TemperatureSchedule { get; set; }
+
+
+        public void ComputeTemperature()
+        {
+
+        }
     }
 }

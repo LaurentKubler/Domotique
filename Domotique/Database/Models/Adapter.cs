@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Domotique.Database
 {
     public class Adapter
     {
         [Key]
-        public int ID { get; set; }
+        public int AdapterID { get; set; }
 
         public string AdapterName { get; set; }
         public string IPAddress { get; set; }

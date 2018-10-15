@@ -6,8 +6,11 @@ using Messages.Queue.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System;
 using System.Collections.Generic;
 
 namespace Domotique
@@ -34,7 +37,13 @@ namespace Domotique
                 ServerPort = Configuration.GetValue<int>("Services:Temperature:ServerPort"),
                 QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName")
             });*/
-            services.AddDbContext<DomotiqueContext>();
+            services.AddDbContext<DomotiqueContext>(
+                options => options.UseMySql(Configuration.GetValue<string>("Services:Database:ConnectionString"), // replace with your Connection String
+                    mysqlOptions =>
+                    {
+                        mysqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql); // replace with your Server Version and Type
+                    }
+            ));
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddSingleton<IQueueConnectionFactory, QueueConnectionFactory>();

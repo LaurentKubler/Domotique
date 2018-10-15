@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domotique.Model
 {
     public class Device
     {
+        [Key]
+        public int DeviceID { get; set; }
+
         public string Name { get; set; }
 
         public string Adapter { get; set; }

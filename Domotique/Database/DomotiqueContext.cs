@@ -1,28 +1,22 @@
-﻿using Domotique.Database;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Domotique.Database
 {
 
     public class DomotiqueContext : DbContext
     {
-
+        public DomotiqueContext(DbContextOptions options) : base(options)
+        {
+        }
         public DbSet<Adapter> Adapter { get; set; }
 
         public DbSet<DBImage> DBImage { get; set; }
 
         public DbSet<Device> Device { get; set; }
 
-      /*  public DbSet<DeviceChangeEvent> DeviceChangeEvent { get; set; }
+        /*  public DbSet<DeviceChangeEvent> DeviceChangeEvent { get; set; }
 
-        public DbSet<DeviceRequestLog> DeviceRequestLog { get; set; }*/
+          public DbSet<DeviceRequestLog> DeviceRequestLog { get; set; }*/
 
         public DbSet<ScenarioStep> ScenarioStep { get; set; }
 
@@ -47,47 +41,43 @@ namespace Domotique.Database
         {
             // add your own confguration here
         }*/
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySql("server=192.168.1.34;port=3306;database=DomotiqueDev;uid=laurent;password=odile");
-        }
     }
 
 }
 
-   
-   /*  public class Post
-     {
-         public int PostId { get; set; }
-         public string Title { get; set; }
-         public string Content { get; set; }
 
-         public int BlogId { get; set; }
-         public Device Device { get; set; }
-     }
-   CREATE DATABASE `DomotiqueDev` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci ;
-    CREATE TABLE `Adapter` (
-  `id` int (11) NOT NULL AUTO_INCREMENT,
-  `AdapterName` varchar(256) COLLATE latin1_general_ci NOT NULL,
-  `IPAddress` varchar(32) COLLATE latin1_general_ci NOT NULL,
-  `IPPort` int (11) NOT NULL,
-  `deviceType` varchar(32) COLLATE latin1_general_ci NOT NULL,
-  `ExpirationTime` bigint(20) NOT NULL,
-  `AutoRefreshDelay` bigint(20) NOT NULL,
-  `Enabled` tinyint(1) NOT NULL,
-  PRIMARY KEY(`id`)
+/*  public class Post
+  {
+      public int PostId { get; set; }
+      public string Title { get; set; }
+      public string Content { get; set; }
+
+      public int BlogId { get; set; }
+      public Device Device { get; set; }
+  }
+CREATE DATABASE `DomotiqueDev` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci ;
+ CREATE TABLE `Adapter` (
+`id` int (11) NOT NULL AUTO_INCREMENT,
+`AdapterName` varchar(256) COLLATE latin1_general_ci NOT NULL,
+`IPAddress` varchar(32) COLLATE latin1_general_ci NOT NULL,
+`IPPort` int (11) NOT NULL,
+`deviceType` varchar(32) COLLATE latin1_general_ci NOT NULL,
+`ExpirationTime` bigint(20) NOT NULL,
+`AutoRefreshDelay` bigint(20) NOT NULL,
+`Enabled` tinyint(1) NOT NULL,
+PRIMARY KEY(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT = 13 DEFAULT CHARSET = latin1 COLLATE=latin1_general_ci;
 
-    CREATE TABLE `Device` (
-  `DeviceName` varchar(128) COLLATE latin1_general_ci NOT NULL,
-  `Adapter` int (11) NOT NULL,
-  `StatusAddress` varchar(128) COLLATE latin1_general_ci DEFAULT NULL,
-  `Address` varchar(128) COLLATE latin1_general_ci NOT NULL,
-  `Picture` varchar(10) COLLATE latin1_general_ci NOT NULL,
-  `id` int (11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(`id`)
+ CREATE TABLE `Device` (
+`DeviceName` varchar(128) COLLATE latin1_general_ci NOT NULL,
+`Adapter` int (11) NOT NULL,
+`StatusAddress` varchar(128) COLLATE latin1_general_ci DEFAULT NULL,
+`Address` varchar(128) COLLATE latin1_general_ci NOT NULL,
+`Picture` varchar(10) COLLATE latin1_general_ci NOT NULL,
+`id` int (11) NOT NULL AUTO_INCREMENT,
+PRIMARY KEY(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT = 17 DEFAULT CHARSET = latin1 COLLATE=latin1_general_ci ROW_FORMAT = DYNAMIC;
- 
+
 
 
 

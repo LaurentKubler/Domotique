@@ -1,8 +1,11 @@
-﻿using Domotique.Model;
+﻿using Domotique.Database;
+using Domotique.Model;
 using Messages.WebMessages;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Domotique.Controllers
 {
@@ -14,10 +17,19 @@ namespace Domotique.Controllers
     {
         IDataRead _dataRead;
 
+        DomotiqueContext _context;
 
-        public StatusController(IDataRead dataRead)
+        public StatusController(IDataRead dataRead, DomotiqueContext context)
         {
             _dataRead = dataRead;
+            _context = context;
+        }
+
+        [HttpGet("test")]
+        public IActionResult TestContext()
+        {
+            Console.Write(_context.Adapter.Count());
+            return Ok(_context.Device.Include(b => b.Functions));
         }
 
         [HttpGet()]
