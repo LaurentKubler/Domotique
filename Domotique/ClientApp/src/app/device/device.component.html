@@ -1,0 +1,15 @@
+<div class="card-title">
+  <h5 class="card-title">{{device.deviceName}}</h5>
+</div>
+<div class="card-body">
+  Status :{{device.status}} value :{{device.value}}<br />
+  Last status date: {{device.valueDate}}<br />
+  <div *ngIf="device.IsSwitch()">
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" (click)="PowerOn(device.device_ID)" class="btn btn-success">On</button>
+        <button type="button" (click)="PowerOff(device.device_ID)" class="btn btn-danger">Off</button>
+      </div>
+    </div>
+  </div>
+</div>
