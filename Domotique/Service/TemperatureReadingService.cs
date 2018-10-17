@@ -100,13 +100,23 @@ namespace Domotique.Service
 
         private void Received(ProbeTemperatureMessage message)
         {
-            using (var dbContext = _provider.getContext())// new DomotiqueContext(_options))
+            try
             {
-                var room = dbContext.Rooms.Where(c => c.Captor.StatusAddress == message.ProbeAddress).First();
-                statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
-            }
-            //string roomName = _dataRead.ReadRoomNameByProbe(message.ProbeAddress);
 
+                using (var dbContext = _provider.getContext())// new DomotiqueContext(_options))
+                {
+                    var address = message.ProbeAddress.Replace("/", string.Empty);
+                    var room = dbContext.Rooms.Where(c => c.Captor.Address == address).First();
+                    statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
+
+                    //string roomName = _dataRead.ReadRoomNameByProbe(message.ProbeAddress);
+                    dbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Temperature reception: {ex.Message}");
+            }
 
         }
     }
