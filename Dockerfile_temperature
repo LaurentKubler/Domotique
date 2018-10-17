@@ -6,4 +6,4 @@ COPY temperature.py ./
 COPY config.json ./
 
 
-CMD ["python", "temperature.py"]
+CMD ["python", "Temperature.py"]
