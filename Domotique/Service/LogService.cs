@@ -34,7 +34,7 @@ namespace Domotique.Service.Log
                 };
 
                 _context.Add(tempLog);
-
+                _context.SaveChanges();
                 Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
             }
         }
