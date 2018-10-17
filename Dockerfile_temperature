@@ -1,0 +1,9 @@
+FROM python:2
+
+RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika
+
+COPY onewire.py ./
+COPY config.json ./
+
+
+CMD ["python", "temperature.py"]
