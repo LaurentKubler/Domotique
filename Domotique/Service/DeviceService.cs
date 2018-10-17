@@ -28,16 +28,16 @@ namespace Domotique.Service
         public void PowerOff(long deviceID)
         {
             //var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>("ZWaveCommand");
-            var d = _context.Device.Where(c => c.DeviceID == deviceID).Include(dev => dev.Adapter).First();
-            Console.Write("QueueTage :" + d.Adapter.QueueTag);
-            var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>(d.Adapter.QueueTag);
+            var device = _context.Device.Where(c => c.DeviceID == deviceID).Include(dev => dev.Adapter).First();
+            Console.Write("QueueTage :" + device.Adapter.QueueTag);
+            var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>(device.Adapter.QueueTag);
             //Model.Device device = _dataread.ReadDeviceByID(deviceID);
             var message = new CommandMessage()
             {
                 Command = "PowerOff",
                 MessageDate = System.DateTime.Now,
                 TargetAdapter = "zwave",
-                TargetAddress = d.Address
+                TargetAddress = device.Address
             };
 
             publisher.Publish(message);
@@ -46,8 +46,11 @@ namespace Domotique.Service
 
         public void PowerOn(long deviceID)
         {
-            var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>("ZWaveCommand");
-            Model.Device device = _dataread.ReadDeviceByID(deviceID);
+            //var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>("ZWaveCommand");
+            //Model.Device device = _dataread.ReadDeviceByID(deviceID);
+            var device = _context.Device.Where(c => c.DeviceID == deviceID).Include(dev => dev.Adapter).First();
+            var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>(device.Adapter.QueueTag);
+
             var message = new CommandMessage()
             {
                 Command = "PowerOn",

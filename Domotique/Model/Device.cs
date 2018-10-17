@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace Domotique.Model
-{
+﻿namespace Domotique.Model
+{/*
     public class Device
     {
         [Key]
@@ -19,5 +16,5 @@ namespace Domotique.Model
         public string Value { get; set; }
 
         public IList<Function> Functions { get; set; }
-    }
+    }*/
 }

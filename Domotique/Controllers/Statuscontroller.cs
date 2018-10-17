@@ -29,7 +29,7 @@ namespace Domotique.Controllers
         public IActionResult TestContext()
         {
             Console.Write(_context.Adapter.Count());
-            return Ok(_context.Device.Include(b => b.Functions));
+            return Ok(_context.TemperatureLog.Take(10).Include(tl => tl.Room));
         }
 
         [HttpGet()]

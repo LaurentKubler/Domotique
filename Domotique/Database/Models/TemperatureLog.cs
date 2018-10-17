@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Domotique.Database
 {/*
@@ -24,13 +21,16 @@ CREATE TABLE `TemperatureLog` (
         [Key]
         public int ID { get; set; }
 
-        public float CurrentTemp { get; set; }
+        public double CurrentTemp { get; set; }
 
         public DateTime LogDate { get; set; }
 
-        public string Room { get; set; }
+        [ForeignKey("Room")]
+        public int RoomID { get; set; }
 
-        public float TargetTemp { get; set; }
+        public Room Room { get; set; }
+
+        public double TargetTemp { get; set; }
 
     }
 }

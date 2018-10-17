@@ -3,6 +3,7 @@ using Domotique.Service.Log;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
 using System;
+using System.Linq;
 
 namespace Domotique.Service
 {
@@ -14,14 +15,16 @@ namespace Domotique.Service
 
         ILogService _logService;
 
-        IDataRead _dataRead;
+        // IDataRead _dataRead;
 
+        DBContextProvider _contextProvider;
 
-        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead)
+        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, DBContextProvider contextProvider)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _logService = logService;
-            _dataRead = dataRead;
+            //   _dataRead = dataRead;
+            _contextProvider = contextProvider;
         }
 
 
@@ -35,7 +38,7 @@ namespace Domotique.Service
 
         public void Start()
         {
-            _statusSubscriber = _queueConnectionFactory.GetQueueSubScriber<DeviceStatusMessage>("DeviceStatus");
+            _statusSubscriber = _queueConnectionFactory.GetQueueSubscriber<DeviceStatusMessage>("DeviceStatus");
             _statusSubscriber.OnMessage += OnDeviceStatus;
             _statusSubscriber.Connect();
         }
@@ -45,17 +48,20 @@ namespace Domotique.Service
         {
             try
             {
-                Console.WriteLine($"On Device status Received : {message.ToString()}");
+                using (var _context = _contextProvider.getContext())
+                {
+                    Console.WriteLine($"On Device status Received : {message.ToString()}");
 
-                int device_ID = _dataRead.ReadDeviceIDByAddress(message.DeviceAddress, message.DeviceAdapter);
-                Console.WriteLine($"Device identified ad : {device_ID}");
+                    int device_ID = _context.Device.Where(d => d.Address == message.DeviceAddress).First().DeviceID;// _dataRead.ReadDeviceIDByAddress(message.DeviceAddress, message.DeviceAdapter);
+                    Console.WriteLine($"Device identified ad : {device_ID}");
 
-                if (string.Compare(message.Value, "false", true) == 0)
-                    _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
-                else if (string.Compare(message.Value, "true", true) == 0)
-                    _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
-                else
-                    _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
+                    if (string.Compare(message.Value, "false", true) == 0)
+                        _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
+                    else if (string.Compare(message.Value, "true", true) == 0)
+                        _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
+                    else
+                        _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
+                }
             }
             catch (Exception ex)
             {

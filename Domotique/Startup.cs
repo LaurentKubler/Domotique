@@ -48,6 +48,7 @@ namespace Domotique
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddSingleton<IQueueConnectionFactory, QueueConnectionFactory>();
             services.AddSingleton<IStatusService, Status>();
+            services.AddSingleton<DBContextProvider, DBContextProvider>();
 
             var queues = new List<QueueConfiguration>();
             var nodes = Configuration.GetSection("Services:Queues");

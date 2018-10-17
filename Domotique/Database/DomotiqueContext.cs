@@ -14,6 +14,10 @@ namespace Domotique.Database
 
         public DbSet<Device> Device { get; set; }
 
+        public DbSet<Room> Rooms { get; set; }
+
+        //LK a tester 
+        public DbSet<TemperatureLog> TemperatureLog { get; set; }
         /*  public DbSet<DeviceChangeEvent> DeviceChangeEvent { get; set; }
 
           public DbSet<DeviceRequestLog> DeviceRequestLog { get; set; }*/
@@ -26,7 +30,7 @@ namespace Domotique.Database
 
         public DbSet<Schedule> Schedule { get; set; }
 
-        public DbSet<TemperatureLog> TemperatureLog { get; set; }
+
 
         public DbSet<TemperaturePlan> TemperaturePlan { get; set; }
 
