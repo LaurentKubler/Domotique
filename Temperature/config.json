@@ -3,8 +3,8 @@
   "Queue": {
     "server": "rabbitmq",
     "port": 5672,
-    "exchangeName": "hello",
-    "InboundroutingKey": "command.zwave"
+    "exchangeName": "InboundMessages",
+    "InboundroutingKey": "device.temperature"
   },
   "ZWave": {
     "address": "/dev/zwave"

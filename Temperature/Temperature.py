@@ -18,7 +18,7 @@ def refresh():
     #pika.BlockingConnection(pika.ConnectionParameters('172.17.0.1$
         print cfg["Queue"]["server"]
         credentials = pika.PlainCredentials('guest','guest')
-        connection = pika.BlockingConnection('rabbitmq')
+        connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
         channel = connection.channel()
         #channel.queue_declare(queue = cfg["Queue"]["queueName"])
         owproxy = pyownet.protocol.proxy(host = "192.168.1.42", port = 4304)
@@ -33,7 +33,7 @@ def refresh():
                                 dev['MessageDate'] = datetime.datetime.now().isoformat()
                                 dev['TemperatureValue'] = owproxy.read(device + 'temperature')
                                 print(datetime.datetime.now().isoformat() + ":Temp:" + dev['TemperatureValue'] + "@" + dev['ProbeAddress'])
-                                channel.basic_publish(exchange="InboundMessages",routing_key="device.plcbus.status",body=json.dumps(dev))
+                                channel.basic_publish(exchange="InboundMessages",routing_key="device.temperature",body=json.dumps(dev))
                         except :
                             print("Oops!  That was no valid number.  Try again...")
                 else:
