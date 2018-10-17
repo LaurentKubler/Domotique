@@ -1,11 +1,9 @@
 ﻿using Domotique.Model;
 using Messages.Queue.Model;
-using Newtonsoft.Json;
+using Messages.Queue.Service;
 using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
 using System;
-using System.Text;
-using System.Threading;
+using System.Linq;
 
 namespace Domotique.Service
 {
@@ -26,10 +24,18 @@ namespace Domotique.Service
 
         private IDataRead _dataRead;
 
+        private IQueueConnectionFactory _queueConnectionFactory;
 
-        public TemperatureReadingService(IDataRead dataRead)
+        private IQueueSubscriber<ProbeTemperatureMessage> subscriber;
+
+        //private DbContextOptions<DomotiqueContext> _options;
+        private DBContextProvider _provider;
+
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, DBContextProvider provider)
         {
             _dataRead = dataRead;
+            _provider = provider;
+            _queueConnectionFactory = queueConnectionFactory;
         }
 
 
@@ -41,8 +47,10 @@ namespace Domotique.Service
 
         public void Start()
         {
-
-            var factory = new ConnectionFactory() { HostName = ServerName };
+            subscriber = _queueConnectionFactory.GetQueueSubscriber<ProbeTemperatureMessage>("Temperature");
+            subscriber.OnMessage += Received;
+            subscriber.Connect();
+            /*var factory = new ConnectionFactory() { HostName = ServerName };
             while (connection == null)
             {
                 try
@@ -51,7 +59,7 @@ namespace Domotique.Service
                 }
                 catch (Exception e)
                 {
-                    Console.Write("unable to reach rabbitmq");
+                    Console.Write("unable to reach rabbitmq: " + e.Message);
                     Thread.Sleep(10000);
                 }
 
@@ -81,13 +89,25 @@ namespace Domotique.Service
                 channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);
             }
 
-            IsStarted = true;
+            IsStarted = true;*/
         }
 
         public void Dispose()
         {
-            channel.Dispose();
-            connection.Dispose();
+            subscriber.Disconnect();
+        }
+
+
+        private void Received(ProbeTemperatureMessage message)
+        {
+            using (var dbContext = _provider.getContext())// new DomotiqueContext(_options))
+            {
+                var room = dbContext.Rooms.Where(c => c.Captor.StatusAddress == message.ProbeAddress).First();
+                statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
+            }
+            //string roomName = _dataRead.ReadRoomNameByProbe(message.ProbeAddress);
+
+
         }
     }
 }

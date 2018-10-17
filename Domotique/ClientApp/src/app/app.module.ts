@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomStatusComponent } from './room-status/room-status.component';
 import { ChartModule } from 'angular-highcharts';
+import { DeviceComponent } from './device/device.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomStatusComponent
+    RoomStatusComponent,
+    DeviceComponent
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ namespace Messages.Queue.Service
         }
 
 
-        public IQueueSubscriber<T> GetQueueSubScriber<T>(string queueTag)
+        public IQueueSubscriber<T> GetQueueSubscriber<T>(string queueTag)
         {
             foreach (var queue in _queues)
             {

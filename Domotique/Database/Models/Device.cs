@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Domotique.Database
 {
@@ -25,16 +22,20 @@ CREATE TABLE `DomoTrigger` (
     public class Device
     {
         [Key]
-        public int ID { get; set; }
+        public int DeviceID { get; set; }
 
         public string DeviceName { get; set; }
 
-        [Column("Adapter")]
+        [Column("AdapterID")]
         public int AdapterID { get; set; }
         public Adapter Adapter { get; set; }
-        public string StatusAddress { get; set; }
+
         public string Address { get; set; }
-        //public string Picture { get; set; }
+
+        public string StatusAddress { get; set; }
+
+        public IList<Function> Functions { get; set; }
+
 
     }
 }

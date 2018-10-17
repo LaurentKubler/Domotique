@@ -37,21 +37,21 @@ namespace Domotique.Model
         }
 
 
-        int IDataRead.ReadRoomIdByRoomName(string RoomName)
-        {
-            using (var connection = _databaseConnection.GetConnection())
+        /*   int IDataRead.ReadRoomIdByRoomName(string RoomName)
             {
-                int RoomId = 0;
-                connection.Open();
-                using (var command = connection.CreateCommand())
+                using (var connection = _databaseConnection.GetConnection())
                 {
-                    command.CommandText = "SELECT ID from Room Where Name = @RoomName";
-                    command.Parameters.AddWithValue("@RoomName", RoomName);
-                    RoomId = Int32.Parse(command.ExecuteScalar().ToString());
+                    int RoomId = 0;
+                    connection.Open();
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = "SELECT ID from Room Where Name = @RoomName";
+                        command.Parameters.AddWithValue("@RoomName", RoomName);
+                        RoomId = Int32.Parse(command.ExecuteScalar().ToString());
+                    }
+                    return RoomId;
                 }
-                return RoomId;
-            }
-        }
+            }*/
 
 
         public Room ReadRoomByName(string RoomName)
@@ -240,28 +240,28 @@ namespace Domotique.Model
             }
         }
 
-        public Device ReadDeviceByID(long deviceID)
-        {
-            Device device = new Device();
+        /* public Device ReadDeviceByID(long deviceID)
+          {
+              Device device = new Device();
 
-            using (var connection = _databaseConnection.GetConnection())
-            {
-                connection.Open();
+              using (var connection = _databaseConnection.GetConnection())
+              {
+                  connection.Open();
 
-                using (var command = connection.CreateCommand())
-                {
-                    command.CommandText = $"SELECT Device.* FROM Device WHERE DeviceID={deviceID}";
-                    var reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        device.Address = reader.GetString("Address");
-                    }
-                }
-            }
+                  using (var command = connection.CreateCommand())
+                  {
+                      command.CommandText = $"SELECT Device.* FROM Device WHERE DeviceID={deviceID}";
+                      var reader = command.ExecuteReader();
+                      while (reader.Read())
+                      {
+                          device.Address = reader.GetString("Address");
+                      }
+                  }
+              }
 
-            return device;
-        }
-
+              return device;
+          }
+          */
 
         public IList<DeviceStatus> ReadDevices()
         {

@@ -6,8 +6,11 @@ using Messages.Queue.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System;
 using System.Collections.Generic;
 
 namespace Domotique
@@ -34,11 +37,18 @@ namespace Domotique
                 ServerPort = Configuration.GetValue<int>("Services:Temperature:ServerPort"),
                 QueueName = Configuration.GetValue<string>("Services:Temperature:QueueName")
             });*/
-            services.AddDbContext<DomotiqueContext>();
+            services.AddDbContext<DomotiqueContext>(
+                options => options.UseMySql(Configuration.GetValue<string>("Services:Database:ConnectionString"), // replace with your Connection String
+                    mysqlOptions =>
+                    {
+                        mysqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql); // replace with your Server Version and Type
+                    }
+            ));
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
             services.AddSingleton<IQueueConnectionFactory, QueueConnectionFactory>();
             services.AddSingleton<IStatusService, Status>();
+            services.AddSingleton<DBContextProvider, DBContextProvider>();
 
             var queues = new List<QueueConfiguration>();
             var nodes = Configuration.GetSection("Services:Queues");
@@ -88,7 +98,8 @@ namespace Domotique
             app.UseSpa(spa =>
             {
                 //spa.Options.SourcePath = "C:\\Users\\lkubler\\source\\perso\\Domotique\\Domotique\\ClientApp";
-                spa.Options.SourcePath = "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique\\ClientApp";
+                //spa.Options.SourcePath = "C:\\Users\\Laurent\\Source\\Repos\\Domotique\\Domotique\\ClientApp";
+                spa.Options.SourcePath = "ClientApp";
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");

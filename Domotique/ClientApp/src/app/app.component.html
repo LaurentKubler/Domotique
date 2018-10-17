@@ -49,26 +49,9 @@
     <div class="container-fluid no-padding">
       <div class="row">
         <div *ngFor="let deviceStatus of Devices" class="card col-xl-6 col-md-12 col-sm-12 col-xs-12" style="width: 18rem;">
-          <div class="card-title">
-            <h5 class="card-title">{{deviceStatus.deviceName}}</h5>
-          </div>
-          <div class="card-body">
-            Status :{{deviceStatus.status}} value :{{deviceStatus.value}}<br />
-            Last status date: {{deviceStatus.valueDate}}<br />
-            Id :{{deviceStatus.device_ID}}<br />
-            <div *ngIf="deviceStatus.IsSwitch()">
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" (click)="PowerOn(deviceStatus.device_ID)" class="btn btn-success">On</button>
-                  <button type="button" (click)="PowerOff(deviceStatus.device_ID)" class="btn btn-danger">Off</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <device [device]=deviceStatus></device>
         </div>
       </div>
-      <h3>Menu 1</h3>
-      <p>Some content in menu 1.</p>
     </div>
   </div>
   <div id="music" class="tab-pane fade">

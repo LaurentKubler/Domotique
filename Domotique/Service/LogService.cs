@@ -1,6 +1,8 @@
-﻿using Domotique.Model;
+﻿using Domotique.Database;
+using Domotique.Model;
 using MySql.Data.MySqlClient;
 using System;
+using System.Linq;
 
 namespace Domotique.Service.Log
 {
@@ -9,29 +11,31 @@ namespace Domotique.Service.Log
 
         IDataRead _dataRead;
 
-        public LogService(IDataRead dataRead)
+        DBContextProvider _provider;
+
+        public LogService(IDataRead dataRead, DBContextProvider provider)
         {
             _dataRead = dataRead;
+            _provider = provider;
         }
 
 
         public void LogTemperatureService(string name, double currentTemperature, double? targetTemperature, DateTime logDate)
         {
-            int RoomId = _dataRead.ReadRoomIdByRoomName(name);
-            using (var connection = new MySqlConnection("server=192.168.1.34;port=3306;database=DomotiqueCore;uid=laurent;password=odile"))
+            using (var _context = _provider.getContext())
             {
-                connection.Open();
-                using (var command = connection.CreateCommand())
+                int RoomID = _context.Rooms.Where(room => room.Name == name).First().ID;
+                var tempLog = new TemperatureLog()
                 {
-                    command.CommandText = "INSERT INTO `DomotiqueCore`.`TemperatureLog` (`CurrentTemp`,`LogDate`,`RoomId`,`TargetTemp`) VALUES" +
-                                    "(@CurrentTemp,@LogDate,@RoomId,@TargetTemp);";
-                    command.Parameters.AddWithValue("@CurrentTemp", currentTemperature);
-                    command.Parameters.AddWithValue("@LogDate", logDate);
-                    command.Parameters.AddWithValue("@RoomId", RoomId);
-                    command.Parameters.AddWithValue("@TargetTemp", targetTemperature);
-                    command.ExecuteNonQuery();
-                    Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
-                }
+                    CurrentTemp = currentTemperature,
+                    LogDate = logDate,
+                    RoomID = RoomID,
+                    TargetTemp = targetTemperature ?? 0
+                };
+
+                _context.Add(tempLog);
+
+                Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
             }
         }
 
