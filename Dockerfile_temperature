@@ -2,8 +2,8 @@ FROM python:2
 
 RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika
 
-COPY Temperature.py ./
-COPY config.json ./
+COPY Temperature/Temperature.py ./
+COPY Temperature/config.json ./
 
 
 CMD ["python", "Temperature.py"]
