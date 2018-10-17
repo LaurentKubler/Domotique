@@ -1,17 +1,28 @@
 ﻿using Domotique.Database;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System;
+
 
 namespace Domotique.Service
 {
     public class DBContextProvider
     {
-        IServiceProvider _serviceProvider;
-        public DBContextProvider(IServiceProvider serviceProvider)
+        string _dbConnectionString;
+
+        public DBContextProvider(string dbConnectionString)
         {
-            _serviceProvider = serviceProvider;
+            _dbConnectionString = dbConnectionString;
         }
 
-        public DomotiqueContext getContext() => _serviceProvider.GetService<DomotiqueContext>();
+        public DomotiqueContext getContext()
+        {
+            var builder = new DbContextOptionsBuilder();
+            builder.UseMySql(_dbConnectionString, mysqlOptions =>
+            {
+                mysqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql); // replace with your Server Version and Type
+            });
+            return new DomotiqueContext(builder.Options);
+        }
     }
 }
