@@ -2,7 +2,7 @@ FROM python:2
 
 RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika
 
-COPY temperature.py ./
+COPY Temperature.py ./
 COPY config.json ./
 
 
