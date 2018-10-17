@@ -1,0 +1,12 @@
+{
+  "Timeout": 300,
+  "Queue": {
+    "server": "rabbitmq",
+    "port": 5672,
+    "exchangeName": "hello",
+    "InboundroutingKey": "command.zwave"
+  },
+  "ZWave": {
+    "address": "/dev/zwave"
+  }
+}
