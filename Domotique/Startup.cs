@@ -85,6 +85,7 @@ namespace Domotique
         {
             // Start the main server
 
+            var tmp = app.ApplicationServices.GetService<ITemperatureReadingService>();
             var tmp2 = app.ApplicationServices.GetService<IDeviceStatusReadingService>();
             tmp2.Start();
 
