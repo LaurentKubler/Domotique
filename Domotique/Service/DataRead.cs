@@ -1,5 +1,4 @@
 ﻿using Domotique.Controllers;
-using Domotique.Database;
 using Domotique.Service;
 using Messages.WebMessages;
 using MySql.Data.MySqlClient;
@@ -22,70 +21,6 @@ namespace Domotique.Model
         }
 
 
-        public String ReadRoomNameByProbe(string CaptorId)
-        {
-            using (var connection = _databaseConnection.GetConnection())
-            {
-                connection.Open();
-                using (var command = connection.CreateCommand())
-                {
-                    command.CommandText = "Select Name from Room left join Device on Device.DeviceID = Room.Captor where Device.Address = @CaptorId";
-                    command.Parameters.AddWithValue("@CaptorId", CaptorId.Replace("/", String.Empty));
-                    var name = command.ExecuteScalar().ToString();
-                    return name;
-                }
-            }
-        }
-
-
-        /*   int IDataRead.ReadRoomIdByRoomName(string RoomName)
-            {
-                using (var connection = _databaseConnection.GetConnection())
-                {
-                    int RoomId = 0;
-                    connection.Open();
-                    using (var command = connection.CreateCommand())
-                    {
-                        command.CommandText = "SELECT ID from Room Where Name = @RoomName";
-                        command.Parameters.AddWithValue("@RoomName", RoomName);
-                        RoomId = Int32.Parse(command.ExecuteScalar().ToString());
-                    }
-                    return RoomId;
-                }
-            }*/
-
-
-        public Room ReadRoomByName(string RoomName)
-        {
-            using (var connection = _databaseConnection.GetConnection())
-            {
-                connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = "Select * from Room where Name = @RoomName";
-                command.Parameters.AddWithValue("@RoomName", RoomName);
-                var roomLine = command.ExecuteReader().Read();
-                Room newRoom = new Room()
-                {
-                    Name = RoomName,
-                    TargetTemperature = 0
-                };
-                return newRoom;
-            }
-        }
-
-
-        public int ReadDeviceIDByAddress(string address, string adapter)
-        {
-            using (var connection = _databaseConnection.GetConnection())
-            {
-                connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = "Select DeviceID from Device where Address = @address";
-                command.Parameters.AddWithValue("@address", address);
-
-                return int.Parse(command.ExecuteScalar().ToString()); ;
-            }
-        }
 
         public IList<RoomStatus> ReadRoomTemperatures()
         {
@@ -241,28 +176,6 @@ namespace Domotique.Model
             }
         }
 
-        /* public Device ReadDeviceByID(long deviceID)
-          {
-              Device device = new Device();
-
-              using (var connection = _databaseConnection.GetConnection())
-              {
-                  connection.Open();
-
-                  using (var command = connection.CreateCommand())
-                  {
-                      command.CommandText = $"SELECT Device.* FROM Device WHERE DeviceID={deviceID}";
-                      var reader = command.ExecuteReader();
-                      while (reader.Read())
-                      {
-                          device.Address = reader.GetString("Address");
-                      }
-                  }
-              }
-
-              return device;
-          }
-          */
 
         public IList<DeviceStatus> ReadDevices()
         {

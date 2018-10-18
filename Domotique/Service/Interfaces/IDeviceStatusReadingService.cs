@@ -5,7 +5,5 @@
         bool IsStarted { get; set; }
 
         void Start();
-
-        void SetStatusService(IStatusService service);
     }
 }

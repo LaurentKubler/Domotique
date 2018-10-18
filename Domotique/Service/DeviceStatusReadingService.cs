@@ -17,9 +17,9 @@ namespace Domotique.Service
 
         // IDataRead _dataRead;
 
-        DBContextProvider _contextProvider;
+        IDBContextProvider _contextProvider;
 
-        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, DBContextProvider contextProvider)
+        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _logService = logService;
@@ -29,11 +29,6 @@ namespace Domotique.Service
 
 
         public bool IsStarted { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void SetStatusService(IStatusService service)
-        {
-
-        }
 
 
         public void Start()

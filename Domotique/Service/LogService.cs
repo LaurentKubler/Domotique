@@ -11,9 +11,10 @@ namespace Domotique.Service.Log
 
         IDataRead _dataRead;
 
-        DBContextProvider _provider;
+        IDBContextProvider _provider;
 
-        public LogService(IDataRead dataRead, DBContextProvider provider)
+
+        public LogService(IDataRead dataRead, IDBContextProvider provider)
         {
             _dataRead = dataRead;
             _provider = provider;
