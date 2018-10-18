@@ -1,7 +1,6 @@
 ﻿using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
-using RabbitMQ.Client;
 using System;
 using System.Linq;
 
@@ -16,11 +15,8 @@ namespace Domotique.Service
 
         public bool IsStarted { get; set; } = false;
 
-        private IConnection connection;
 
-        private IModel channel;
-
-        private IStatusService statusService;
+        private IStatusService _statusService;
 
         private IDataRead _dataRead;
 
@@ -41,7 +37,7 @@ namespace Domotique.Service
 
         public void SetStatusService(IStatusService service)
         {
-            statusService = service;
+            _statusService = service;
         }
 
 
@@ -107,7 +103,7 @@ namespace Domotique.Service
                 {
                     var address = message.ProbeAddress.Replace("/", string.Empty);
                     var room = dbContext.Rooms.Where(c => c.Captor.Address == address).First();
-                    statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
+                    _statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
 
                     //string roomName = _dataRead.ReadRoomNameByProbe(message.ProbeAddress);
                     dbContext.SaveChanges();
