@@ -53,6 +53,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\NewFolder\" />
+    <Folder Include="Model\Logs\" />
   </ItemGroup>
 
 </Project>

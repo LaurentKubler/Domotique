@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,12 +47,19 @@ namespace Messages.Queue.Service
 
             consumer.Received += (model, ea) =>
             {
-                var body = ea.Body;
-                var message = Encoding.UTF8.GetString(body);
-                var routingKey = ea.RoutingKey;
-                var command = JsonConvert.DeserializeObject<T>(message);
+                try
+                {
+                    var body = ea.Body;
+                    var message = Encoding.UTF8.GetString(body);
+                    var routingKey = ea.RoutingKey;
+                    var command = JsonConvert.DeserializeObject<T>(message);
 
-                OnMessage(command);
+                    OnMessage(command);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Exception {ex.Message} occured reading message from queue: original message is {ea.Body} for routing key '{ea.RoutingKey}'");
+                }
             };
 
             return consumer;

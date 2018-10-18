@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Domotique.Controllers
 {
 
@@ -29,7 +30,7 @@ namespace Domotique.Controllers
         public IActionResult TestContext()
         {
             Console.Write(_context.Adapter.Count());
-            return Ok(_context.TemperatureLog.Take(10).Include(tl => tl.Room));
+            return Ok(_context.Rooms.Include(tl => tl.TemperatureSchedules).ThenInclude(t => t.Schedule).ThenInclude(schedule => schedule.Periods));
         }
 
         [HttpGet()]
