@@ -406,13 +406,13 @@ def bind_mq(callback):
 
 def callback(ch, method, properties, body):
     print("Received " + body)
-    command = json.loads(body) 
-    address = command["targetAddress"]
-    command = command["command"]
-    nodeindex,instance = address.split('/')
-    nodes = network.nodes
-    print("Activate switch {} on node {}".format(instance,nodeindex))
     try:
+        command = json.loads(body) 
+        address = command["targetAddress"]
+        command = command["command"]
+        nodeindex,instance = address.split('/')
+        nodes = network.nodes
+        print("Activate switch {} on node {}".format(instance,nodeindex))    
         for node in network.nodes:
             if (str(network.nodes[node].node_id) == str(nodeindex)):
                 print("node found {}".format(node))
