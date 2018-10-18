@@ -36,6 +36,15 @@ namespace Domotique.Database
 
         public IList<TemperatureSchedule> TemperatureSchedules { get; set; }
 
+        [NotMapped]
+        public double CurrentTemperature { get; set; }
+
+        [NotMapped]
+        public double TargetTemperature { get; set; }
+
+        [NotMapped]
+        public DateTime LastTemperatureRefreshDate { get; set; }
+
         public float? ComputeTemperature()
         {
             var schedules = TemperatureSchedules.OrderBy(schedule => schedule.Priority);

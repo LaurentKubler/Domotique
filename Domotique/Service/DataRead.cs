@@ -1,4 +1,5 @@
 ﻿using Domotique.Controllers;
+using Domotique.Database;
 using Domotique.Service;
 using Messages.WebMessages;
 using MySql.Data.MySqlClient;

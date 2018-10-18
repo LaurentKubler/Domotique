@@ -1,4 +1,5 @@
-﻿using Messages.WebMessages;
+﻿using Domotique.Database;
+using Messages.WebMessages;
 using System.Collections.Generic;
 
 namespace Domotique.Model
