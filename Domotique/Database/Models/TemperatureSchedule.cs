@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Domotique.Database
 {/*
@@ -21,12 +17,22 @@ CREATE TABLE `TemperatureSchedule` (
     public class TemperatureSchedule
     {
         [Key]
-        public int ID { get; set; }
+        public int TemperatureScheduleID { get; set; }
+
 
         public int Priority { get; set; }
+
+
         public float TargetTemperature { get; set; }
-        public int Schedule_ID { get; set; }
-        public int TemperaturePlan_ID { get; set; }
-       
+
+
+        [ForeignKey("Schedule")]
+        public int ScheduleID { get; set; }
+        public Schedule Schedule { get; set; }
+
+
+        [ForeignKey("Room")]
+        public int RoomID { get; set; }
+
     }
 }

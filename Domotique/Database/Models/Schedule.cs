@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Domotique.Database
 {/*
@@ -15,8 +13,46 @@ CREATE TABLE `Schedule` (
     public class Schedule
     {
         [Key]
-        public int ID { get; set; }
+        public int ScheduleID { get; set; }
 
-        public string Name { get; set; }        
+        public string Name { get; set; }
+
+        public IList<SchedulePeriod> Periods { get; set; }
+
+
+        public bool IsActiveOn(DateTime time)
+        {
+            foreach (var period in Periods)
+            {
+                if (period.IsActiveOn(time))
+                    return true;
+            }
+            return false;
+        }
+
+    }
+
+
+    public class SchedulePeriod
+    {
+        [Key]
+        public int SchedulePeriodID { get; set; }
+
+        [ForeignKey("Schedule")]
+        public int ScheduleID { get; set; }
+
+        public string DayOfWeek { get; set; }
+
+        public float StartHour { get; set; }
+
+        //  public int StartMinute { get; set; }
+
+        public float Duration { get; set; }
+
+        public bool IsActiveOn(DateTime time)
+        {
+            return false;
+        }
+
     }
 }

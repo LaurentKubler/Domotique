@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Domotique.Model
 {
@@ -19,12 +18,11 @@ namespace Domotique.Model
 
         string HeaterName { get; set; }
 
-        IList<Schedule> TemperatureSchedule { get; set; }
+
 
 
         public void ComputeTemperature()
         {
-
         }
     }
 }
