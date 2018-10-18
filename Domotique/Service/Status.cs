@@ -34,23 +34,24 @@ namespace Domotique.Service
 
         public void RegisterTemperature(string RoomName, double Temperature, DateTime date)
         {
+            Console.WriteLine($"Before reading room {RoomName}");
             if (!Rooms.ContainsKey(RoomName))
             {
                 Rooms.Add(RoomName, _dataRead.ReadRoomByName(RoomName));
             }
 
             Room room = Rooms[RoomName];
-
+            Console.WriteLine("Room read");
             //update the roomValues:
             room.CurrentTemperature = Temperature;
             room.LastTemperatureRefreshDate = date;
             // Compute desired temperature
-            room.ComputeTemperature();
+            //room.ComputeTemperature();
 
 
             // store Temperature in database for the room
             LogService.LogTemperatureService(RoomName, Temperature, room.TargetTemperature, date);
-
+            Console.WriteLine("Log written");
             // Eventually issue command
             if (room.CurrentTemperature < room.TargetTemperature)
             {
