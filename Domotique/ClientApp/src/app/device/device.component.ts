@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Http } from '@angular/http';
 import { DeviceStatus } from '../app.component';
 
 @Component({
@@ -9,6 +10,10 @@ import { DeviceStatus } from '../app.component';
 export class DeviceComponent implements OnInit {
 
   @Input() device: DeviceStatus;
+  constructor(private http: Http) { };
+
+  ngOnInit() {
+  };
   public PowerOn(deviceid) {
     this.http.post('/rest/BinarySwitchDevice/' + deviceid + '/PowerOn', '').subscribe(
       result => console.debug(result),
@@ -20,10 +25,5 @@ export class DeviceComponent implements OnInit {
       result => console.debug(result),
       error => console.error(error)
     );
-  constructor() { };
-
-
-  ngOnInit() {
   }
-
 }
