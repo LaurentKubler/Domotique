@@ -58,7 +58,7 @@ namespace Messages.Queue.Service
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Exception occured reading message from queue: original message is {ea.Body} for routing key '{ea.RoutingKey}'");
+                    Console.WriteLine($"Exception {ex.Message} occured reading message from queue: original message is {ea.Body} for routing key '{ea.RoutingKey}'");
                 }
             };
 
