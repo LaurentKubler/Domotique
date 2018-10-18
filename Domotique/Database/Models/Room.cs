@@ -40,22 +40,41 @@ namespace Domotique.Database
         public double CurrentTemperature { get; set; }
 
         [NotMapped]
-        public double TargetTemperature { get; set; }
+        public double? TargetTemperature { get; set; } = null;
 
         [NotMapped]
         public DateTime LastTemperatureRefreshDate { get; set; }
 
-        public float? ComputeTemperature()
+
+        public void ComputeCurrentTemperature()
         {
-            var schedules = TemperatureSchedules.OrderBy(schedule => schedule.Priority);
-            foreach (var schedule in schedules)
+            ComputeTemperature(new DateTime());
+        }
+
+
+        public void ComputeTemperature(DateTime time)
+        {
+            if (!HeatRegulation)
             {
-                if (schedule.Schedule.IsActiveOn(new DateTime()))
+                TargetTemperature = null;
+                return;
+            }
+
+            if (TemperatureSchedules.Count != 0)
+            {
+                var schedules = TemperatureSchedules.OrderBy(schedule => schedule.Priority);
+
+                foreach (var schedule in schedules)
                 {
-                    return schedule.TargetTemperature;
+                    if (schedule.Schedule.IsActiveOn(time))
+                    {
+                        TargetTemperature = schedule.TargetTemperature;
+                        return;
+                    }
                 }
             }
-            return MinTemperature;
+
+            TargetTemperature = MinTemperature;
         }
     }
 }

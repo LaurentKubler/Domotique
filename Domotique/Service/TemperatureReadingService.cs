@@ -1,4 +1,5 @@
-﻿using Domotique.Model;
+﻿using Domotique.Database;
+using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
 using System;
@@ -16,8 +17,6 @@ namespace Domotique.Service
         public bool IsStarted { get; set; } = false;
 
 
-        private IStatusService _statusService;
-
         private IDataRead _dataRead;
 
         private IQueueConnectionFactory _queueConnectionFactory;
@@ -25,19 +24,13 @@ namespace Domotique.Service
         private IQueueSubscriber<ProbeTemperatureMessage> subscriber;
 
         //private DbContextOptions<DomotiqueContext> _options;
-        private DBContextProvider _provider;
+        private IDBContextProvider _provider;
 
-        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, DBContextProvider provider)
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider)
         {
             _dataRead = dataRead;
             _provider = provider;
             _queueConnectionFactory = queueConnectionFactory;
-        }
-
-
-        public void SetStatusService(IStatusService service)
-        {
-            _statusService = service;
         }
 
 
@@ -46,46 +39,6 @@ namespace Domotique.Service
             subscriber = _queueConnectionFactory.GetQueueSubscriber<ProbeTemperatureMessage>("Temperature");
             subscriber.OnMessage += Received;
             subscriber.Connect();
-            /*var factory = new ConnectionFactory() { HostName = ServerName };
-            while (connection == null)
-            {
-                try
-                {
-                    connection = factory.CreateConnection();
-                }
-                catch (Exception e)
-                {
-                    Console.Write("unable to reach rabbitmq: " + e.Message);
-                    Thread.Sleep(10000);
-                }
-
-            }
-            channel = connection.CreateModel();
-            {
-                channel.QueueDeclare(queue: QueueName,
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
-
-                var consumer = new EventingBasicConsumer(channel);
-
-                consumer.Received += (model, ea) =>
-                {
-                    var body = ea.Body;
-
-                    var message = Encoding.UTF8.GetString(body);
-                    var temp = JsonConvert.DeserializeObject<ProbeTemperatureMessage>(message);
-
-                    string roomName = _dataRead.ReadRoomNameByProbe(temp.ProbeAddress);
-
-                    statusService.RegisterTemperature(roomName, temp.TemperatureValue, temp.MessageDate);
-                };
-
-                channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);
-            }
-
-            IsStarted = true;*/
         }
 
         public void Dispose()
@@ -99,14 +52,37 @@ namespace Domotique.Service
             try
             {
 
-                using (var dbContext = _provider.getContext())// new DomotiqueContext(_options))
+                using (var dbContext = _provider.getContext())
                 {
                     var address = message.ProbeAddress.Replace("/", string.Empty);
                     var room = dbContext.Rooms.Where(c => c.Captor.Address == address).First();
-                    _statusService.RegisterTemperature(room.Name, message.TemperatureValue, message.MessageDate);
 
-                    //string roomName = _dataRead.ReadRoomNameByProbe(message.ProbeAddress);
+                    //room.ComputeTemperature();
+
+                    var tempLog = new TemperatureLog()
+                    {
+                        CurrentTemp = message.TemperatureValue,
+                        LogDate = message.MessageDate,
+                        RoomID = room.ID,
+                        TargetTemp = room.TargetTemperature ?? 0
+                    };
+
+                    dbContext.Add(tempLog);
                     dbContext.SaveChanges();
+                    Console.WriteLine($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
+
+
+                    /*
+                    
+                    // Eventually issue command
+                    if (room.CurrentTemperature < room.TargetTemperature)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }*/
                 }
             }
             catch (Exception ex)

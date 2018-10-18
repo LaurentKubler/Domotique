@@ -6,7 +6,7 @@ using System;
 
 namespace Domotique.Service
 {
-    public class DBContextProvider
+    public class DBContextProvider : IDBContextProvider
     {
         string _dbConnectionString;
 
