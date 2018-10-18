@@ -1,5 +1,6 @@
 ﻿using Domotique.Model;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,10 @@ namespace Messages.Queue.Service
                 using (var channel = connection.CreateModel())
                 {
                     channel.ExchangeDeclare(exchange: Configuration.Exchange, type: "fanout");
-                    var stringMessage = JsonConvert.SerializeObject(message);
+                    var stringMessage = JsonConvert.SerializeObject(message, new JsonSerializerSettings
+                    {
+                        ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    });
                     var body = Encoding.UTF8.GetBytes(stringMessage);
 
                     channel.BasicPublish(exchange: Configuration.Exchange,
