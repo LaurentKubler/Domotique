@@ -46,7 +46,7 @@ namespace Domotique
             ));
             services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<IDeviceStatusReadingService, DeviceStatusReadingService>();
-            services.AddSingleton<IQueueConnectionFactory, QueueConnectionFactory>();
+
 
             services.AddSingleton<IDBContextProvider>(c => { return new DBContextProvider(Configuration.GetValue<string>("Services:Database:ConnectionString")); });
 

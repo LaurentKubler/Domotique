@@ -48,7 +48,7 @@ namespace Domotique.Database
 
         public void ComputeCurrentTemperature()
         {
-            ComputeTemperature(new DateTime());
+            ComputeTemperature(DateTime.Now);
         }
 
 
