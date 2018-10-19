@@ -19,7 +19,7 @@ namespace Messages.Queue.Service
                 if (queueTag == queue.QueueApplicationTag)
                     return new QueuePublisher<T>(queue);
             }
-            throw new System.Exception("Queue not defined{queueTag}");
+            throw new System.Exception($"Queue not defined{queueTag}");
         }
 
 
@@ -30,7 +30,7 @@ namespace Messages.Queue.Service
                 if (queueTag == queue.QueueApplicationTag)
                     return new QueueSubscriber<T>(queue);
             }
-            throw new System.Exception("Queue not defined{queueTag}");
+            throw new System.Exception($"Queue not defined{queueTag}");
         }
     }
 }

@@ -57,7 +57,8 @@ namespace Domotique.Service
                     var address = message.ProbeAddress.Replace("/", string.Empty);
                     var room = dbContext.Rooms.Where(c => c.Captor.Address == address).First();
 
-                    //room.ComputeTemperature();
+                    if (room.HeatRegulation)
+                        room.ComputeTemperature(new DateTime());
 
                     var tempLog = new TemperatureLog()
                     {
