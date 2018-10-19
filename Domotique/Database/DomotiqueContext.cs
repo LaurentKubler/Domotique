@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Domotique.Database
 {
@@ -8,6 +9,18 @@ namespace Domotique.Database
         public DomotiqueContext(DbContextOptions options) : base(options)
         {
         }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            var converter = new EnumToStringConverter<EDayOfWeek>();
+
+            modelBuilder.Entity<SchedulePeriod>()
+                        .Property(e => e.DayOfWeek)
+                        .HasConversion(converter);
+        }
+
+
         public DbSet<Adapter> Adapter { get; set; }
 
         public DbSet<DBImage> DBImage { get; set; }

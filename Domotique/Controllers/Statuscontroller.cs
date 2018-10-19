@@ -30,7 +30,12 @@ namespace Domotique.Controllers
         public IActionResult TestContext()
         {
             Console.Write(_context.Adapter.Count());
-            return Ok(_context.Rooms.Include(tl => tl.TemperatureSchedules).ThenInclude(t => t.Schedule).ThenInclude(schedule => schedule.Periods));
+            var rooms = _context.Rooms.Include(tl => tl.TemperatureSchedules).ThenInclude(t => t.Schedule).ThenInclude(schedule => schedule.Periods);
+            foreach (var room in rooms)
+            {
+                room.ComputeCurrentTemperature();
+            }
+            return Ok(rooms);
         }
 
         [HttpGet()]
