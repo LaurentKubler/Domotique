@@ -44,7 +44,7 @@ def refresh():
 logging.basicConfig()
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
-logger.addHandler(GelfUdpHandler(host='graylog', port=12201))
+logger.addHandler(GelfUdpHandler(host='graylog', _app_name='temperature', port=12201))
 
 logger.info("Starting ")
 time.sleep(15)
