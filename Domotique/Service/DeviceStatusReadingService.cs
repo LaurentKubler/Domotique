@@ -2,6 +2,7 @@
 using Domotique.Service.Log;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
@@ -19,11 +20,13 @@ namespace Domotique.Service
 
         IDBContextProvider _contextProvider;
 
-        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider)
+        ILogger<DeviceStatusReadingService> _logger;
+
+        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider, ILogger<DeviceStatusReadingService> logger)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _logService = logService;
-            //   _dataRead = dataRead;
+            _logger = logger;
             _contextProvider = contextProvider;
         }
 
@@ -45,10 +48,10 @@ namespace Domotique.Service
             {
                 using (var _context = _contextProvider.getContext())
                 {
-                    Console.WriteLine($"On Device status Received : {message.ToString()}");
+                    _logger.LogTrace($"On Device status Received : {message.ToString()}");
 
                     int device_ID = _context.Device.Where(d => d.Address == message.DeviceAddress).First().DeviceID;// _dataRead.ReadDeviceIDByAddress(message.DeviceAddress, message.DeviceAdapter);
-                    Console.WriteLine($"Device identified ad : {device_ID}");
+                    _logger.LogTrace($"Device identified ad : {device_ID}");
 
                     if (string.Compare(message.Value, "false", true) == 0)
                         _logService.LogDeviceStatus(device_ID, 0, message.MessageDate);
@@ -60,7 +63,7 @@ namespace Domotique.Service
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception occured in OnDeviceStatus: {ex.Message}:{ex.StackTrace}");
+                _logger.LogError($"Exception occured in OnDeviceStatus: {ex.Message}:{ex.StackTrace}");
             }
         }
     }

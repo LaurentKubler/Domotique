@@ -3,6 +3,7 @@ using Domotique.Model;
 using Messages.WebMessages;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,23 +21,33 @@ namespace Domotique.Controllers
 
         DomotiqueContext _context;
 
-        public StatusController(IDataRead dataRead, DomotiqueContext context)
+        ILogger<StatusController> _logger;
+
+        public StatusController(IDataRead dataRead, DomotiqueContext context, ILogger<StatusController> logger)
         {
             _dataRead = dataRead;
             _context = context;
+            _logger = logger;
         }
+
 
         [HttpGet("test")]
         public IActionResult TestContext()
         {
-            Console.Write(_context.Adapter.Count());
+            _logger.LogTrace("Trace");
+            _logger.LogDebug("Debug");
+            _logger.LogInformation("Info");
+            _logger.LogWarning("Warning");
+            _logger.LogWarning(_context.Adapter.Count().ToString());
             var rooms = _context.Rooms.Include(tl => tl.TemperatureSchedules).ThenInclude(t => t.Schedule).ThenInclude(schedule => schedule.Periods);
             foreach (var room in rooms)
             {
                 room.ComputeCurrentTemperature();
             }
+
             return Ok(rooms);
         }
+
 
         [HttpGet()]
         public IActionResult Get()

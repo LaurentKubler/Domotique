@@ -2,6 +2,7 @@
 using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
@@ -23,14 +24,16 @@ namespace Domotique.Service
 
         private IQueueSubscriber<ProbeTemperatureMessage> subscriber;
 
-        //private DbContextOptions<DomotiqueContext> _options;
+        ILogger<TemperatureReadingService> _logger;
+
         private IDBContextProvider _provider;
 
-        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider)
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger)
         {
             _dataRead = dataRead;
             _provider = provider;
             _queueConnectionFactory = queueConnectionFactory;
+            _logger = logger;
         }
 
 
@@ -70,25 +73,13 @@ namespace Domotique.Service
 
                     dbContext.Add(tempLog);
                     dbContext.SaveChanges();
-                    Console.WriteLine($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
 
-
-                    /*
-                    
-                    // Eventually issue command
-                    if (room.CurrentTemperature < room.TargetTemperature)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }*/
+                    _logger.LogInformation($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
                 }
             }
             catch (Exception ex)
             {
-                Console.Write($"Temperature reception: {ex.Message}");
+                _logger.LogError($"{ex.ToString()}: {ex.Message}");
             }
 
         }

@@ -4,7 +4,7 @@ using Messages.Queue.Model;
 using Messages.Queue.Service;
 using Messages.WebMessages;
 using Microsoft.EntityFrameworkCore;
-using System;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,7 +18,9 @@ namespace Domotique.Service
 
         DomotiqueContext _context;
 
-        public DeviceService(IQueueConnectionFactory queueConnectionFactory, IDataRead dataread, DomotiqueContext context)
+        ILogger<DeviceService> _logger;
+
+        public DeviceService(IQueueConnectionFactory queueConnectionFactory, IDataRead dataread, DomotiqueContext context, ILogger<DeviceService> logger)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _dataread = dataread;
@@ -27,9 +29,10 @@ namespace Domotique.Service
 
         public void PowerOff(long deviceID)
         {
+            _logger.LogTrace($"Sending PowerOff to {deviceID}");
             //var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>("ZWaveCommand");
             var device = _context.Device.Where(c => c.DeviceID == deviceID).Include(dev => dev.Adapter).First();
-            Console.Write("QueueTage :" + device.Adapter.QueueTag);
+
             var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>(device.Adapter.QueueTag);
             //Model.Device device = _dataread.ReadDeviceByID(deviceID);
             var message = new CommandMessage()
@@ -46,6 +49,8 @@ namespace Domotique.Service
 
         public void PowerOn(long deviceID)
         {
+            _logger.LogTrace($"Sending PowerOn to {deviceID}");
+
             //var publisher = _queueConnectionFactory.GetQueuePublisher<CommandMessage>("ZWaveCommand");
             //Model.Device device = _dataread.ReadDeviceByID(deviceID);
             var device = _context.Device.Where(c => c.DeviceID == deviceID).Include(dev => dev.Adapter).First();
