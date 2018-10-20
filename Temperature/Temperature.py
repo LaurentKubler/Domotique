@@ -44,7 +44,7 @@ def refresh():
 logging.basicConfig()
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
-logger.addHandler(GelfUdpHandler(host='127.0.0.1', port=12201))
+logger.addHandler(GelfUdpHandler(host='graylog', port=12201))
 
 logger.info("Starting ")
 time.sleep(15)
