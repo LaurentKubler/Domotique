@@ -1,6 +1,6 @@
 FROM python:2
 
-RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika
+RUN pip install stompest pyownet apscheduler futures  pbr funcsigs pika pygelf
 
 COPY Temperature/Temperature.py ./
 COPY Temperature/config.json ./

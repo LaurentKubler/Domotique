@@ -1,5 +1,6 @@
 ﻿using Domotique.Database;
 using Domotique.Model;
+using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 using System;
 using System.Linq;
@@ -13,11 +14,13 @@ namespace Domotique.Service.Log
 
         IDBContextProvider _provider;
 
+        ILogger<LogService> _logger;
 
-        public LogService(IDataRead dataRead, IDBContextProvider provider)
+        public LogService(IDataRead dataRead, IDBContextProvider provider, ILogger<LogService> logger)
         {
             _dataRead = dataRead;
             _provider = provider;
+            _logger = logger;
         }
 
 
@@ -36,7 +39,7 @@ namespace Domotique.Service.Log
 
                 _context.Add(tempLog);
                 _context.SaveChanges();
-                Console.WriteLine($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
+                _logger.LogTrace($"Stored into DB: {currentTemperature}° for {name} at {logDate}");
             }
         }
 
@@ -55,7 +58,8 @@ namespace Domotique.Service.Log
                     command.Parameters.AddWithValue("@ValueDate", valueDate);
                     command.Parameters.AddWithValue("@ValueRequest", null);
                     command.ExecuteNonQuery();
-                    Console.WriteLine($"Stored into DB: {deviceValue}° for {deviceID} at {valueDate}");
+
+                    _logger.LogTrace($"Stored into DB: value {deviceValue} for {deviceID} at {valueDate}");
                 }
             }
         }

@@ -24,12 +24,14 @@ namespace Domotique.Database
         public bool IsActiveOn(DateTime time)
         {
             var dayOfWeek = time.DayOfWeek;
+
             if (!IsValid(DayOfWeek, dayOfWeek))
                 return false;
-            if (time.Hour < StartHour)
+            if (time.Hour + time.Minute / 60 < StartHour)
                 return false;
-            if (time.Hour > StartHour + Duration)
+            if (time.Hour + time.Minute / 60 > StartHour + Duration)
                 return false;
+
             return true;
         }
 

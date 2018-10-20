@@ -2,6 +2,8 @@
 using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
@@ -10,12 +12,11 @@ namespace Domotique.Service
     public class TemperatureReadingService : IDisposable, ITemperatureReadingService
     {
 
-        public static String ServerName { get; set; }
+        public static string ServerName { get; set; }
 
-        public static String QueueName { get; set; }
+        public static string QueueName { get; set; }
 
         public bool IsStarted { get; set; } = false;
-
 
         private IDataRead _dataRead;
 
@@ -23,14 +24,17 @@ namespace Domotique.Service
 
         private IQueueSubscriber<ProbeTemperatureMessage> subscriber;
 
-        //private DbContextOptions<DomotiqueContext> _options;
+        ILogger<TemperatureReadingService> _logger;
+
         private IDBContextProvider _provider;
 
-        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider)
+
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger)
         {
             _dataRead = dataRead;
             _provider = provider;
             _queueConnectionFactory = queueConnectionFactory;
+            _logger = logger;
         }
 
 
@@ -40,6 +44,7 @@ namespace Domotique.Service
             subscriber.OnMessage += Received;
             subscriber.Connect();
         }
+
 
         public void Dispose()
         {
@@ -51,14 +56,22 @@ namespace Domotique.Service
         {
             try
             {
-
                 using (var dbContext = _provider.getContext())
                 {
                     var address = message.ProbeAddress.Replace("/", string.Empty);
-                    var room = dbContext.Rooms.Where(c => c.Captor.Address == address).First();
+                    var room = dbContext.Rooms.Include(tl => tl.TemperatureSchedules).ThenInclude(t => t.Schedule).ThenInclude(schedule => schedule.Periods).Where(c => c.Captor.Address == address).First();
+
+                    if (room == null)
+                    {
+                        _logger.LogDebug($"No room found for address '{address}'");
+                        return;
+                    }
 
                     if (room.HeatRegulation)
+                    {
                         room.ComputeTemperature(new DateTime());
+                        _logger.LogInformation($"Computed temperature : {room.TargetTemperature}° /Current Temperature {message.TemperatureValue}° for {room.Name} at {message.MessageDate}");
+                    }
 
                     var tempLog = new TemperatureLog()
                     {
@@ -70,25 +83,13 @@ namespace Domotique.Service
 
                     dbContext.Add(tempLog);
                     dbContext.SaveChanges();
-                    Console.WriteLine($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
 
-
-                    /*
-                    
-                    // Eventually issue command
-                    if (room.CurrentTemperature < room.TargetTemperature)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }*/
+                    _logger.LogTrace($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
                 }
             }
             catch (Exception ex)
             {
-                Console.Write($"Temperature reception: {ex.Message}");
+                _logger.LogError($"{ex.ToString()}: {ex.Message}");
             }
 
         }
