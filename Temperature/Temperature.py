@@ -5,6 +5,8 @@ import json
 import logging
 import datetime
 import time
+from pygelf import GelfTcpHandler, GelfUdpHandler, GelfTlsHandler, GelfHttpHandler
+
 
 QUEUE = 'jms.queue.TemperatureInput'
 
@@ -13,17 +15,19 @@ with open('config.json') as json_data_file:
 
 def refresh():
         logging.basicConfig()
-        logging.getLogger().setLevel(logging.WARNING)
+        logger = logging.getLogger()
+        logger.setLevel(level=logging.INFO)
+        logger.addHandler(GelfUdpHandler(host='127.0.0.1', port=12201))
     #connection =
     #pika.BlockingConnection(pika.ConnectionParameters('172.17.0.1$
-        print cfg["Queue"]["server"]
+        logger.info(cfg["Queue"]["server"])
         credentials = pika.PlainCredentials('guest','guest')
         connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
         channel = connection.channel()
         #channel.queue_declare(queue = cfg["Queue"]["queueName"])
         owproxy = pyownet.protocol.proxy(host = "192.168.1.42", port = 4304)
         #owproxy = pyownet.protocol.proxy(host="192.168.1.15", port=4304)
-        print("beggining listing")
+        logger.info("beggining listing")
         devices = owproxy.dir()
         for device in devices:
                 if device.find('/28') > -1:
@@ -32,18 +36,18 @@ def refresh():
                                 dev['ProbeAddress'] = device
                                 dev['MessageDate'] = datetime.datetime.now().isoformat()
                                 dev['TemperatureValue'] = owproxy.read(device + 'temperature')
-                                print(datetime.datetime.now().isoformat() + ":Temp:" + dev['TemperatureValue'] + "@" + dev['ProbeAddress'])
+                                logger.info(datetime.datetime.now().isoformat() + ":Temp:" + dev['TemperatureValue'] + "@" + dev['ProbeAddress'])
                                 channel.basic_publish(exchange="InboundMessages",routing_key="device.temperature",body=json.dumps(dev))
                         except :
-                            print("Oops!  That was no valid number.  Try again...")
+                            logger.info("Oops!  That was no valid number.  Try again...")
                 else:
-                    print("Device :" + device)
-        print("Ending listing")
+                    logger.info("Device :" + device)
+        logger.info("Ending listing")
         connection.close()
-print("Starting ")
+logger.info("Starting ")
 time.sleep(15)
 
-print("First sleep finished")
+logger.info("First sleep finished")
 refresh()
 scheduler = BlockingScheduler()
 scheduler.add_job(refresh, 'interval', seconds=cfg["Timeout"])

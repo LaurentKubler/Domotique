@@ -34,7 +34,7 @@ namespace Domotique.Database
 
         public bool HeatRegulation { get; set; }
 
-        public IList<TemperatureSchedule> TemperatureSchedules { get; set; }
+        public IList<TemperatureSchedule> TemperatureSchedules { get; set; } = new List<TemperatureSchedule>();
 
         [NotMapped]
         public double CurrentTemperature { get; set; }
