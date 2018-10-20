@@ -14,10 +14,6 @@ with open('config.json') as json_data_file:
     cfg = json.load(json_data_file)
 
 def refresh():
-        logging.basicConfig()
-        logger = logging.getLogger()
-        logger.setLevel(level=logging.INFO)
-        logger.addHandler(GelfUdpHandler(host='127.0.0.1', port=12201))
     #connection =
     #pika.BlockingConnection(pika.ConnectionParameters('172.17.0.1$
         logger.info(cfg["Queue"]["server"])
@@ -44,6 +40,12 @@ def refresh():
                     logger.info("Device :" + device)
         logger.info("Ending listing")
         connection.close()
+
+logging.basicConfig()
+logger = logging.getLogger()
+logger.setLevel(level=logging.INFO)
+logger.addHandler(GelfUdpHandler(host='127.0.0.1', port=12201))
+
 logger.info("Starting ")
 time.sleep(15)
 
