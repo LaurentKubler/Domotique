@@ -37,7 +37,7 @@ def refresh():
                         except :
                             logger.debug("Oops!  That was no valid number.  Try again...")
                 else:
-                    logger.trace("Device type not recogniuzed :" + device)
+                    logger.debug("Device type not recogniuzed :" + device)
         logger.info("Ending listing")
         connection.close()
 
@@ -49,7 +49,7 @@ logger.addHandler(GelfUdpHandler(host='graylog', _app_name='temperature', port=1
 logger.info("Starting temperature ")
 time.sleep(15)
 
-logger.trace("First sleep finished")
+logger.debug("First sleep finished")
 refresh()
 scheduler = BlockingScheduler()
 scheduler.add_job(refresh, 'interval', seconds=cfg["Timeout"])
