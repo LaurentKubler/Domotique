@@ -33,7 +33,7 @@ namespace Domotique.Service
         IHubContext<NotificationHub> _notificationHub;
 
 
-        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger, , IHubContext<NotificationHub> context)
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger, IHubContext<NotificationHub> context)
         {
             _dataRead = dataRead;
             _provider = provider;
