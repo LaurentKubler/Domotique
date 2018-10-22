@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { Chart } from 'angular-highcharts';
+import * as signalR from "@aspnet/signalr";
+import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
+
 
 @Component({
   selector: 'app-root',
@@ -14,7 +17,7 @@ export class AppComponent {
   public Rooms: RoomStatus[];
   public Devices: DeviceStatus[];
   public chart: Chart;
-
+  private _hubConnection: HubConnection;
   constructor(private http: Http) {
 
     this.http.get('/rest/status').subscribe(
@@ -30,7 +33,11 @@ export class AppComponent {
 
       },
       error => console.error(error));
-
+    this._hubConnection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+    this._hubConnection.on('DeviceChange', (deviceID: number, status: boolean, valueDate: Date) => {
+      console.log(deviceID + "/" + status + "/" + valueDate);
+    });
+    this._hubConnection.start();
     this.http.get('/rest/temphistory').subscribe(
       result => {
         var series = result.json() as Highcharts.SeriesOptions[];

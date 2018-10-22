@@ -25,6 +25,7 @@ namespace Domotique.Service
             _queueConnectionFactory = queueConnectionFactory;
             _dataread = dataread;
             _context = context;
+            _logger = logger;
         }
 
         public void PowerOff(long deviceID)

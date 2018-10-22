@@ -5,11 +5,13 @@ using Domotique.Service.Log;
 using Messages.Queue.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using SignalRChat.Hubs;
 using System;
 using System.Collections.Generic;
 
@@ -75,8 +77,8 @@ namespace Domotique
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            services.AddMvc();
-
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSignalR();
         }
 
 
@@ -93,7 +95,10 @@ namespace Domotique
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ChatHub>("/chatHub");
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
 
