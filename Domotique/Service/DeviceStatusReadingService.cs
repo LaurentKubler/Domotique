@@ -2,7 +2,9 @@
 using Domotique.Service.Log;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
+using SignalRChat.Hubs;
 using System;
 using System.Linq;
 
@@ -16,18 +18,20 @@ namespace Domotique.Service
 
         ILogService _logService;
 
-        // IDataRead _dataRead;
+        IHubContext<NotificationHub> _contextt;
 
         IDBContextProvider _contextProvider;
 
         ILogger<DeviceStatusReadingService> _logger;
 
-        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider, ILogger<DeviceStatusReadingService> logger)
+        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider, ILogger<DeviceStatusReadingService> logger, IHubContext<NotificationHub> context)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _logService = logService;
             _logger = logger;
             _contextProvider = contextProvider;
+            _contextt = context;
+
         }
 
 
@@ -59,6 +63,8 @@ namespace Domotique.Service
                         _logService.LogDeviceStatus(device_ID, 100, message.MessageDate);
                     else
                         _logService.LogDeviceStatus(device_ID, int.Parse(message.Value), message.MessageDate);
+                    _contextt.Clients.All.SendAsync("DeviceChange", device_ID, true, message.MessageDate);
+
                 }
             }
             catch (Exception ex)
