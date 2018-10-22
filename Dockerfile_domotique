@@ -12,7 +12,7 @@ COPY Domotique/. ./Domotique/
 COPY Messages/. ./Messages/
 
 WORKDIR /app/Domotique
-RUN dotnet publish  -c Release -o out
+RUN dotnet publish  -c Release -o out  /p:Version="$(cat Version|tail --bytes=+4)"
 
 #tests
 #FROM build as testrunner
@@ -24,5 +24,6 @@ FROM microsoft/dotnet:2.1-runtime AS runtime
 WORKDIR /app
 COPY --from=build /app/Domotique/out ./
 COPY Domotique/ClientApp/dist/ClientApp/  ./ClientApp/dist
+COPY Domotique/Version  ./
 
 ENTRYPOINT ["dotnet", "Domotique.dll"]
