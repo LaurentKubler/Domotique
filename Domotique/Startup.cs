@@ -97,7 +97,7 @@ namespace Domotique
             app.UseSpaStaticFiles();
             app.UseSignalR(routes =>
             {
-                routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<NotificationHub>("/chatHub");
             });
             app.UseHttpsRedirection();
             app.UseMvc();

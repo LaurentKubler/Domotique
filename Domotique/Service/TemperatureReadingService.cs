@@ -2,8 +2,10 @@
 using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SignalRChat.Hubs;
 using System;
 using System.Linq;
 
@@ -28,13 +30,16 @@ namespace Domotique.Service
 
         private IDBContextProvider _provider;
 
+        IHubContext<NotificationHub> _notificationHub;
 
-        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger)
+
+        public TemperatureReadingService(IDataRead dataRead, IQueueConnectionFactory queueConnectionFactory, IDBContextProvider provider, ILogger<TemperatureReadingService> logger, , IHubContext<NotificationHub> context)
         {
             _dataRead = dataRead;
             _provider = provider;
             _queueConnectionFactory = queueConnectionFactory;
             _logger = logger;
+            _notificationHub = context;
         }
 
 
@@ -84,7 +89,9 @@ namespace Domotique.Service
                     dbContext.Add(tempLog);
                     dbContext.SaveChanges();
 
-                    _logger.LogTrace($"Stored into DB: { message.TemperatureValue}° for { room.Name} at {message.MessageDate}");
+                    _notificationHub.Clients.All.SendAsync("TemperatureReceived", room.ID, message.TemperatureValue, room.TargetTemperature, message.MessageDate);
+
+                    _logger.LogTrace($"Stored into DB: {message.TemperatureValue}° for {room.Name} at {message.MessageDate}");
                 }
             }
             catch (Exception ex)

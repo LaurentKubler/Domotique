@@ -1,18 +1,12 @@
-﻿using Domotique.Service;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
 namespace SignalRChat.Hubs
 {
-    public class ChatHub : Hub
+    public class NotificationHub : Hub
     {
-        IDeviceStatusReadingService _deviceService;
-
-
-        public ChatHub(IDeviceStatusReadingService deviceService) : base()
+        public NotificationHub() : base()
         {
-            _deviceService = deviceService;
-            _deviceService.OnMessage += _deviceService_OnMessage;
         }
 
         private async void _deviceService_OnMessage(Messages.Queue.Model.DeviceStatusMessage message)

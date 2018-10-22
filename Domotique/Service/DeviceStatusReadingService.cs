@@ -12,21 +12,19 @@ namespace Domotique.Service
 {
     class DeviceStatusReadingService : IDeviceStatusReadingService
     {
-        public event QueueMessageReceived<DeviceStatusMessage> OnMessage;
-
         IQueueConnectionFactory _queueConnectionFactory;
 
         IQueueSubscriber<DeviceStatusMessage> _statusSubscriber;
 
         ILogService _logService;
 
-        IHubContext<ChatHub> _contextt;
+        IHubContext<NotificationHub> _contextt;
 
         IDBContextProvider _contextProvider;
 
         ILogger<DeviceStatusReadingService> _logger;
 
-        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider, ILogger<DeviceStatusReadingService> logger, IHubContext<ChatHub> context)
+        public DeviceStatusReadingService(IQueueConnectionFactory queueConnectionFactory, ILogService logService, IDataRead dataRead, IDBContextProvider contextProvider, ILogger<DeviceStatusReadingService> logger, IHubContext<NotificationHub> context)
         {
             _queueConnectionFactory = queueConnectionFactory;
             _logService = logService;
