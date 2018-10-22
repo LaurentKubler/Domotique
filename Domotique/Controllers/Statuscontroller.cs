@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Reflection;
 
 namespace Domotique.Controllers
 {
@@ -55,7 +55,8 @@ namespace Domotique.Controllers
             Status status = new Status()
             {
                 Rooms = _dataRead.ReadRoomTemperatures(),
-                Devices = _dataRead.ReadDevices()
+                Devices = _dataRead.ReadDevices(),
+                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyFileVersionAttribute>().Version
             };
 
             return Ok(status);
