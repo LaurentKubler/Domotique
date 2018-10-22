@@ -37,6 +37,9 @@ export class AppComponent {
     this._hubConnection.on('DeviceChange', (deviceID: number, status: boolean, valueDate: Date) => {
       console.log(deviceID + "/" + status + "/" + valueDate);
     });
+    this._hubConnection.on('TemperatureReceived', (roomID: number, currentTemp: number, targetTemp: number, messageDate: Date) => {
+      console.log(roomID + "/" + currentTemp + "/" + targetTemp + "/" + messageDate);
+    });
     this._hubConnection.start();
     this.http.get('/rest/temphistory').subscribe(
       result => {
