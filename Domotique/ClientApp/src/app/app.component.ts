@@ -13,6 +13,7 @@ import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
 
 export class AppComponent {
   title = 'ma domotique';
+  public version: string = '';
   public Status: Status;
   public Rooms: RoomStatus[];
   public Devices: DeviceStatus[];
@@ -30,6 +31,7 @@ export class AppComponent {
           this.Devices.push(Object.assign(new DeviceStatus(), device));
           //console.warn(device.deviceName + ":" + device.IsLight());
         }
+        this.version = this.Status.version;
 
       },
       error => console.error(error));
@@ -92,6 +94,7 @@ export class AppComponent {
 export class Status {
   public rooms: RoomStatus[];
   public devices: DeviceStatus[];
+  public version: string;
 }
 export class RoomStatus {
   public roomId: number;
