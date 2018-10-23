@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RoomStatusComponent } from './room-status/room-status.component';
 import { ChartModule } from 'angular-highcharts';
 import { DeviceComponent } from './device/device.component';
+import { RoomComponent } from './room/room.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomStatusComponent,
-    DeviceComponent
+    DeviceComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,

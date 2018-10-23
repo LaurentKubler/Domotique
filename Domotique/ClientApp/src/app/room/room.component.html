@@ -1,0 +1,18 @@
+<div class="card-body">
+  <h5 class="card-title">
+    {{room.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{room.lastTemperatureRefresh}}"> {{room.currentTemperature}}°C</span>
+  </h5>
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th *ngFor="let temperature of room.temperatures"> {{temperature.temperatureDate | date : 'EEE'}}</th>
+      </tr>
+      <tr>
+        <td *ngFor="let temperature of room.temperatures"> {{temperature.minTemp | number : '1.1-1'}}</td>
+      </tr>
+      <tr>
+        <td *ngFor="let temperature of room.temperatures"> {{temperature.maxTemp | number : '1.1-1'}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
