@@ -1,6 +1,7 @@
 <div class="card-body">
   <h5 class="card-title">
     {{room.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{room.lastTemperatureRefresh}}"> {{room.currentTemperature}}°C</span>
+    <span [hidden]="!room.heatRegulation"><b>On</b></span>
   </h5>
   <div class="table-responsive">
     <table class="table">

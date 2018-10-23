@@ -11,6 +11,10 @@ namespace Messages.WebMessages
 
         public int Picture { get; set; }
 
+        public int? HeaterID { get; set; }
+
+        public bool HeatRegulation { get; set; }
+
         public IList<DayTemperature> Temperatures { get; set; }
 
         public DateTime LastTemperatureRefresh { get; set; }

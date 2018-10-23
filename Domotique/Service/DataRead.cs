@@ -1,4 +1,5 @@
 ﻿using Domotique.Controllers;
+using Domotique.Database;
 using Domotique.Service;
 using Messages.WebMessages;
 using MySql.Data.MySqlClient;
@@ -14,10 +15,15 @@ namespace Domotique.Model
 
         IDatabaseConnection _databaseConnection;
 
+        IDBContextProvider _provider;
 
-        public DataRead(IDatabaseConnection databaseConnection)
+        DomotiqueContext _context;
+
+        public DataRead(IDatabaseConnection databaseConnection, IDBContextProvider provider)
         {
             _databaseConnection = databaseConnection;
+            _provider = provider;
+            _context = provider.getContext();
         }
 
 
@@ -26,27 +32,33 @@ namespace Domotique.Model
         {
             IList<RoomStatus> result = new List<RoomStatus>();
 
-            Dictionary<int, RoomStatus> rooms = new Dictionary<int, RoomStatus>();
+            /*      var query = from room in _context.Rooms
+                              from temperatureLog in _context.TemperatureLog
+                              .Where(tl => tl.RoomID == room.ID && tl.LogDate ==
+                                  _context.TemperatureLog.Where(tl1 => tl1.RoomID == room.ID).Max(o1 => o1.LogDate)
+                              )
+                              select new RoomStatus()
+                              {
+                                  RoomId = room.ID,
+                                  RoomName = room.Name,
+                                  HeaterID = room.HeaterID,
+                                  HeatRegulation = room.HeatRegulation,
+                                  LastTemperatureRefresh = temperatureLog.LogDate,
+                                  CurrentTemperature = (float)temperatureLog.CurrentTemp
+                              };
+                  Console.Write(query.Count());*/
+            //Dictionary<int, RoomStatus> rooms = new Dictionary<int, RoomStatus>();
             using (var connection = _databaseConnection.GetConnection())
             {
-                connection.Open();
-
-                using (var command = connection.CreateCommand())
+                var rooms = _context.Rooms.Select(r => new RoomStatus()
                 {
-                    command.CommandText = "Select * from Room;";
-                    var reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        RoomStatus room = new RoomStatus()
-                        {
-                            RoomId = reader.GetInt32("ID"),
-                            RoomName = reader.GetString("Name"),
-                            //  Picture = reader.GetInt32("Picture")
-                        };
-                        rooms.Add(room.RoomId, room);
-                    }
-                    reader.Close();
-                }
+                    RoomId = r.ID,
+                    RoomName = r.Name,
+                    HeaterID = r.HeaterID,
+                    HeatRegulation = r.HeatRegulation
+                }).ToList();
+
+                connection.Open();
 
                 using (var command = connection.CreateCommand())
                 {
@@ -65,14 +77,17 @@ namespace Domotique.Model
                             var roomMin = reader.GetFloat(2);
                             var roomMax = reader.GetFloat(3);
                             var roomLastRefresh = reader.GetDateTime(4);
-                            if (rooms[roomId].Temperatures == null)
-                                rooms[roomId].Temperatures = new List<DayTemperature>();
-                            rooms[roomId].Temperatures.Add(new DayTemperature()
+                            foreach (var room in rooms.Where(r => r.RoomId == roomId))
                             {
-                                MaxTemp = reader.GetFloat(3),
-                                MinTemp = reader.GetFloat(2),
-                                TemperatureDate = reader.GetDateTime(4)
-                            });
+                                if (room.Temperatures == null)
+                                    room.Temperatures = new List<DayTemperature>();
+                                room.Temperatures.Add(new DayTemperature()
+                                {
+                                    MaxTemp = reader.GetFloat(3),
+                                    MinTemp = reader.GetFloat(2),
+                                    TemperatureDate = reader.GetDateTime(4)
+                                });
+                            };
                         }
 
                     }
@@ -94,14 +109,17 @@ namespace Domotique.Model
                         {
                             var roomId = reader.GetInt32(0);
                             var roomLastRefresh = reader.GetDateTime(2);
-                            rooms[roomId].LastTemperatureRefresh = reader.GetDateTime(2);
-                            rooms[roomId].CurrentTemperature = reader.GetFloat(1);
+                            foreach (var room in rooms.Where(r => r.RoomId == roomId))
+                            {
+                                room.LastTemperatureRefresh = reader.GetDateTime(2);
+                                room.CurrentTemperature = reader.GetFloat(1);
+                            };
                         }
 
                     }
                 }
 
-                return rooms.Values.ToList();
+                return rooms.ToList();
             }
         }
 
