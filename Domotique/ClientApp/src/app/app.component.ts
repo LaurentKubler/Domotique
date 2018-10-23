@@ -100,6 +100,8 @@ export class RoomStatus {
   public roomId: number;
   public roomName: string;
   public picture: number;
+  public heaterID: number;
+  public heatRegulation: number;
   public temperatures: DayTemperature[];
   public lastTemperatureRefresh: Date;
   public currentTemperature: number;
