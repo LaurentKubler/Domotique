@@ -195,7 +195,133 @@ namespace Domotique.Model
         }
 
 
-        public IList<DeviceStatus> ReadDevices()
+        public IList<Messages.WebMessages.DeviceStatus> ReadDevices()
+        {
+            //List<Messages.WebMessages.DeviceStatus> list = new List<Messages.WebMessages.DeviceStatus>();
+
+            /*  var dev = from device in _context.Device//.Include(d => d.Functions)
+                        join devicesstatus in _context.DeviceStatus
+                           on _context.DeviceStatus.Where(statusmax => statusmax.Device_ID == device.DeviceID).Max(o1 => o1.DeviceStatusID) equals devicesstatus.DeviceStatusID
+                        select new Messages.WebMessages.DeviceStatus()
+                        {
+                            DeviceName = device.DeviceName,
+                            Device_ID = device.DeviceID,
+                            Status = (devicesstatus.DeviceValue != 0),
+                            Value = devicesstatus.DeviceValue,
+                            ValueDate = (devicesstatus.ValueDate),
+                            /*Functions = device.Functions.Select(c => new Messages.WebMessages.Function()
+                            {
+                                Name = c.Name
+                            }).ToList()
+                        };
+
+              /*var query = from device in _context.Device.Include(device => device.Functions)
+                          from devicesstatus in _context.DeviceStatus
+                          where (devicesstatus.ValueDate == _context.DeviceStatus.Where(statusmax => statusmax.Device_ID == device.DeviceID).Max(o1 => o1.ValueDate))
+                              && devicesstatus.Device_ID == device.DeviceID
+                          select new Messages.WebMessages.DeviceStatus()
+                          {
+                              DeviceName = device.DeviceName,
+                              Device_ID = device.DeviceID,
+                              Status = (devicesstatus.DeviceValue != 0),
+                              Value = devicesstatus.DeviceValue,
+                              ValueDate = (devicesstatus.ValueDate),
+                              Functions = device.Functions.Select(c => new Messages.WebMessages.Function()
+                              {
+                                  Name = c.Name
+                              }).ToList()
+                          };*/
+            /*var test = from device in _context.Device.Include(device => device.Functions)
+                           //from function in _context.Function.Where(func => func.)
+                       from devicestatus in _context.DeviceStatus
+                       where (device.DeviceID == devicestatus.Device_ID
+                           && devicestatus.ValueDate == _context.DeviceStatus.Where(tl1 => tl1.Device_ID == devicestatus.Device_ID).Max(o1 => o1.ValueDate))
+                       select device.DeviceID, devicestatus.Device_ID;*/
+            /*
+             *  var query = from device in _context.Device.Include(device => device.Functions)
+                            //from function in _context.Function.Where(func => func.)
+                        from devicestatus in _context.DeviceStatus
+                        .Where(ds => ds.Device_ID == device.DeviceID && ds.ValueDate ==
+                            _context.DeviceStatus.Where(tl1 => tl1.Device_ID == device.DeviceID).Max(o1 => o1.ValueDate)
+                        )
+                        select new Messages.WebMessages.DeviceStatus()
+                        {
+                            DeviceName = device.DeviceName,
+                            Device_ID = device.DeviceID,
+                            Status = (devicestatus.DeviceValue != 0),
+                            Value = devicestatus.DeviceValue,
+                            ValueDate = (devicestatus.ValueDate),
+                            Functions = device.Functions.Select(c => new Messages.WebMessages.Function()
+                            {
+                                Name = c.Name
+                            }).ToList()
+                        };
+*/
+            IList<Messages.WebMessages.DeviceStatus> result = new List<Messages.WebMessages.DeviceStatus>();
+
+            using (var connection = _databaseConnection.GetConnection())
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT Device.*, DeviceStatus.ValueDate,DeviceStatus.DeviceValue" +
+                                          "    FROM Device" +
+                                          "    LEFT JOIN(SELECT Device_ID, MAX(DeviceStatusID) MaxStatus FROM DeviceStatus GROUP BY Device_ID) MaxDateDeviceStatus" +
+                                          "          ON MaxDateDeviceStatus.Device_ID = Device.DeviceID" +
+                                          "    LEFT JOIN DeviceStatus" +
+                                          "          ON DeviceStatus.Device_ID = Device.DeviceID AND DeviceStatus.DeviceStatusID = MaxDateDeviceStatus.MaxStatus";
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Messages.WebMessages.DeviceStatus device = new Messages.WebMessages.DeviceStatus()
+                        {
+                            Device_ID = reader.GetInt32("DeviceID"),
+                            DeviceName = reader.GetString("DeviceName"),
+                            OnImage_ID = reader.GetInt32("OnImage"),
+                            OffImage_ID = reader.GetInt32("OffImage")
+                        };
+                        if (!reader.IsDBNull(reader.GetOrdinal("ValueDate")))
+                            device.ValueDate = reader.GetDateTime("ValueDate");
+                        else
+                            device.ValueDate = null;
+
+                        if (!reader.IsDBNull(reader.GetOrdinal("DeviceValue")))
+                            device.Value = reader.GetInt32("DeviceValue");
+                        else
+                            device.Value = null;
+
+                        if (device.Value != null)
+                            device.Status = (device.Value != 0 ? true : false);
+                        result.Add(device);
+                    }
+                    reader.Close();
+                }
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT * from Functions";
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var func = new Messages.WebMessages.Function()
+                        {
+                            Name = reader.GetString("Function")
+                        };
+
+                        int id = reader.GetInt32("DeviceID");
+
+                        result.First(device => device.Device_ID == id).Functions.Add(func);
+                    }
+                    reader.Close();
+                }
+            }
+
+            return result.ToList();
+        }
+        /*
+        public IList<DeviceStatus> ReadDevices_old()
         {
             IList<DeviceStatus> result = new List<DeviceStatus>();
 
@@ -258,7 +384,7 @@ namespace Domotique.Model
                 }
             }
             return result;
-        }
+        }*/
     }
 
 }

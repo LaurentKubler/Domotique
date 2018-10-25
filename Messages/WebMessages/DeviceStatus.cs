@@ -20,5 +20,10 @@ namespace Messages.WebMessages
         public DateTime? ValueDate { get; set; }
 
         public IList<Function> Functions { get; set; } = new List<Function>();
+
+        public object ToList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

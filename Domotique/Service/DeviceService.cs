@@ -2,10 +2,8 @@
 using Domotique.Model;
 using Messages.Queue.Model;
 using Messages.Queue.Service;
-using Messages.WebMessages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Domotique.Service
@@ -72,10 +70,10 @@ namespace Domotique.Service
         {
 
         }
-
+        /*
         public List<DeviceStatus> GetDeviceStatus()
         {
             return null;
-        }
+        }*/
     }
 }

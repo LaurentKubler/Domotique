@@ -1,11 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
 namespace Domotique.Database
 {
 
     public class DomotiqueContext : DbContext
     {
+
+
+        public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[] { new ConsoleLoggerProvider((_, __) => true, true) });
+
         public DomotiqueContext(DbContextOptions options) : base(options)
         {
         }
@@ -21,6 +27,13 @@ namespace Domotique.Database
         }
 
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+
+            //   optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+        }
+
         public DbSet<Adapter> Adapter { get; set; }
 
         public DbSet<DBImage> DBImage { get; set; }
@@ -28,6 +41,9 @@ namespace Domotique.Database
         public DbSet<Device> Device { get; set; }
 
         public DbSet<Room> Rooms { get; set; }
+
+        public DbSet<DeviceStatus> DeviceStatus { get; set; }
+        public DbSet<Function> Functions { get; set; }
 
         //LK a tester 
         public DbSet<TemperatureLog> TemperatureLog { get; set; }

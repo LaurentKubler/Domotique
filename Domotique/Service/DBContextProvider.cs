@@ -1,5 +1,6 @@
 ﻿using Domotique.Database;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System;
 
@@ -9,6 +10,9 @@ namespace Domotique.Service
     public class DBContextProvider : IDBContextProvider
     {
         string _dbConnectionString;
+
+        ILoggerFactory _loggerFactory;
+
 
         public DBContextProvider(string dbConnectionString)
         {

@@ -1,7 +1,7 @@
 <div class="card-body">
   <h5 class="card-title">
     {{room.roomName}}  <span class="card-text" data-toggle="tooltip" data-placement="top" title=" {{room.lastTemperatureRefresh}}"> {{room.currentTemperature}}°C</span>
-    <span [hidden]="!room.heatRegulation"><b>On</b></span>
+    <span class="float-right btn btn-primary" *ngIf="room.heatRegulation" (click)="SetRegulationOff()" role="button"><b>Auto</b></span> <span class="btn btn-primary float-right" (click)="SetRegulationOn()" role="button" *ngIf="!room.heatRegulation||room.heaterID"><b>Off</b></span>
   </h5>
   <div class="table-responsive">
     <table class="table">
@@ -17,3 +17,4 @@
     </table>
   </div>
 </div>
+

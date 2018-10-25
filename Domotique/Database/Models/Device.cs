@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -37,5 +38,18 @@ CREATE TABLE `DomoTrigger` (
         public IList<Function> Functions { get; set; }
 
 
+    }
+    public class DeviceStatus
+    {
+        [Key]
+        public int DeviceStatusID { get; set; }
+
+        public DateTime ValueDate { get; set; }
+
+        public DateTime ValueRequest { get; set; }
+
+        public int DeviceValue { get; set; }
+
+        public int Device_ID { get; set; }
     }
 }

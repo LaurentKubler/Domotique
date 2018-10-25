@@ -1,7 +1,4 @@
-﻿using Messages.WebMessages;
-using System.Collections.Generic;
-
-namespace Domotique.Service
+﻿namespace Domotique.Service
 {
     public interface IDeviceService
     {
@@ -11,6 +8,6 @@ namespace Domotique.Service
 
         void PowerOn(long deviceID, long value);
 
-        List<DeviceStatus> GetDeviceStatus();
+        //  List<DeviceStatus> GetDeviceStatus();
     }
 }

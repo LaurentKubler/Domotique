@@ -14,5 +14,18 @@ export class RoomComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public SetRegulationOn() {
+    this.http.get('/rest/room/' + this.room.roomId + '/SetRegulationOn').subscribe(
+      result => {
+        console.log("Regulation set Auto on roomId")
+      },
+      error => console.error(error));
+  }
+  public SetRegulationOff() {
+    this.http.get('/rest/room/' + this.room.roomId + '/SetRegulationOff').subscribe(
+      result => {
+        console.log("Regulation set Off on oom roomId")
+      },
+      error => console.error(error));
+  }
 }
